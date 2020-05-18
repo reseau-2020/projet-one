@@ -3,7 +3,7 @@
 * Lecture de l'énoncé du projet
 * Listing détaillé et répartition des tâches
 * Documentation/état de l'art
-* Création du journal.md
+* Création du journal.md (Nom définitif à préciser)
 * Choix des blocs d'adressage et du protocole de routage
 
 ## 1- Liste des tâches
@@ -22,7 +22,7 @@
 * Etherchannel (ports, PAgP/LACP)				
 * Rapid Spanning-Tree (RSTP)				
 													
-#### 1.2.2 Switch Distribution
+#### 1.2.2- Switch Distribution
 
 * Création des VLANs				
 * Configuration des ports Access et Trunk				
@@ -32,7 +32,7 @@
 * Configuration des passerelles (IPv4 et IPv6)				
 * Configuration du service DHCP										
 								
-### 1.3- Une couche Core maillée de trois routeurs
+### 1.3- Topologie Tripod (Couche Core maillée de trois routeurs)
 
 #### 1.3.1- Configuration du routeur R1
 
@@ -50,27 +50,45 @@
 * Adressage IPv4 et IPv6 + service DHCP				
 * Activer routage OSPF	
 
-## Un maillage entre la couche Core et les switchblock							
-### Redondance entre DS1/DS2 (Switchblock) et R2/R3 (couche Core)					
-* Etherchannel (PAgP ou LACP)				
-* Rapid ST				
-* HSRP 	
+### 1.4- Topologie Complète : liaison Tripod - Switchblock(s)
 
-## Un accès Internet avec un pare-feu/nat et une DMZ											
-## Un site distant connecté en VPN IPSEC												
-## Des services d'infrastuctures (NTP,DNS,DHCP,NTP/DHCPv6/DHCP Relay,RA, ...)							
+#### 1.4.1- Redondance entre DS1/DS2 (Switchblock) et R2/R3 (Tripod, couche Core)					
+* Etherchannel (PAgP ou LACP)				
+* Rapid Spanning-Tree (RSTP)				
+* Redondance de passerelle (HSRP) 	
+
+#### 1.4.2- Accès Internet via un routeur NAT & Pare-feu Cisco ou Fortinet
+* Configuration des pare-feux (Fortinet ou Cisco), nombre à définir
+* Pare-feu sur le routeur NAT R1 interconnectant le réseau du lab au réseau internet
+
+#### 1.4.2- DMZ (Serveurs applicatifs, ...)
+* Encore à préciser
+
+#### 1.4.3- Connexion à un site distant en VPN IPSEC
+* LAN et/ou VLAN à préciser
+
+#### 1.4.4- Des services d'infrastuctures (NTP,DNS,DHCP,NTP/DHCPv6/DHCP Relay,RA, ...)							
 * CDP/LLDP (Voisinage immédiat)					
 * Synchronisation temporelle NTP						
 
-## Des services de surveillance (SYSLOG, SNMP)
+#### 1.4.5- Des services de surveillance (SYSLOG, SNMP)
 * SYSLOG : Gestion des logs
 * Supervision SNMP
 
-## Le focus sécuriataire sur toutes les solutions déployées							
-## Documentation														
-### Tenue du journal de bord					
-### État de l'art					
-### Support de présentation					
-### Bibliographie					
+### 1.5 Focus sécuritaire sur toutes les solutions déployées
+
+### 1.6 Extension à plusieurs Switchblocks
+
+### 1.7 Utilisation d'Ansible, Gestion centralisée
+							
+## 2- Documentation
+
+### 2.1- Tenue du journal de bord
+
+### 2.2- État de l'art
+
+### 2.3- Support de présentation
+
+### 2.4- Bibliographie					
 
 
