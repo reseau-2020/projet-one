@@ -6,7 +6,7 @@
 <body>
   <h1>Programme du jour: 18/05/2020</h1>
   <p>* Lecture de l'énoncé du projet
-  <p>* Listing et répartition des taches
+  <p>* Listing et répartition des tâches
   <p>* Documentation/état de l'art
   <p>* Création du journal.md
   <p>* Choix des blocs d'adressage et du protocole de routage
