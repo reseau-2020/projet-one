@@ -23,6 +23,7 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 * Affectation des rôles
 
 ### 1- Adressage IPv4 et IPv6 spécifique (blocs d'adresses indédits) & Protocole de Routage 
+* Diagramme de la topologie
 * Choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie		
 * Choisir le protocole de routage (EIGRP ou OSPF)	
 											
@@ -42,6 +43,11 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 * Redondance de passerelle (HSRP)				
 * Configuration des passerelles (IPv4 et IPv6)				
 * Configuration du service DHCP
+
+#### 2.3- Tests fiabilité, Diagnostics
+* Connectivité
+* Adressage
+* à développer ...
 								
 ### 3- Topologie Tripod (Couche Core maillée de trois routeurs)
 
@@ -56,7 +62,12 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 
 #### 3.3- Configuration du routeur R3
 * Adressage IPv4 et IPv6 + service DHCP				
-* Activer routage OSPF	
+* Activer routage OSPF
+
+#### 3.4- Tests fiabilité, Diagnostics
+* Connectivité
+* Adressage
+* à développer ...	
 
 ### 4- Topologie Complète : liaison Tripod - Switchblock(s)
 
@@ -69,6 +80,11 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 * Configuration des pare-feux (Fortinet ou Cisco), nombre à définir
 * Pare-feu sur le routeur NAT R1 interconnectant le réseau du lab au réseau internet
 
+#### 4.3- Tests fiabilité, Diagnostics
+* Connectivité
+* Adressage
+* à développer ...	
+
 ### 5- Fonctions complémentaires
 
 #### 5.1- DMZ (Serveurs applicatifs, ...)
@@ -76,21 +92,26 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 
 #### 5.2- Connexion à un site distant en VPN IPSEC
 * LAN et/ou VLAN à préciser
+* Diagnostics fiabilité
 
 #### 5.3- Services d'infrastuctures (NTP,DNS,DHCP,NTP/DHCPv6/DHCP Relay,RA, ...)							
 * CDP ou LLDP (Voisinage immédiat)					
-* Synchronisation temporelle NTP						
+* Synchronisation temporelle NTP
+* Diagnostics fiabilité
 
 #### 5.4- Services de surveillance (SYSLOG, SNMP)
 * SYSLOG : Gestion des logs
 * Supervision SNMP
+* Diagnostics fiabilité
 
 #### 5.5- Focus sécuritaire sur toutes les solutions déployées
 * Filtrage Couches 2, 3 et 7 sur routeurs, commutateurs (Switch) et autres périphériques
 * Renforcer la sécurité des périphériques du réseau
 * Pare-feu additionnels et contrôle des flux via listes d'accès?
+* Tests sécurité, diagnostics
 
 ### 6- Extension à plusieurs Switchblocks
+* Tests sécurité et fiabilité, diagnostics
 
 ### 7- Ansible, Gestion centralisée des configurations, IaC
 
@@ -103,6 +124,8 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 #### 7.4- Topologie Finale (Core + Access + Distribution)
 
 #### 7.5- Configuration des compléments
+
+#### 7.6- Tests & Diagnostics
 							
 ### 8- Documentation
 
