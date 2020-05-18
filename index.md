@@ -12,7 +12,7 @@
   <p>* Choix des blocs d'adressage et du protocole de routage
 
     
-  <h1>remplir ici les tâches<h1>
+  <h1>remplir ici les tâches</h1>
   <p>1.Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF							
  <p>*choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie					
  <p>*choisir le protocole de routage											
