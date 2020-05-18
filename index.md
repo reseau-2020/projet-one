@@ -1,46 +1,54 @@
 # Programme du jour: 18/05/2020
 
-  * Lecture de l'énoncé du projet
-  * Listing détaillé et répartition des tâches
-  * Documentation/état de l'art
-  * Création du journal.md
-  * Choix des blocs d'adressage et du protocole de routage
+* Lecture de l'énoncé du projet
+* Listing détaillé et répartition des tâches
+* Documentation/état de l'art
+* Création du journal.md
+* Choix des blocs d'adressage et du protocole de routage
 
 ## 1- Liste des tâches
 
-* Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF				
-	- Choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie		
-	- Choisir le protocole de routage	
-											
-## Switchblock (4 vlans utiles) dans les couches Access et Distribution (assuré par RSTP, Etherchannel et HSRP)	
+### 1.1- Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF
 
-### Switch Access					
+* Choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie		
+* Choisir le protocole de routage	
+											
+### 1.2- Topologie Switchblock (4 vlans utiles) dans les couches Access et Distribution (assuré par RSTP, Etherchannel et HSRP)	
+
+#### 1.2.1- Switch Access
+
 * Création des VLANs				
 * Configuration des ports Access et Trunk				
 * Etherchannel (ports, PAgP/LACP)				
-* Rapid Spanning-Tree				
+* Rapid Spanning-Tree (RSTP)				
 													
-### Switch Distribution					
+#### 1.2.2 Switch Distribution
+
 * Création des VLANs				
 * Configuration des ports Access et Trunk				
 * Etherchannel (ports, PAgP/LACP)				
-* Rapid Spanning-Tree				
+* Rapid Spanning-Tree (RSTP)				
 * Redondance de passerelle (HSRP)				
 * Configuration des passerelles (IPv4 et IPv6)				
-* Configuration du service DHCP				
+* Configuration du service DHCP										
 								
-								
-## Une couche Core maillée de trois routeurs							
-### Configuration du routeur R1					
+### 1.3- Une couche Core maillée de trois routeurs
+
+#### 1.3.1- Configuration du routeur R1
+
 * Adressage IPv4 et IPv6 + service DHCP				
-* Activer OSPF				
-* Activer l'accès internet (liste d'accès, NAT)			
-### Configuration du routeur R2					
+* Activer routage OSPF				
+* Activer l'accès internet (listes d'accès, NAT)
+
+#### 1.3.2- Configuration du routeur R2
+
 * Adressage IPv4 et IPv6 + service DHCP				
-* Activer OSPF			
-### Configuration du routeur R3			
+* Activer routage OSPF
+
+#### 1.3.3- Configuration du routeur R3
+
 * Adressage IPv4 et IPv6 + service DHCP				
-* Activer OSPF	
+* Activer routage OSPF	
 
 ## Un maillage entre la couche Core et les switchblock							
 ### Redondance entre DS1/DS2 (Switchblock) et R2/R3 (couche Core)					
