@@ -8,26 +8,24 @@
 
 # remplir ici les tâches
 
- * Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF							
- * choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie					
- * choisir le protocole de routage											
-								
- 2.Switchblock (4 vlans utiles) dans les couches Access et Distribution (assuré par RSTP, Etherchannel et HSRP)							
- 2.1	Switch Access					
-2.1.1	Création des VLANs				
-2.1.2	Configuration des ports Access et Trunk				
-2.1.3	Etherchannel (ports, PAgP/LACP)				
-2.1.4	Rapid Spanning-Tree				
+* Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF				
+* choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie		
+* choisir le protocole de routage												
+* Switchblock (4 vlans utiles) dans les couches Access et Distribution (assuré par RSTP, Etherchannel et HSRP)			* Switch Access					
+* Création des VLANs				
+* Configuration des ports Access et Trunk				
+* Etherchannel (ports, PAgP/LACP)				
+* Rapid Spanning-Tree				
 					
 								
-2.2	Switch Distribution					
-2.2.1	Création des VLANs				
-2.2.2	Configuration des ports Access et Trunk				
-2.2.3	Etherchannel (ports, PAgP/LACP)				
-2.2.4	Rapid Spanning-Tree				
-2.2.5	Redondance de passerelle (HSRP)				
-2.2.6	Configuration des passerelles (IPv4 et IPv6)				
-2.2.7	Configuration du service DHCP				
+Switch Distribution					
+Création des VLANs				
+Configuration des ports Access et Trunk				
+Etherchannel (ports, PAgP/LACP)				
+Rapid Spanning-Tree				
+Redondance de passerelle (HSRP)				
+Configuration des passerelles (IPv4 et IPv6)				
+Configuration du service DHCP				
 								
 								
 3.Une couche Core maillée de trois routeurs							
