@@ -23,9 +23,9 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 * Affectation des rôles
 
 ### 2- Adressage IPv4 et IPv6 spécifique (blocs d'adresses indédits) & Protocole de Routage 
-* Diagramme de la topologie
-* Choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie		
-* Choisir le protocole de routage (EIGRP ou OSPF)	
+* Choix des topologies et Diagrammes associés
+* Choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie	finale	
+* Choix du protocole de routage (EIGRP ou OSPF)	
 											
 ### 3- Topologie Switchblock (4 vlans utiles) dans les couches Access et Distribution (assuré par RSTP, Etherchannel et HSRP)	
 
