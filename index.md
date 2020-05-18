@@ -5,11 +5,11 @@
 </head>
 <body>
   <h1>Programme du jour: 18/05/2020</h1>
-  <p>*lecture de l'énoncé du projet
-  <p>*listning et répartition des taches
-  <p>*documentation/état de l'art
-  <p>*création du journal.md
-  <p>*choix des blocs d'adressage et du protocole de routage
+  <p>* Lecture de l'énoncé du projet
+  <p>* Listing et répartition des taches
+  <p>* Documentation/état de l'art
+  <p>* Création du journal.md
+  <p>* Choix des blocs d'adressage et du protocole de routage
 
     
   <h1>remplir ici les tâches<h1> 
