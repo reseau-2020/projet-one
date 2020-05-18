@@ -19,7 +19,7 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 ### 1- Etat de l'Art, Analyse des besoins du client, Analyse du Cahier des Charges
 * Listing des tâches
 * Plannification
-* Détermination des tâches et du chemin critique
+* Détermination des tâches critiques et du chemin critique
 * Affectation des rôles
 
 ### 2- Adressage IPv4 et IPv6 spécifique (blocs d'adresses indédits) & Protocole de Routage 
