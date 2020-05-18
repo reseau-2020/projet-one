@@ -14,8 +14,8 @@
     
   <h1>Liste des tâches</h1>
   <p>1.Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF							
- <p>*choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie					
- <p>*choisir le protocole de routage											
+ <p>1.1 choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie					
+ <p>1.2 choisir le protocole de routage											
 								
  <p>2.Switchblock (4 vlans utiles) dans les couches Access et Distribution (assuré par RSTP, Etherchannel et HSRP)							
  <p>2.1	Switch Access					
@@ -54,10 +54,10 @@
 <p>5.Un accès Internet avec un pare-feu/nat et une DMZ											
 <p>6.Un site distant connecté en VPN IPSEC												
 <p>7.Des services d'infrastuctures (NTP,DNS,DHCP,NTP/DHCPv6/DHCP Relay,RA, ...)							
-<p>7.1	CDP/LLDP					
-<p>7.2	Synchronisation temporelle NTP					
-<p>7.3	Gestion des logs SYSLOG					
-<p>7.4	Supervision SNMP										
+	<p>7.1	CDP/LLDP					
+	<p>7.2	Synchronisation temporelle NTP					
+	<p>7.3	Gestion des logs SYSLOG					
+	<p>7.4	Supervision SNMP										
 <p>8.Des services de surveillance (SYSLOG, SNMP)											
 <p>9.Le focus sécuriataire sur toutes les solutions déployées										
 <p>10	Documentation							
