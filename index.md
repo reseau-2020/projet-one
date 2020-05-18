@@ -6,11 +6,11 @@
   * Création du journal.md
   * Choix des blocs d'adressage et du protocole de routage
 
-# Liste des tâches
+## 1- Liste des tâches
 
-## Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF				
-* Choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie		
-* Choisir le protocole de routage	
+* Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF				
+	- Choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie		
+	- Choisir le protocole de routage	
 											
 ## Switchblock (4 vlans utiles) dans les couches Access et Distribution (assuré par RSTP, Etherchannel et HSRP)	
 
