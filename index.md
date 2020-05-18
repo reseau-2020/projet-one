@@ -16,6 +16,12 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 
 ## Liste des tâches
 
+### 0- Etat de l'Art, Analyse des besoins du client, Analyse du Cahier des Charges
+* Listing des tâches
+* Plannification
+* Détermination du tâches et du chemin critique
+* Affectation des rôles
+
 ### 1- Adressage IPv4 et IPv6 spécifique (blocs d'adresses indédits) & Protocole de Routage 
 * Choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie		
 * Choisir le protocole de routage (EIGRP ou OSPF)	
@@ -80,19 +86,23 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 * Supervision SNMP
 
 #### 5.5- Focus sécuritaire sur toutes les solutions déployées
-* Couches 2, 3 et 7
+* Filtrage Couches 2, 3 et 7 sur routeurs, commutateurs (Switch) et autres périphériques
+* Renforcer la sécurité des périphériques du réseau
+* Pare-feu additionnels et contrôle des flux via listes d'accès?
 
 ### 6- Extension à plusieurs Switchblocks
 
 ### 7- Ansible, Gestion centralisée des configurations, IaC
 
-#### 7.1- Switchblock(s) (Couches Access et Distribution)
+#### 7.1- Prise en Main d'Ansible, documentation client
 
-#### 7.2- Tripod (Couche Core)
+#### 7.2- Switchblock(s) (Couches Access et Distribution)
 
-#### 7.3- Topologie Finale (Core + Access + Distribution)
+#### 7.3- Tripod (Couche Core)
 
-#### 7.4- Configuration des compléments
+#### 7.4- Topologie Finale (Core + Access + Distribution)
+
+#### 7.5- Configuration des compléments
 							
 ### 8- Documentation
 
