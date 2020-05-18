@@ -5,8 +5,7 @@
 </head>
 <body>
   <h1>Programme du jour: 18/05/2020</h1>
-* Lecture de l'énoncé du projet
-* Test
+  <p>* Lecture de l'énoncé du projet
   <p>* Listing détaillé et répartition des tâches
   <p>* Documentation/état de l'art
   <p>* Création du journal.md
