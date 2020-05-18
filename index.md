@@ -1,7 +1,5 @@
-<!DOCTYPE HTML>
 <html lang = "fr">
 <head>
-  <!-- basic.html -->
   <title>Blog Projet-One</title>
   <meta charset = "UTF-8" />
 </head>
