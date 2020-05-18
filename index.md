@@ -1,11 +1,13 @@
-<h1>Programme du jour: 18/05/2020</h1>
+# Programme du jour: 18/05/2020
+
   * Lecture de l'énoncé du projet
   * Listing détaillé et répartition des tâche
   * Documentation/état de l'art
   * Création du journal.md
   * Choix des blocs d'adressage et du protocole de routage
 
-  <h1>remplir ici les tâches</h1>
+# remplir ici les tâches
+
  * Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF							
  * choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie					
  * choisir le protocole de routage											
@@ -28,12 +30,12 @@
 2.2.7	Configuration du service DHCP				
 								
 								
-<p>3.Une couche Core maillée de trois routeurs							
-<p>3.1	Configuration du routeur R1					
-<p>3.1.1	adressage IPv4 et IPv6 + service DHCP				
-<p>3.1.2	activer OSPF				
-<p>3.1.3	activer l'accès internet (liste d'accès, NAT)				
-<p>.2	Configuration du routeur R2					
+3.Une couche Core maillée de trois routeurs							
+3.1	Configuration du routeur R1					
+3.1.1	adressage IPv4 et IPv6 + service DHCP				
+3.1.2	activer OSPF				
+3.1.3	activer l'accès internet (liste d'accès, NAT)				
+.2	Configuration du routeur R2					
 3.2.1	adressage IPv4 et IPv6 + service DHCP				
 3.2.2	activer OSPF				
 3.3	Configuration du routeur R3					
@@ -60,4 +62,4 @@
 10.3	Support de présentation					
 10.4	Bibliographie					
 
-  <h1>Programme du 19/05/2020</h1>
+# Programme du 19/05/2020</h1>
