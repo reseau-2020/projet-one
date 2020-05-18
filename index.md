@@ -43,17 +43,18 @@
 * activer OSPF	
 
 ## Un maillage entre la couche Core et les switchblock							
-4.1	Redondance entre DS1/DS2 (Switchblock) et R2/R3 (couche Core)					
-4.1.1	Etherchannel (PAgP ou LACP)				
-4.1.2	Rapid ST				
-4.1.3	HSRP 													
-5.Un accès Internet avec un pare-feu/nat et une DMZ											
+### Redondance entre DS1/DS2 (Switchblock) et R2/R3 (couche Core)					
+* Etherchannel (PAgP ou LACP)				
+* Rapid ST				
+* HSRP 	
+
+## Un accès Internet avec un pare-feu/nat et une DMZ											
 ## Un site distant connecté en VPN IPSEC												
-7.Des services d'infrastuctures (NTP,DNS,DHCP,NTP/DHCPv6/DHCP Relay,RA, ...)							
-7.1	CDP/LLDP					
-7.2	Synchronisation temporelle NTP					
-7.3	Gestion des logs SYSLOG					
-7.4	Supervision SNMP	
+## Des services d'infrastuctures (NTP,DNS,DHCP,NTP/DHCPv6/DHCP Relay,RA, ...)							
+* CDP/LLDP					
+* Synchronisation temporelle NTP					
+* Gestion des logs SYSLOG					
+ Supervision SNMP	
 
 ## Des services de surveillance (SYSLOG, SNMP)											
 
