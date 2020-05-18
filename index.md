@@ -34,11 +34,11 @@
 ### Configuration du routeur R1					
 * adressage IPv4 et IPv6 + service DHCP				
 * activer OSPF				
-* activer l'accès internet (liste d'accès, NAT)				
+* activer l'accès internet (liste d'accès, NAT)			
 ### Configuration du routeur R2					
 * adressage IPv4 et IPv6 + service DHCP				
-* activer OSPF				
-### Configuration du routeur R3					
+* activer OSPF			
+### Configuration du routeur R3			
 * adressage IPv4 et IPv6 + service DHCP				
 * activer OSPF	
 
