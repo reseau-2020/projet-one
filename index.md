@@ -5,7 +5,8 @@
 </head>
 <body>
   <h1>Programme du jour</h1>
-  <p>
+  <p>*lecture de l'énoncé du projet
+  <p>*listning et répartition des taches
     remplir ici les tâches 
   </p>
   <h1>A faire</h1>
