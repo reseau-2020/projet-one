@@ -108,7 +108,14 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 * Filtrage Couches 2, 3 et 7 sur routeurs, commutateurs (Switch) et autres périphériques
 * Renforcer la sécurité des périphériques du réseau
 * Pare-feu additionnels et contrôle des flux via listes d'accès?
+* Ex : Délai d'inactivité de la console à fixer (voir lab vlan de base, livre 1 François, P398)
+* Ex : Fixer le niveau de privilège de la console? (idem)
 * Tests sécurité, diagnostics
+* Configuration mot de passe privilege (passer du chiffrement md5 au chiffrement sha256 (Lab commutateur, livre 1, P143)
+* Cacher les mots de passe en clair dans une configuration par l'algorithme de Vigenere ? 
+* Créer un compte d'administration (=> root)
+* Configurer et sécuriser SSH (+ utiliser la version 2 du protocole SSH)
+* Configurer l'interface de gestion (SVI) du périphérique (switch, routeur ...) et le VLAN de Gestion
 
 ### 7- Extension à plusieurs Switchblocks
 * Tests sécurité et fiabilité, diagnostics
