@@ -14,45 +14,39 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 
 ## 1- Liste des tâches
 
-### 1.1- Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF
-
+### 1.1- Adressage IPv4 et IPv6 spécifique (blocs d'adresses indédits) & Protocole de Routage 
 * Choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie		
-* Choisir le protocole de routage	
+* Choisir le protocole de routage (EIGRP ou OSPF)	
 											
 ### 1.2- Topologie Switchblock (4 vlans utiles) dans les couches Access et Distribution (assuré par RSTP, Etherchannel et HSRP)	
 
 #### 1.2.1- Switch Access
-
 * Création des VLANs				
 * Configuration des ports Access et Trunk				
 * Etherchannel (ports, PAgP/LACP)				
 * Rapid Spanning-Tree (RSTP)				
 													
 #### 1.2.2- Switch Distribution
-
 * Création des VLANs				
 * Configuration des ports Access et Trunk				
 * Etherchannel (ports, PAgP/LACP)				
 * Rapid Spanning-Tree (RSTP)				
 * Redondance de passerelle (HSRP)				
 * Configuration des passerelles (IPv4 et IPv6)				
-* Configuration du service DHCP										
+* Configuration du service DHCP
 								
 ### 1.3- Topologie Tripod (Couche Core maillée de trois routeurs)
 
 #### 1.3.1- Configuration du routeur R1
-
 * Adressage IPv4 et IPv6 + service DHCP				
 * Activer routage OSPF				
 * Activer l'accès internet (listes d'accès, NAT)
 
 #### 1.3.2- Configuration du routeur R2
-
 * Adressage IPv4 et IPv6 + service DHCP				
 * Activer routage OSPF
 
 #### 1.3.3- Configuration du routeur R3
-
 * Adressage IPv4 et IPv6 + service DHCP				
 * Activer routage OSPF	
 
@@ -67,25 +61,36 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 * Configuration des pare-feux (Fortinet ou Cisco), nombre à définir
 * Pare-feu sur le routeur NAT R1 interconnectant le réseau du lab au réseau internet
 
-#### 1.4.2- DMZ (Serveurs applicatifs, ...)
+### 1.5- Fonctions complémentaires
+
+#### 1.5.1- DMZ (Serveurs applicatifs, ...)
 * Encore à préciser
 
-#### 1.4.3- Connexion à un site distant en VPN IPSEC
+#### 1.5.2- Connexion à un site distant en VPN IPSEC
 * LAN et/ou VLAN à préciser
 
-#### 1.4.4- Des services d'infrastuctures (NTP,DNS,DHCP,NTP/DHCPv6/DHCP Relay,RA, ...)							
-* CDP/LLDP (Voisinage immédiat)					
+#### 1.5.3- Services d'infrastuctures (NTP,DNS,DHCP,NTP/DHCPv6/DHCP Relay,RA, ...)							
+* CDP ou LLDP (Voisinage immédiat)					
 * Synchronisation temporelle NTP						
 
-#### 1.4.5- Des services de surveillance (SYSLOG, SNMP)
+#### 1.5.4- Services de surveillance (SYSLOG, SNMP)
 * SYSLOG : Gestion des logs
 * Supervision SNMP
 
-### 1.5 Focus sécuritaire sur toutes les solutions déployées
+#### 1.5.5- Focus sécuritaire sur toutes les solutions déployées
+* Couches 2, 3 et 7
 
-### 1.6 Extension à plusieurs Switchblocks
+### 1.6- Extension à plusieurs Switchblocks
 
-### 1.7 Utilisation d'Ansible, Gestion centralisée
+### 1.7- Ansible, Gestion centralisée des configurations, IaC
+
+#### 1.7.1- Switchblock(s) (Couches Access et Distribution)
+
+#### 1.7.2- Tripod (Couche Core)
+
+#### 1.7.3- Topologie Finale (Core + Access + Distribution)
+
+#### 1.7.4- Configuration des compléments
 							
 ## 2- Documentation
 
@@ -95,6 +100,8 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 
 ### 2.3- Support de présentation
 
-### 2.4- Bibliographie					
+### 2.4- Bibliographie
+
+### 2.5- Documentation technique, Rapport & Annexes
 
 
