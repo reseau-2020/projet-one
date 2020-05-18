@@ -6,6 +6,12 @@
 * Création du journal.md (Nom définitif à préciser)
 * Choix des blocs d'adressage et du protocole de routage
 
+## Synthèse de la journée
+
+Il s'agit du Jour 1 de notre projet. Nous avons pris le temps de poser le sujet, d'analyser les attentes du client et d'y apporter une première réponse. La journée a été essentiellement dédiée à la mise en place du squelette de notre projet, de cerner ses grandes étapes et d'établir une première planification provisoire. Une attention particulière a été portée sur la description des tâches et sous-tâches.
+Le choix prochain du plan d'adressage IPv4 découlera directement de cette mise en place, le plan d'adressage IPv6 est quant-à-lui cadré par notre client.
+Les prochaines journées seront dédiées à la configuration des topologies de type Tripod et Switchblock, et leurs protocoles associés. Nous incluerons progressivement une gestion centralisée Ansible, avec pour objectif majeur de la rendre parfaitement opérationnelle dans notre champ d'intervention.
+
 ## 1- Liste des tâches
 
 ### 1.1- Adressage IPv4 et IPv6 spécifique (bloc d'adresse indédits) et le protocole de routage EIGRP ou OSPF
