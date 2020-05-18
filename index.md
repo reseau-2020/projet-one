@@ -16,26 +16,26 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 
 ## Liste des tâches
 
-### 0- Etat de l'Art, Analyse des besoins du client, Analyse du Cahier des Charges
+### 1- Etat de l'Art, Analyse des besoins du client, Analyse du Cahier des Charges
 * Listing des tâches
 * Plannification
-* Détermination du tâches et du chemin critique
+* Détermination des tâches et du chemin critique
 * Affectation des rôles
 
-### 1- Adressage IPv4 et IPv6 spécifique (blocs d'adresses indédits) & Protocole de Routage 
+### 2- Adressage IPv4 et IPv6 spécifique (blocs d'adresses indédits) & Protocole de Routage 
 * Diagramme de la topologie
 * Choix des blocs d'adressage IPv4 (1 Bloc IPv6 HE Global Unicast fourni par le formateur) pour notre topologie		
 * Choisir le protocole de routage (EIGRP ou OSPF)	
 											
-### 2- Topologie Switchblock (4 vlans utiles) dans les couches Access et Distribution (assuré par RSTP, Etherchannel et HSRP)	
+### 3- Topologie Switchblock (4 vlans utiles) dans les couches Access et Distribution (assuré par RSTP, Etherchannel et HSRP)	
 
-#### 2.1- Switch Access
+#### 3.1- Switch Access
 * Création des VLANs				
 * Configuration des ports Access et Trunk				
 * Etherchannel (ports, PAgP/LACP)				
 * Rapid Spanning-Tree (RSTP)				
 													
-#### 2.2- Switch Distribution
+#### 3.2- Switch Distribution
 * Création des VLANs				
 * Configuration des ports Access et Trunk				
 * Etherchannel (ports, PAgP/LACP)				
@@ -44,99 +44,99 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 * Configuration des passerelles (IPv4 et IPv6)				
 * Configuration du service DHCP
 
-#### 2.3- Tests fiabilité, Diagnostics
+#### 3.3- Tests fiabilité, Diagnostics
 * Connectivité
 * Adressage
 * à développer ...
 								
-### 3- Topologie Tripod (Couche Core maillée de trois routeurs)
+### 4- Topologie Tripod (Couche Core maillée de trois routeurs)
 
-#### 3.1- Configuration du routeur R1
+#### 4.1- Configuration du routeur R1
 * Adressage IPv4 et IPv6 + service DHCP				
 * Activer routage OSPF				
 * Activer l'accès internet (listes d'accès, NAT)
 
-#### 3.2- Configuration du routeur R2
+#### 4.2- Configuration du routeur R2
 * Adressage IPv4 et IPv6 + service DHCP				
 * Activer routage OSPF
 
-#### 3.3- Configuration du routeur R3
+#### 4.3- Configuration du routeur R3
 * Adressage IPv4 et IPv6 + service DHCP				
 * Activer routage OSPF
 
-#### 3.4- Tests fiabilité, Diagnostics
+#### 4.4- Tests fiabilité, Diagnostics
 * Connectivité
 * Adressage
 * à développer ...	
 
-### 4- Topologie Complète : liaison Tripod - Switchblock(s)
+### 5- Topologie Complète : liaison Tripod - Switchblock(s)
 
-#### 4.1- Redondance entre DS1/DS2 (Switchblock) et R2/R3 (Tripod, couche Core)					
+#### 5.1- Redondance entre DS1/DS2 (Switchblock) et R2/R3 (Tripod, couche Core)					
 * Etherchannel (PAgP ou LACP)				
 * Rapid Spanning-Tree (RSTP)				
 * Redondance de passerelle (HSRP) 	
 
-#### 4.2- Accès Internet via un routeur NAT & Pare-feu Cisco ou Fortinet
+#### 5.2- Accès Internet via un routeur NAT & Pare-feu Cisco ou Fortinet
 * Configuration des pare-feux (Fortinet ou Cisco), nombre à définir
 * Pare-feu sur le routeur NAT R1 interconnectant le réseau du lab au réseau internet
 
-#### 4.3- Tests fiabilité, Diagnostics
+#### 5.3- Tests fiabilité, Diagnostics
 * Connectivité
 * Adressage
 * à développer ...	
 
-### 5- Fonctions complémentaires
+### 6- Fonctions complémentaires
 
-#### 5.1- DMZ (Serveurs applicatifs, ...)
+#### 6.1- DMZ (Serveurs applicatifs, ...)
 * Encore à préciser
 
-#### 5.2- Connexion à un site distant en VPN IPSEC
+#### 6.2- Connexion à un site distant en VPN IPSEC
 * LAN et/ou VLAN à préciser
 * Diagnostics fiabilité
 
-#### 5.3- Services d'infrastuctures (NTP,DNS,DHCP,NTP/DHCPv6/DHCP Relay,RA, ...)							
+#### 6.3- Services d'infrastuctures (NTP,DNS,DHCP,NTP/DHCPv6/DHCP Relay,RA, ...)							
 * CDP ou LLDP (Voisinage immédiat)					
 * Synchronisation temporelle NTP
 * Diagnostics fiabilité
 
-#### 5.4- Services de surveillance (SYSLOG, SNMP)
+#### 6.4- Services de surveillance (SYSLOG, SNMP)
 * SYSLOG : Gestion des logs
 * Supervision SNMP
 * Diagnostics fiabilité
 
-#### 5.5- Focus sécuritaire sur toutes les solutions déployées
+#### 6.5- Focus sécuritaire sur toutes les solutions déployées
 * Filtrage Couches 2, 3 et 7 sur routeurs, commutateurs (Switch) et autres périphériques
 * Renforcer la sécurité des périphériques du réseau
 * Pare-feu additionnels et contrôle des flux via listes d'accès?
 * Tests sécurité, diagnostics
 
-### 6- Extension à plusieurs Switchblocks
+### 7- Extension à plusieurs Switchblocks
 * Tests sécurité et fiabilité, diagnostics
 
-### 7- Ansible, Gestion centralisée des configurations, IaC
+### 8- Ansible, Gestion centralisée des configurations, IaC
 
-#### 7.1- Prise en Main d'Ansible, documentation client
+#### 8.1- Prise en Main d'Ansible, documentation client
 
-#### 7.2- Switchblock(s) (Couches Access et Distribution)
+#### 8.2- Switchblock(s) (Couches Access et Distribution)
 
-#### 7.3- Tripod (Couche Core)
+#### 8.3- Tripod (Couche Core)
 
-#### 7.4- Topologie Finale (Core + Access + Distribution)
+#### 8.4- Topologie Finale (Core + Access + Distribution)
 
-#### 7.5- Configuration des compléments
+#### 8.5- Configuration des compléments
 
-#### 7.6- Tests & Diagnostics
+#### 8.6- Tests & Diagnostics
 							
-### 8- Documentation
+### 9- Documentation
 
-#### 8.1- Tenue du journal de bord
+#### 9.1- Tenue du journal de bord
 
-#### 8.2- État de l'art
+#### 9.2- État de l'art
 
-#### 8.3- Support de présentation
+#### 9.3- Support de présentation
 
-#### 8.4- Bibliographie
+#### 9.4- Bibliographie
 
-#### 8.5- Documentation technique, Rapport & Annexes
+#### 9.5- Documentation technique, Rapport & Annexes
 
 
