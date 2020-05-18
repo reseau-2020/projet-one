@@ -33,13 +33,13 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 * Création des VLANs				
 * Configuration des ports Access et Trunk				
 * Etherchannel (ports, PAgP/LACP)				
-* Rapid Spanning-Tree (RSTP)				
+* Rapid Spanning-Tree Portfast (RSTP)				
 													
 #### 3.2- Switch Distribution
 * Création des VLANs				
 * Configuration des ports Access et Trunk				
 * Etherchannel (ports, PAgP/LACP)				
-* Rapid Spanning-Tree (RSTP)				
+* Rapid Spanning-Tree Portfast (RSTP)				
 * Redondance de passerelle (HSRP)				
 * Configuration des passerelles (IPv4 et IPv6)				
 * Configuration du service DHCP
@@ -73,7 +73,7 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 
 #### 5.1- Redondance entre DS1/DS2 (Switchblock) et R2/R3 (Tripod, couche Core)					
 * Etherchannel (PAgP ou LACP)				
-* Rapid Spanning-Tree (RSTP)				
+* Rapid Spanning-Tree Portfast (RSTP)				
 * Redondance de passerelle (HSRP) 	
 
 #### 5.2- Accès Internet via un routeur NAT & Pare-feu Cisco ou Fortinet
