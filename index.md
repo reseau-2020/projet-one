@@ -149,6 +149,8 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 
 # Programme du jour : 19/05/2020
 
+* Finalisation des tâches et sous-tâches
+* Répartition des tâches au sein du groupe
 * Choix des blocs d'adressage IPv4 et du protocole de routage
 * Mise en place de la topologie dans GNS3
-*  
+
