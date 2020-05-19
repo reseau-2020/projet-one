@@ -3,7 +3,7 @@ L'adressage IPv4 est en /24.
 L'adressage IPv6 est en /26.
 
 ## Tripod 
-|Module|Interface|Description/Connexion|Adressage IPv4|Adressage<br>IPv6 Link-local|Adressage<br>IPv6 privé|Adressage<br>IPv6 public|
+|Module|Interface|Description<br>Connexion|Adressage IPv4|Adressage IPv6<br>Link-local|Adressage<br>IPv6 privé|Adressage<br>IPv6 public|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |R1|G0/2|connecté à R2|10.1.1.1|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
 |R1|G0/3|connecté à R3|10.1.2.1|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
