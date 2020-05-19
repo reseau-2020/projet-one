@@ -3,10 +3,10 @@ L'adressage IPv4 est en /24.
 L'adressage IPv6 est en /26.
 
 ## Tripod 
-|Module|Interface|Description<br>Connexion|Adressage IPv4|Adressage IPv6<br>Link-local|Adressage<br>IPv6 privé|Adressage<br>IPv6 public|
+|Module|Interface|Description<br>Connexion|Adressage IPv4|Adressage<br>IPv6 Link-local|Adressage<br>IPv6 privé|Adressage<br>IPv6 public|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |R1|G0/2|connecté à R2|10.1.1.1|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
-|R1|G0/3|connecté à R3|10.1.2.1|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
+|R1|G0/3|connecté à R3|10.1.2.1|
 |R2|G0/1|connecté à R1|10.1.1.2|
 |R2|G0/3|connecté à R3|10.1.3.2|
 |R3|G0/1|connecté à R1|10.1.2.2|
@@ -14,24 +14,24 @@ L'adressage IPv6 est en /26.
 
 
 ## Liaison Tripod-Switchblocks
-|Module|Interface|Adressage IPv4|Adressage IPv6|Description/Connexion|
+|Module|Interface|Description/Connexion|Adressage IPv4|Adressage IPv6|
 |:-:|:-:|:-:|:-:|:-:|
-|R2|G0/2|10.3.1.1||connecté à DS1|
-|R2|G0/4|10.3.11.1||connecté à DS1|
-|R2|G0/5|10.3.4.1||connecté à DS2|
-|R2|G0/6|10.3.44.1||connecté à DS2|
-|R3|G0/3|10.3.3.1||connecté à DS2|
-|R3|G0/4|10.3.33.1||connecté à DS2|
-|R3|G0/5|10.3.2.1||connecté à DS1|
-|R3|G0/6|10.3.22.1||connecté à DS1|
-|DS1|G2/0|10.3.1.2||connecté à R2|
-|DS1|G3/0|10.3.11.2||connecté à R2|
-|DS1|G2/1|10.3.2.2||connecté à R3|
-|DS1|G3/1|10.3.22.2||connecté à R3|
-|DS2|G2/0|10.3.3.2||connecté à R3|
-|DS2|G3/0|10.3.33.2||connecté à R3|
-|DS2|G2/1|10.3.4.2||connecté à R2|
-|DS2|G3/1|10.3.44.2||connecté à R2|
+|R2|G0/2|connecté à DS1|10.3.1.1||
+|R2|G0/4|connecté à DS1|10.3.11.1||
+|R2|G0/5|connecté à DS2|10.3.4.1||
+|R2|G0/6|connecté à DS2|10.3.44.1||
+|R3|G0/3|connecté à DS2|10.3.3.1||
+|R3|G0/4|connecté à DS2|10.3.33.1||
+|R3|G0/5|connecté à DS1|10.3.2.1||
+|R3|G0/6|connecté à DS1|10.3.22.1||
+|DS1|G2/0|connecté à R2|10.3.1.2||
+|DS1|G3/0|connecté à R2|10.3.11.2||
+|DS1|G2/1|connecté à R3|10.3.2.2||
+|DS1|G3/1|connecté à R3|10.3.22.2||
+|DS2|G2/0|connecté à R3|10.3.3.2||
+|DS2|G3/0|connecté à R3|10.3.33.2||
+|DS2|G2/1|connecté à R2|10.3.4.2||
+|DS2|G3/1|connecté à R2|10.3.44.2||
 
 ## VLANs
 ### Switchblocks
