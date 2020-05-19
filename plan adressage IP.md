@@ -1,6 +1,6 @@
 # Plan d'adressage
 
-## Tripod
+## Tripod & Switchblocks
 |Module|Interface|Adressage IPv4 en /24|Adressage IPv6 en /64|Description/Connexion|
 |-:|:-:|:-:|:-:|:-:|
 |R1|G0/2|10.1.2.1||connecté à R2|
@@ -26,6 +26,7 @@
 |DS2|G2/1|
 |DS2|G3/1|
 
+## VLANs
 ### HSRP
 |VLAN|Port Access (AS1 et AS2)|Passerelle par défaut|IPv4|IPv6 Virtuelle|
 |-:|:-:|:-:|:-:|:-:|
@@ -35,10 +36,22 @@
 |VLAN40|G2/3|10.2.40.254/24|10.2.40.0/24|fe80::d:40|
 |VLAN99|VLAN natif|-|-|-|
 
+### Etherchannel
+|PortChannel|Ports Physiques|Commutateurs|
+|-:|:-:|:-:|
+|PO1|G0/0,G1/0|AS1-DS1|
+|PO2|G0/1,G1/1|AS1-DS2|
+|PO3|G0/2,G1/2|DS1-DS2|
+|PO4|G0/0,G1/0|AS2-DS2|
+|PO5|G0/1,G1/1|AS2-DS1|
 
+### Spanning-Tree
+|VLANs|DS1|DS2|
+|-:|:-:|:-:|
+|VLANs 10,30,99|Root Primary|Root Secondary|
+|VLANs 20,40|Root Secondary|Root Primary|
 
-
-## ???
+### Adressage Vlans
 |Commutateur|Interface|Adresse IPV4|Adressses IPv6|
 |-:|:-:|:-:|:-:|
 |DS1|VLAN10|10.2.10.252/24|fe80::d1:10 ; fd00:470:c814:1010::1 ; 2001:470:c814:1010::1|
