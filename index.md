@@ -147,3 +147,8 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 #### 9.5- Documentation technique, Rapport & Annexes
 
 
+# Programme du jour : 19/05/2020
+
+* Choix des blocs d'adressage IPv4 et du protocole de routage
+* Mise en place de la topologie dans GNS3
+*  
