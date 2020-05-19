@@ -33,8 +33,8 @@
 
 ## VLANs
 ### Switchblocks
-|Commutateur|Interface|Adresse IPV4|IPv6 Link-local|IPv6 privé|IPv6 public
-|:-:|:-:|:-:|:-:|
+|Commutateur|Interface|Adresse IPV4|IPv6 Link-local|IPv6 privé|IPv6 public|
+|:-:|:-:|:-:|:-:|:-:|:-:|
 |DS1|VLAN10|10.2.10.252/24|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
 |DS1|VLAN20|10.2.20.252/24|fe80::d1:20|fd00:470:c814:1020::1|2001:470:c814:1020::1|
 |DS1|VLAN30|10.2.30.252/24|fe80::d1:30|fd00:470:c814:1030::1|2001:470:c814:1030::1|
