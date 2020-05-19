@@ -14,24 +14,24 @@ L'adressage IPv6 est en /52.
 
 
 ## Liaison Tripod-Switchblocks
-|Module|Interface|Description/Connexion|Adressage IPv4|Adressage IPv6|
-|:-:|:-:|:-:|:-:|:-:|
-|R2|G0/2|connecté à DS1|10.3.1.1||
-|R2|G0/4|connecté à DS1|10.3.11.1||
-|R2|G0/5|connecté à DS2|10.3.4.1||
-|R2|G0/6|connecté à DS2|10.3.44.1||
-|R3|G0/3|connecté à DS2|10.3.3.1||
-|R3|G0/4|connecté à DS2|10.3.33.1||
-|R3|G0/5|connecté à DS1|10.3.2.1||
-|R3|G0/6|connecté à DS1|10.3.22.1||
-|DS1|G2/0|connecté à R2|10.3.1.2||
-|DS1|G3/0|connecté à R2|10.3.11.2||
-|DS1|G2/1|connecté à R3|10.3.2.2||
-|DS1|G3/1|connecté à R3|10.3.22.2||
-|DS2|G2/0|connecté à R3|10.3.3.2||
-|DS2|G3/0|connecté à R3|10.3.33.2||
-|DS2|G2/1|connecté à R2|10.3.4.2||
-|DS2|G3/1|connecté à R2|10.3.44.2||
+|Module|Interface|Description/Connexion|IPv4|IPv6 Link-local|IPv6 privé|IPv6 publique|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|R2|G0/2|connecté à DS1|10.3.1.1|
+|R2|G0/4|connecté à DS1|10.3.11.1|
+|R2|G0/5|connecté à DS2|10.3.4.1|
+|R2|G0/6|connecté à DS2|10.3.44.1|
+|R3|G0/3|connecté à DS2|10.3.3.1|
+|R3|G0/4|connecté à DS2|10.3.33.1|
+|R3|G0/5|connecté à DS1|10.3.2.1|
+|R3|G0/6|connecté à DS1|10.3.22.1|
+|DS1|G2/0|connecté à R2|10.3.1.2|
+|DS1|G3/0|connecté à R2|10.3.11.2|
+|DS1|G2/1|connecté à R3|10.3.2.2|
+|DS1|G3/1|connecté à R3|10.3.22.2|
+|DS2|G2/0|connecté à R3|10.3.3.2|
+|DS2|G3/0|connecté à R3|10.3.33.2|
+|DS2|G2/1|connecté à R2|10.3.4.2|
+|DS2|G3/1|connecté à R2|10.3.44.2|
 
 ## VLANs
 ### Switchblocks
