@@ -3,28 +3,28 @@
 ## Tripod & Switchblocks
 |Module|Interface|Adressage IPv4 en /24|Adressage IPv6 en /64|Description/Connexion|
 |:-:|:-:|:-:|:-:|:-:|
-|R1|G0/2|10.1.2.1||connecté à R2|
-|R1|G0/3|10.1.3.1||connecté à R3|
-|R2|G0/1|10.1.2.2||connecté à R1|
-|R2|G0/2|10.2.3.1||connecté à R3|
-|R2|G0/3|
-|R2|G0/4|
-|R2|G0/5|
-|R2|G0/6|
+|R1|G0/2|10.1.1.1||connecté à R2|
+|R1|G0/3|10.1.2.1||connecté à R3|
+|R2|G0/1|10.1.1.2||connecté à R1|
+|R2|G0/3|10.||connecté à R3|
+|R2|G0/2|10.||connecté à DS1|
+|R2|G0/4|10.||connecté à DS1|
+|R2|G0/5|10.||connecté à DS2|
+|R2|G0/6|10.||connecté à DS2|
 |R3|G0/1|10.1.3.2||connecté à R1|
 |R3|G0/2|10.2.3.2||connecté à R2|
-|R3|G0/3|
-|R3|G0/4|
-|R3|G0/5|
-|R3|G0/6|
-|DS1|G2/0|
-|DS1|G3/0|
-|DS1|G2/1|
-|DS1|G3/1|
-|DS2|G2/0|
-|DS2|G3/0|
-|DS2|G2/1|
-|DS2|G3/1|
+|R3|G0/3|10.||connecté à DS2|
+|R3|G0/4|10.||connecté à DS2|
+|R3|G0/5|10.||connecté à DS1|
+|R3|G0/6|10.||connecté à DS1|
+|DS1|G2/0|10.||connecté à R2|
+|DS1|G3/0|10.||connecté à R2|
+|DS1|G2/1|10.||connecté à R3|
+|DS1|G3/1|10.||connecté à R3|
+|DS2|G2/0|10.||connecté à R3|
+|DS2|G3/0|10.||connecté à R3|
+|DS2|G2/1|10.||connecté à R2|
+|DS2|G3/1|10.||connecté à R2|
 
 ## VLANs
 ### HSRP
