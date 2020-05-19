@@ -1,10 +1,10 @@
 # Plan d'adressage
 
 ## Tripod 
-|Module|Interface|Adressage IPv4 en /24|Adressage IPv6 en /64|Description/Connexion|
-|:-:|:-:|:-:|:-:|:-:|
-|R1|G0/2|10.1.1.1||connecté à R2|
-|R1|G0/3|10.1.2.1||connecté à R3|
+|Module|Interface|Adressage IPv4 en /24|IPv6 Link-local|IPv6 privé|IPv6 public|Description/Connexion|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|R1|G0/2|10.1.1.1|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|connecté à R2|
+|R1|G0/3|10.1.2.1||connecté à R3|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
 |R2|G0/1|10.1.1.2||connecté à R1|
 |R2|G0/3|10.1.3.2||connecté à R3|
 |R3|G0/1|10.1.2.2||connecté à R1|
