@@ -35,6 +35,7 @@
 |VLAN30|G2/2|10.2.30.254/24|10.2.30.0/24|fe80::d:30|
 |VLAN40|G2/3|10.2.40.254/24|10.2.40.0/24|fe80::d:40|
 |VLAN99|VLAN natif|-|-|-|
+<Besoin d'un Vlan100 pour un Vlan de Gestion?
 
 ### Etherchannel
 |PortChannel|Ports Physiques|Commutateurs|
