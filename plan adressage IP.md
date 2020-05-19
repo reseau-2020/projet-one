@@ -1,18 +1,20 @@
 # Plan d'adressage
+L'adressage IPv4 est en /24.
+L'adressage IPv6 est en /26.
 
 ## Tripod 
-|Module|Interface|Adressage IPv4 en /24|IPv6 Link-local|IPv6 privé|IPv6 public|Description/Connexion|
+|Module|Interface|Description/Connexion|Adressage IPv4|Adressage<br>IPv6 Link-local|Adressage<br>IPv6 privé|Adressage<br>IPv6 public|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|R1|G0/2|10.1.1.1|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|connecté à R2|
-|R1|G0/3|10.1.2.1||connecté à R3|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
-|R2|G0/1|10.1.1.2||connecté à R1|
-|R2|G0/3|10.1.3.2||connecté à R3|
-|R3|G0/1|10.1.2.2||connecté à R1|
-|R3|G0/2|10.1.3.1||connecté à R2|
+|R1|G0/2|connecté à R2|10.1.1.1|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
+|R1|G0/3|connecté à R3|10.1.2.1|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
+|R2|G0/1|connecté à R1|10.1.1.2|
+|R2|G0/3|connecté à R3|10.1.3.2|
+|R3|G0/1|connecté à R1|10.1.2.2|
+|R3|G0/2|connecté à R2|10.1.3.1|
 
 
 ## Liaison Tripod-Switchblocks
-|Module|Interface|Adressage IPv4 en /24|Adressage IPv6 en /64|Description/Connexion|
+|Module|Interface|Adressage IPv4|Adressage IPv6|Description/Connexion|
 |:-:|:-:|:-:|:-:|:-:|
 |R2|G0/2|10.3.1.1||connecté à DS1|
 |R2|G0/4|10.3.11.1||connecté à DS1|
@@ -33,7 +35,7 @@
 
 ## VLANs
 ### Switchblocks
-|Commutateur|Interface|Adresse IPV4|IPv6 Link-local|IPv6 privé|IPv6 public|
+|Commutateur|Interface|Adresse IPV4|IPv6 Link-local|IPv6 privé|IPv6 publique|
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |DS1|VLAN10|10.2.10.252/24|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
 |DS1|VLAN20|10.2.20.252/24|fe80::d1:20|fd00:470:c814:1020::1|2001:470:c814:1020::1|
