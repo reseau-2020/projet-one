@@ -1,4 +1,4 @@
-# Programme du jour: 18/05/2020
+# Programme du jour : 18/05/2020
 
 * Lecture de l'énoncé du projet
 * Listing détaillé et répartition des tâches
