@@ -151,6 +151,6 @@ Les prochaines journées seront dédiées à la configuration des topologies de 
 
 * Finalisation des tâches et sous-tâches
 * Répartition des tâches au sein du groupe
-* Choix des blocs d'adressage IPv4 et du protocole de routage
+* Choix des blocs d'adressage IPv4, des VLANs et du protocole de routage
 * Mise en place de la topologie dans GNS3
 
