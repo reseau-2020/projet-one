@@ -1,6 +1,18 @@
-## Plan adressage
+## HSPR
+|VLAN|Port Access (AS1 et AS2)|Passerelle par défaut|IPv4|IPv6 Virtuelle
+|-:|:-:|:-:|:-:|
+|VLAN10|G2/0|10.2.10.254/24|10.2.10.0/24|fe80::d:10|
+|VLAN20|G2/1|10.2.20.254/24|10.2.20.0/24|fe80::d:20|
+|VLAN30|G2/2|10.2.30.254/24|10.2.30.0/24|fe80::d:30|
+|VLAN40|G2/3|10.2.40.254/24|10.2.40.0/24|fe80::d:40|
+|VLAN99|VLAN natif||||
 
+
+
+
+## Plan adressage
 |Commutateur|Interface|Adresse IPV4|Adressses IPv6|
+|-:|:-:|:-:|:-:|
 |DS1|VLAN10|10.2.10.252/24|fe80::d1:10 ; fd00:470:c814:1010::1 ; 2001:470:c814:1010::1|
 |DS1|VLAN20|10.2.20.252/24|fe80::d1:20 ; fd00:470:c814:1020::1 ; 2001:470:c814:1020::1|
 |DS1|VLAN30|10.2.30.252/24|fe80::d1:30 ; fd00:470:c814:1030::1 ; 2001:470:c814:1030::1|
