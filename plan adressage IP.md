@@ -1,6 +1,6 @@
 # Plan d'adressage
 L'adressage IPv4 est en /24.
-L'adressage IPv6 est en /26.
+L'adressage IPv6 est en /52.
 
 ## Tripod 
 |Module|Interface|Description<br>Connexion|Adressage IPv4|Adressage<br>IPv6 Link-local|Adressage<br>IPv6 privé|Adressage<br>IPv6 public|
