@@ -1,4 +1,4 @@
-# Journal
+# Journaux
 
-
-[projet-one/journal de bord/18 mai 2020.md](https://github.com/reseau-2020/projet-one/blob/master/journal%20de%20bord/18%20mai%202020.md)
+[Journal du 18 Mai 2020](https://github.com/reseau-2020/projet-one/blob/master/journal%20de%20bord/2020-05-18-journal.md)
+[Journal du 19 Mai 2020](https://github.com/reseau-2020/projet-one/blob/master/journal%20de%20bord/2020-05-19-journal.md)
