@@ -1,11 +1,12 @@
 ## Plan adressage
 
-| Commutateur | Interface | Adresse IPV4 |Adressses IPv6 |
-| DS1 | VLAN10 |Oui|Oui|
-| DS1 | VLAN20 |Oui|Non|
-| DS1 | VLAN30 |Oui|Oui|
-| DS1 | VLAN40 |Oui|Non|
-| DS2 | VLAN10 |Oui|Oui|
-| DS2 | VLAN20 |Oui|Non|
-| DS2 | VLAN30 |Oui|Oui|
-| DS2 | VLAN40 |Oui|Non|
+|Commutateur|Interface|Adresse IPV4|Adressses IPv6|
+|-:|:-:|:-:|:-:|
+|DS1|VLAN10|10.2.10.252/24|fe80::d1:10 ; fd00:470:c814:1010::1 ; 2001:470:c814:1010::1|
+|DS1|VLAN20|10.2.20.252/24|fe80::d1:20 ; fd00:470:c814:1020::1 ; 2001:470:c814:1020::1|
+|DS1|VLAN30|10.2.30.252/24|fe80::d1:30 ; fd00:470:c814:1030::1 ; 2001:470:c814:1030::1|
+|DS1|VLAN40|10.2.40.252/24|fe80::d1:40 ; fd00:470:c814:1040::1 ; 2001:470:c814:1040::1|
+|DS2|VLAN10|10.2.10.253/24|fe80::d1:10 ; fd00:470:c814:1010::2 ; 2001:470:c814:1010::2|
+|DS2|VLAN20|10.2.20.253/24|fe80::d1:20 ; fd00:470:c814:1020::2 ; 2001:470:c814:1020::2|
+|DS2|VLAN30|10.2.30.253/24|fe80::d1:30 ; fd00:470:c814:1030::2 ; 2001:470:c814:1030::2|
+|DS2|VLAN40|10.2.40.253/24|fe80::d1:40 ; fd00:470:c814:1040::2 ; 2001:470:c814:1040::2|
