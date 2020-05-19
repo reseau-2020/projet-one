@@ -3,16 +3,16 @@
 ## Tripod
 |Module|Interface|Adressage IPv4 en /24|Adressage IPv6 en /64|Description/Connexion|
 |-:|:-:|:-:|:-:|:-:|
-|R1|G0/2|10.1.2.1|
-|R1|G0/3|10.1.3.1|
-|R2|G0/1|10.1.2.2|
-|R2|G0/2|10.2.3.1|
+|R1|G0/2|10.1.2.1||connecté à R2|
+|R1|G0/3|10.1.3.1||connecté à R3|
+|R2|G0/1|10.1.2.2||connecté à R1|
+|R2|G0/2|10.2.3.1||connecté à R3|
 |R2|G0/3|
 |R2|G0/4|
 |R2|G0/5|
 |R2|G0/6|
-|R3|G0/1|10.1.3.2|
-|R3|G0/2|10.2.3.2|
+|R3|G0/1|10.1.3.2||connecté à R1|
+|R3|G0/2|10.2.3.2||connecté à R2|
 |R3|G0/3|
 |R3|G0/4|
 |R3|G0/5|
