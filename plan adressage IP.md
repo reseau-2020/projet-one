@@ -1,4 +1,32 @@
-## HSRP
+# Plan d'adressage
+
+## Tripod
+|Module|Interface|Adressage IPv4 en /24|Adressage IPv6 en /64|Description/Connexion|
+|-:|:-:|:-:|:-:|:-:|
+|R1|G0/2|10.1.2.1|
+|R1|G0/3|10.1.3.1|
+|R2|G0/1|10.1.2.2|
+|R2|G0/2|10.2.3.1|
+|R2|G0/3|
+|R2|G0/4|
+|R2|G0/5|
+|R2|G0/6|
+|R3|G0/1|10.1.3.2|
+|R3|G0/2|10.2.3.2|
+|R3|G0/3|
+|R3|G0/4|
+|R3|G0/5|
+|R3|G0/6|
+|DS1|G2/0|
+|DS1|G3/0|
+|DS1|G2/1|
+|DS1|G3/1|
+|DS2|G2/0|
+|DS2|G3/0|
+|DS2|G2/1|
+|DS2|G3/1|
+
+### HSRP
 |VLAN|Port Access (AS1 et AS2)|Passerelle par défaut|IPv4|IPv6 Virtuelle|
 |-:|:-:|:-:|:-:|:-:|
 |VLAN10|G2/0|10.2.10.254/24|10.2.10.0/24|fe80::d:10|
@@ -10,7 +38,7 @@
 
 
 
-## Plan adressage
+## ???
 |Commutateur|Interface|Adresse IPV4|Adressses IPv6|
 |-:|:-:|:-:|:-:|
 |DS1|VLAN10|10.2.10.252/24|fe80::d1:10 ; fd00:470:c814:1010::1 ; 2001:470:c814:1010::1|
