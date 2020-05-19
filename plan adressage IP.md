@@ -1,5 +1,5 @@
-## HSPR
-|VLAN|Port Access (AS1 et AS2)|Passerelle par défaut|IPv4|IPv6 Virtuelle
+## HSRP
+|VLAN|Port Access (AS1 et AS2)|Passerelle par défaut|IPv4|IPv6 Virtuelle|
 |-:|:-:|:-:|:-:|
 |VLAN10|G2/0|10.2.10.254/24|10.2.10.0/24|fe80::d:10|
 |VLAN20|G2/1|10.2.20.254/24|10.2.20.0/24|fe80::d:20|
