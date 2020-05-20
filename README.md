@@ -1,2 +1,2 @@
 # projet-one
-Page Web Projet Groupe 1
+https://github.com/reseau-2020/projet.git
