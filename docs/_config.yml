@@ -30,7 +30,7 @@ twitter_username: goffinet
 github_username:  goffinet
 
 # Build settings
-theme: jekyll-theme-cayman
+theme: minima
 plugins:
   - jekyll-feed
 
