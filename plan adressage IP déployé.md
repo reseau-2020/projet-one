@@ -3,9 +3,9 @@ L'adressage IPv4 est en /24.
 L'adressage IPv6 est en /52.
 
 ## Tripod 
-|Module|Interface|Description<br>Connexion|Adressage IPv4|Adressage<br>IPv6 Link-local|Adressage<br>IPv6 privé|Adressage<br>IPv6 public|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-|R1|G0/2|connecté à R2|10.1.1.1|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
+|Module|Interface|Description<br>Connexion|Adressage IPv4|Adressage<br>IPv6 Link-local|
+|:-:|:-:|:-:|:-:|:-:|
+|R1|G0/2|connecté à R2|10.1.1.1|fe80:
 |R1|G0/3|connecté à R3|10.1.2.1|
 |R2|G0/1|connecté à R1|10.1.1.2|
 |R2|G0/3|connecté à R3|10.1.3.2|
@@ -14,8 +14,8 @@ L'adressage IPv6 est en /52.
 
 
 ## Liaison Tripod-Switchblocks
-|Module|Interface|Description/Connexion|IPv4|IPv6 Link-local|IPv6 privé|IPv6 publique|
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|Module|Interface|Description/Connexion|IPv4|IPv6 Link-local|
+|:-:|:-:|:-:|:-:|:-:|
 |R2|G0/2|connecté à DS1|10.3.1.1|
 |R2|G0/4|connecté à DS1|10.3.11.1|
 |R2|G0/5|connecté à DS2|10.3.4.1|
@@ -37,14 +37,14 @@ L'adressage IPv6 est en /52.
 ### Switchblocks
 |Commutateur|Interface|Adresse IPV4|IPv6 Link-local|IPv6 privé|IPv6 publique|
 |:-:|:-:|:-:|:-:|:-:|:-:|
-|DS1|VLAN10|10.2.10.252/24|fe80::d1:10|fd00:470:c814:1010::1|2001:470:c814:1010::1|
-|DS1|VLAN20|10.2.20.252/24|fe80::d1:20|fd00:470:c814:1020::1|2001:470:c814:1020::1|
-|DS1|VLAN30|10.2.30.252/24|fe80::d1:30|fd00:470:c814:1030::1|2001:470:c814:1030::1|
-|DS1|VLAN40|10.2.40.252/24|fe80::d1:40|fd00:470:c814:1040::1|2001:470:c814:1040::1|
-|DS2|VLAN10|10.2.10.253/24|fe80::d2:10|fd00:470:c814:1010::2|2001:470:c814:1010::2|
-|DS2|VLAN20|10.2.20.253/24|fe80::d2:20|fd00:470:c814:1020::2|2001:470:c814:1020::2|
-|DS2|VLAN30|10.2.30.253/24|fe80::d2:30|fd00:470:c814:1030::2|2001:470:c814:1030::2|
-|DS2|VLAN40|10.2.40.253/24|fe80::d2:40|fd00:470:c814:1040::2|2001:470:c814:1040::2|
+|DS1|VLAN10|10.2.10.252/24|fe80::d1:1|fd00:470:c814:1010::1|2001:470:c814:1010::1|
+|DS1|VLAN20|10.2.20.252/24|fe80::d1:1|fd00:470:c814:1020::1|2001:470:c814:1020::1|
+|DS1|VLAN30|10.2.30.252/24|fe80::d1:1|fd00:470:c814:1030::1|2001:470:c814:1030::1|
+|DS1|VLAN40|10.2.40.252/24|fe80::d1:1|fd00:470:c814:1040::1|2001:470:c814:1040::1|
+|DS2|VLAN10|10.2.10.253/24|fe80::d2:2|fd00:470:c814:1010::2|2001:470:c814:1010::2|
+|DS2|VLAN20|10.2.20.253/24|fe80::d2:2|fd00:470:c814:1020::2|2001:470:c814:1020::2|
+|DS2|VLAN30|10.2.30.253/24|fe80::d2:2|fd00:470:c814:1030::2|2001:470:c814:1030::2|
+|DS2|VLAN40|10.2.40.253/24|fe80::d2:2|fd00:470:c814:1040::2|2001:470:c814:1040::2|
 
 ### HSRP
 |VLAN|Port Access (AS1 et AS2)|Passerelle par défaut|IPv4|IPv6 Virtuelle|
