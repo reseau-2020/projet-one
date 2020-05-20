@@ -55,7 +55,7 @@ L'adressage IPv6 est en /52.
 |VLAN40|G2/3|10.2.40.254/24|10.2.40.0/24|fe80::d:40|
 |VLAN99|VLAN natif|-|-|-|
 
-Besoin d'un Vlan100 pour un Vlan de Gestion?
+Un Vlan de Gestion (Vlan 100) serait une bonne pratique afin de pouvoir joindre les commutateurs et éventuellement leur envoyer du trafic; cependant, l'utilisation d'Ansible va combler cette fonction. Il n'est donc pas nécessaire ici de déployer du Vlan de gestion sur nos commutateurs. 
 
 ### Etherchannel
 |PortChannel|Ports Physiques|Commutateurs|
