@@ -1,4 +1,4 @@
-# Plan d'adressage
+# Plan d'adressage déployé
 L'adressage IPv4 est en /24.
 L'adressage IPv6 est en /52.
 
