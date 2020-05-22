@@ -1,0 +1,7 @@
+---
+- import_tasks: enable_nat.yml
+  when:
+    - ansible_network_os == 'ios'
+    - nat is defined
+  tags:
+    - nat

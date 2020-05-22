@@ -1,0 +1,10 @@
+---
+- import_tasks: write_memory.yml
+  when: ansible_network_os == 'ios'
+  tags:
+    - write
+    - save
+- import_tasks: get_config.yml
+  tags:
+    - write
+    - save

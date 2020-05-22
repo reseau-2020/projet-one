@@ -1,0 +1,7 @@
+---
+- import_tasks: enable_dhcp_server.yml
+  when:
+    - ansible_network_os == 'ios'
+    - dhcp.dhcp_pool is defined
+  tags:
+    - dhcp-server

@@ -1,0 +1,10 @@
+---
+- name: redistribute static nat route to ospfv2
+  ios_config:
+    defaults: yes
+    parents: router ospf {{ routing.ospf_pid | default(1) }}
+    lines:
+      - default-information originate
+  when:
+    - nat is defined
+    - interfaces | selectattr('ospfv2', 'defined') | list

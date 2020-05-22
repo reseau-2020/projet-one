@@ -1,0 +1,25 @@
+---
+galaxy_info:
+  author: goffinet
+  description: configure OSPFv2
+  license: CC-BY-4.0
+  min_ansible_version: 2.9
+  galaxy_tags:
+    - cisco
+    - iosv
+    - ccna
+    - ipv4
+    - routing
+    - ospfv2
+  platforms:
+    - name: VIOS-ADVENTERPRISEK9-M
+      versions:
+        - 15.6(2)T
+    - name: vios_l2-ADVENTERPRISEK9-M
+      versions:
+        - 15.2(20170321:233949)
+dependencies:
+  - role: ios_interface
+  - role: ios_ipv4
+  - role: ios_ipv4-routing
+#  - role: ios_disable-dynamic-ipv4-routing
