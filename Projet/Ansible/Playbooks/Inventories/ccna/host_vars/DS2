@@ -63,21 +63,6 @@ interfaces:
     description: "Trunk Group Channel4 to AS2"
     trunk:
       native: 99
-  - id: Vlan99
-    description: "Management real gateway"
-    ipv4_address: Pas d'adresse pour le moment, à vérifier !!!!!!!
-    passive:
-    rip:
-    eigrp4:
-    ospfv2:
-      area: 0
-      cost: 1
-      pri: 255
-    eigrp6:
-    ospfv3:
-      area: 0
-      cost: 1
-      pri: 255
   - id: Vlan10
     description: "Vlan10 real gateway"
     ipv4_address: 10.2.10.253/24
