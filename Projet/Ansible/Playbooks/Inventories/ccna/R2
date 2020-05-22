@@ -53,7 +53,7 @@ interfaces:
       pri: 255
   - id: GigabitEthernet0/2
     description: "Link to DS1"
-    ipv4_address: 172.16.225.1/24
+    ipv4_address: 10.3.1.1/24
     rip:
     eigrp4:
     ospfv2:
@@ -61,11 +61,11 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::2'
+      - 'FE80::dd:2'
     eigrp6:
   - id: GigabitEthernet0/4
     description: "Link to DS1"
-    ipv4_address: 172.16.224.1/24
+    ipv4_address: 10.3.11.1/24
     rip:
     eigrp4:
     ospfv2:
@@ -73,10 +73,10 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::2'
+      - 'FE80::dd:2'
   - id: GigabitEthernet0/5
     description: "Link to DS2"
-    ipv4_address: 172.16.242.1/24
+    ipv4_address: 10.3.4.1/24
     rip:
     eigrp4:
     ospfv2:
@@ -84,11 +84,11 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::2'
+      - 'FE80::dd:2'
     eigrp6:
   - id: GigabitEthernet0/6
     description: "Link to DS2"
-    ipv4_address: 172.16.243.1/24
+    ipv4_address: 10.3.44.1/24
     rip:
     eigrp4:
     ospfv2:
@@ -96,7 +96,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::2'
+      - 'FE80::dd:2'
     eigrp6:
 routing:
   rid: 2.2.2.2
@@ -104,7 +104,7 @@ routing:
 dhcp:
   dhcp_pool:
     - id: "LANR2"
-      network: 192.168.33.0
-      netmask: 255.255.255.0
-      router: 192.168.33.1
-      dns: 192.168.33.1
+      network: 
+      netmask: 
+      router: 
+      dns: 
