@@ -3,6 +3,7 @@ hostname: R3
 interfaces:
   - id: GigabitEthernet0/0
     description: "Stub Interface"
+    stub: true
   - id: GigabitEthernet0/1
     description: "Link to R1"
     ipv4_address: 10.1.2.2/24
