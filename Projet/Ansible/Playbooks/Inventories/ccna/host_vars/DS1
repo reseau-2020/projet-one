@@ -143,7 +143,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'fe80::D1:1'
+      - 'fe80::d1:1'
       - 'fd00:470:c814:1040::1/64'
     eigrp6:
     ospfv3:
