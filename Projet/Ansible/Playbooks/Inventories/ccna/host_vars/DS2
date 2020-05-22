@@ -89,8 +89,8 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::D2:2'
-      - 'FD00:470:c814:1010::2/64'
+      - 'fe80::d2:2'
+      - 'fd00:470:c814:1010::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -107,8 +107,8 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::D2:2'
-      - 'FD00:470:c814:1020::2/64'
+      - 'fe80::d2:2'
+      - 'fd00:470:c814:1020::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -125,8 +125,8 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::D2:2'
-      - 'FD00:470:c814:1030::2/64'
+      - 'fe80::d2:2'
+      - 'fd00:470:c814:1030::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -143,8 +143,8 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::D2:2'
-      - 'FD00:470:c814:1040::2/64'
+      - 'fe80::d2:2'
+      - 'fd00:470:c814:1040::2/64'
     eigrp6:
     ospfv3:
       area: 0
@@ -161,7 +161,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::D2:2'
+      - 'fe80::d2:2'
     eigrp6:
     ospfv3:
       area: 0
@@ -178,7 +178,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::D2:2'
+      - 'FE80::d2:2'
     eigrp6:
     ospfv3:
       area: 0
@@ -195,7 +195,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::D2:2'
+      - 'fe80::d2:2'
     eigrp6:
     ospfv3:
       area: 0
@@ -212,7 +212,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::D2:2'
+      - 'fe80::d2:2'
     eigrp6:
     ospfv3:
       area: 0
@@ -266,26 +266,26 @@ routing:
     - id: Vlan10
       group: 16
       protocol: ipv6
-      address: 'FE80::D1:1'
+      address: 'fe80::d1:1'
       preempt: false
       mode: standby
     - id: Vlan20
       group: 26
       protocol: ipv6
-      address: 'FE80::D1:1'
+      address: 'fe80::d1:1'
       priority: 150
       preempt: true
       mode: standby
     - id: Vlan30
       group: 36
       protocol: ipv6
-      address: 'FE80::D1:1'
+      address: 'fe80::d1:1'
       preempt: false
       mode: standby
     - id: Vlan40
       group: 46
       protocol: ipv6
-      address: 'FE80::D1:1'
+      address: 'fe80::d1:1'
       priority: 150
       preempt: true
       mode: standby
