@@ -22,9 +22,10 @@ interfaces:
   - id: GigabitEthernet0/1
     description: "Internet connexion ip nat outside"
     ipv4_address: dhcp
+    ipv6_adresss: fe80::cafe:1
   - id: GigabitEthernet0/2
     description: "Link to R2"
-    ipv4_address: 10.1.1.0/24
+    ipv4_address: 10.1.1.1/24
     rip:
     eigrp4:
     ospfv2:
@@ -40,7 +41,7 @@ interfaces:
       pri: 255
   - id: GigabitEthernet0/3
     description: "Link to R3"
-    ipv4_address: 10.1.2.0/24
+    ipv4_address: 10.1.2.1/24
     rip:
     eigrp4:
     ospfv2:
