@@ -2,7 +2,8 @@
 hostname: R2
 interfaces:
  - id: GigabitEthernet0/0
-    description: "stub interface"
+    description: "Stub interface"
+    Stub:true
   - id: GigabitEthernet0/1
     description: "Link to R1"
     ipv4_address: 10.1.1.2/24
