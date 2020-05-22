@@ -161,7 +161,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'fe80::D1:1'
+      - 'fe80::d1:1'
     eigrp6:
     ospfv3:
       area: 0
