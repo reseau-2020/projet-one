@@ -3,7 +3,7 @@ hostname: R1
 interfaces:
   - id: GigabitEthernet0/0
     description: "LAN R1"
-    ipv4_address: 192.168.1.1/24
+    ipv4_address: 10.192.1.0/24
     passive:
     rip:
     eigrp4:
@@ -24,7 +24,7 @@ interfaces:
     ipv4_address: dhcp
   - id: GigabitEthernet0/2
     description: "Link to R2"
-    ipv4_address: 192.168.225.1/24
+    ipv4_address: 10.1.1.0/24
     rip:
     eigrp4:
     ospfv2:
@@ -32,7 +32,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::1'
+      - 'FE80::dd:1'
     eigrp6:
     ospfv3:
       area: 0
@@ -40,7 +40,7 @@ interfaces:
       pri: 255
   - id: GigabitEthernet0/3
     description: "Link to R3"
-    ipv4_address: 192.168.226.1/24
+    ipv4_address: 10.1.2.0/24
     rip:
     eigrp4:
     ospfv2:
@@ -48,7 +48,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::1'
+      - 'FE80::dd:1'
     eigrp6:
     ospfv3:
       area: 0
@@ -60,13 +60,13 @@ routing:
 dhcp:
   dhcp_pool:
     - id: "LANR1"
-      network: 192.168.1.0
+      network: 10.192.1.0
       netmask: 255.255.255.0
-      router: 192.168.1.1
-      dns: 192.168.1.1
+      router: 10.192.1.1
+      dns: 10.192.1.1
   dhcp_excluded:
-    - start: 192.168.1.1
-      end: 192.168.1.100
+    - start: 10.192.1.1
+      end: 10.192.1.100
 nat:
   name: "LANS"
   inside:
@@ -75,5 +75,5 @@ nat:
     - GigabitEthernet0/3
   outside: GigabitEthernet0/1
   sources:
-    - "192.168.0.0 0.0.255.255"
+    - "10.192.0.0 0.0.255.255"
     - "172.16.0.0 0.0.255.255"
