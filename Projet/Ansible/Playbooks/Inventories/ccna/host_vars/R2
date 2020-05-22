@@ -88,7 +88,7 @@ routing:
 dhcp:
   dhcp_pool:
     - id: "LANR2"
-      network: 10.192.1.0
+      network: 10.192.0.0
       netmask: 255.255.255.0
-      router: 10.192.1.1
-      dns: 10.192.1.1
+      router: 10.192.0.1
+      dns: 10.192.0.1
