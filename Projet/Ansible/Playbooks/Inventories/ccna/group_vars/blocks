@@ -11,7 +11,7 @@ vlans:
   - id: 40
     name: VLAN40
   - id: 99
-    name: MANAGEMENT
+    name: NATIVE
 stubvlan:
   id: 4000
   name: STUB
