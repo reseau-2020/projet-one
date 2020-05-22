@@ -64,7 +64,7 @@ dhcp:
       network: 10.191.0.0
       netmask: 255.255.255.0
       router: 10.191.0.1
-      dns: 10.191.0.1
+      dns: 1.1.1.1
   dhcp_excluded:
     - start: 10.191.0.1
       end: 10.191.0.100
@@ -76,5 +76,4 @@ nat:
     - GigabitEthernet0/3
   outside: GigabitEthernet0/1
   sources:
-    - "10.191.0.0 0.0.255.255"
     - "10.0.0.0 0.255.255.255"
