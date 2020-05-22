@@ -11,7 +11,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::DD:2'
+      - 'FE80::dd:2'
     eigrp6:
     ospfv3:
       area: 0
@@ -27,7 +27,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::DD:2'
+      - 'FE80::dd:2'
     eigrp6:
     ospfv3:
       area: 0
@@ -43,7 +43,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::DD:2'
+      - 'FE80::dd:2'
     eigrp6:
   - id: GigabitEthernet0/4
     description: "Link to DS1"
@@ -55,7 +55,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::DD:2'
+      - 'FE80::dd:2'
   - id: GigabitEthernet0/5
     description: "Link to DS2"
     ipv4_address: 10.3.4.1/24
@@ -66,7 +66,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::DD:2'
+      - 'FE80::dd:2'
     eigrp6:
   - id: GigabitEthernet0/6
     description: "Link to DS2"
@@ -78,7 +78,7 @@ interfaces:
       cost: 1
       pri: 255
     ipv6_addresses:
-      - 'FE80::DD:2'
+      - 'FE80::dd:2'
     eigrp6:
 routing:
   rid: 2.2.2.2
