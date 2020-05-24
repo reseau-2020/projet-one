@@ -1,0 +1,34 @@
+---
+- name: configure ipv4 adresses nat outside interface
+  ios_config:
+    defaults: yes
+    parents: interface {{ nat.outside }}
+    lines:
+      - ip nat outside
+  when: nat.outside is defined
+- name: configure ip nat inside interfaces
+  ios_config:
+    defaults: yes
+    parents: interface {{ item }}
+    lines:
+      - ip nat inside
+  loop: "{{ nat.inside }}"
+  when: item is defined
+- name: configure source nat acl
+  ios_config:
+    defaults: yes
+    parents: ip access-list standard {{ nat.name }}
+    lines:
+      - permit {{ item }}
+  loop: "{{ nat.sources }}"
+  when:
+    - nat.name is defined
+    - item is defined
+- name: configure the nat rule
+  ios_config:
+    defaults: yes
+    lines:
+      - ip nat inside source list {{ nat.name }} interface {{ nat.outside }} overload
+  when:
+    - nat.name is defined
+    - nat.outside is defined

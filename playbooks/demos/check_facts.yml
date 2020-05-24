@@ -1,0 +1,10 @@
+---
+- name: CHECK FACTS
+  hosts: cisco
+  gather_facts: no
+  tasks:
+    - name: GATHER ROUTER FACTS
+      ios_facts:
+      register: print_output
+    - debug:
+        var: ansible_net_interfaces['GigabitEthernet0/0'].operstatus

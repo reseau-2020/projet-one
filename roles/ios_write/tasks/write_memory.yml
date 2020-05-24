@@ -1,0 +1,4 @@
+---
+- name: write memory
+  ios_config:
+    save_when: always

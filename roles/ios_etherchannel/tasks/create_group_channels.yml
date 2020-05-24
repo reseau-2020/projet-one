@@ -1,0 +1,9 @@
+- name: set link aggregation group to members
+  ios_linkagg:
+    group: "{{ item.id }}"
+    mode: "{{ item.mode }}"
+    members:
+      - "{{ item.interfaces[0] }}"
+      - "{{ item.interfaces[1] }}"
+  loop: "{{ group_channels }}"
+  when: group_channels is defined

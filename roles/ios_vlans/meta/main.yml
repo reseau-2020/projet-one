@@ -1,0 +1,20 @@
+---
+galaxy_info:
+  author: goffinet
+  description: configure vlan database, access and trunk ports
+  license: CC-BY-4.0
+  min_ansible_version: 2.9
+  galaxy_tags:
+    - cisco
+    - iosv
+    - ccna
+    - vlan
+    - access
+    - trunk
+  platforms:
+    - name: vios_l2-ADVENTERPRISEK9-M
+      versions:
+        - 15.2(20170321:233949)
+dependencies:
+  - role: ios_etherchannel
+  - role: ios_interface

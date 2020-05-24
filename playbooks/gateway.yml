@@ -1,0 +1,15 @@
+---
+# gateway.yml
+- hosts: core
+  gather_facts: False
+  roles:
+    - role: ios_common
+    - role: ios_interface
+    - role: ios_ipv4
+    - role: ios_ipv6
+    - role: ios_ipv4-routing
+    - role: ios_ipv6-routing
+    - role: ios_nat44
+    - role: ios_recursive-dns-server
+    - role: ios_dhcp-server
+    - role: ios_write
