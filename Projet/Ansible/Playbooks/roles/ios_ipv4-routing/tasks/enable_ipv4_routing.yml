@@ -1,7 +1,0 @@
----
-- name: enable ipv4 routing
-  ios_config:
-    defaults: yes
-    lines: ip routing
-  when:
-    - routing is defined

@@ -1,5 +1,0 @@
----
-- name: disable rip
-  ios_config:
-    defaults: yes
-    lines: no router rip

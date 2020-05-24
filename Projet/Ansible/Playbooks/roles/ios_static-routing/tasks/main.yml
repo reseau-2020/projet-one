@@ -1,6 +1,0 @@
----
-- import_tasks: add_ip_routes.yml
-  when:
-    - ansible_network_os == 'ios'
-  tags:
-    - static
