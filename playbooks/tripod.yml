@@ -24,9 +24,11 @@
         - '"ospf" in ipv6.routing'
     - role: ios_recursive-dns-server
     - role: ios_dhcp-server
-    - role: ios_write
 - hosts: R1
   gather_facts: False
   roles:
-    - role: ios_nat44
+    - role: ios_nat
+- hosts: core
+  gather_facts: False
+  roles:
     - role: ios_write
