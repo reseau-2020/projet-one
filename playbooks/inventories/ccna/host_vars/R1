@@ -3,7 +3,7 @@ hostname: R1
 interfaces:
   - id: GigabitEthernet0/0
     description: "LAN R1"
-    ipv4_address: 10.191.0.0/24
+    ipv4_address: 10.191.0.1/24
     passive:
     rip:
     eigrp4:
