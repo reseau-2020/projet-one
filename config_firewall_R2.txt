@@ -3,8 +3,8 @@ hostname R2
 !
 ip dhcp pool LAN
    network 10.192.0.0 255.255.255.0
-   default-router 10.191.0.1
-   dns-server x.x.x.x
+   default-router 10.192.0.1
+   dns-server 10.192.0.1
 !
 ip dhcp pool DMZ
    network 192.168.101.0 255.255.255.0
