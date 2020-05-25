@@ -1,10 +1,10 @@
 !
-hostname R1
+hostname R3
 !
 ip dhcp pool LAN
-   network 192.168.59.0 255.255.255.0
-   default-router 192.168.59.1
-   dns-server 192.168.59.1
+   network 10.193.0.0 255.255.255.0
+   default-router 10.193.0.1
+   dns-server ???
 !
 ip dhcp pool DMZ
    network 192.168.101.0 255.255.255.0
@@ -84,7 +84,7 @@ interface G0/1
 !
 interface G0/0
  description Interface LAN
- ip address 192.168.59.1 255.255.255.0
+ ip address 10.193.0.1 255.255.255.0
  ip nat inside
  zone-member security lan
  no shutdown
