@@ -1,0 +1,4 @@
+ip dhcp pool LAN
+network 10.104.1.0 255.255.255.0
+default-routeur 10.104.1.1
+dns-server 1.1.1.1
