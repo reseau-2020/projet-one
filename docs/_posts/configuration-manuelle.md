@@ -9,3 +9,6 @@ Ajouter les blocs de commandes utilisés pour la configuration manuelle
       Pour changer le nom de la machine :
           sudo echo PCx > /etc/hostname
           reboot
+
+      Configuration du service DNS :
+          echo "nameserver 1.1.1.1" >> /etc/resolv.conf
