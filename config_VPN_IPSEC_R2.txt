@@ -1,0 +1,42 @@
+hostname R2
+!
+crypto isakmp policy 1
+ encr aes 256
+ authentication pre-share
+ group 5
+!
+crypto isakmp key cisco123 address 10.2.2.1
+!
+crypto ipsec transform-set to-R3-set esp-aes 256 esp-sha-hmac
+!
+crypto map cm-to-R3 1 ipsec-isakmp
+ set peer 10.2.2.1
+ set transform-set to-R3-set
+ match address crypto-acl
+!
+interface G0/0
+ ip address 10.1.1.1 255.255.255.252
+ ip nat outside
+ no shutdown
+ crypto map cm-to-R3
+!
+interface G0/1
+ ip address 192.168.1.1 255.255.255.0 255.255.255.0
+ ip nat inside
+ no shutdown
+!
+ip route 0.0.0.0 0.0.0.0 10.1.1.2 222
+!
+ip nat inside source route-map nonat interface G0/0 overload
+!
+ip access-list extended nonat-acl
+ deny ip 192.168.1.0 0.0.0.255 192.168.3.0 0.0.0.255
+ permit ip 192.168.1.0 0.0.0.255 any
+!
+ip access-list extended crypto-acl
+ permit ip 192.168.1.0 0.0.0.255 192.168.3.0 0.0.0.255
+!
+route-map nonat permit 10
+ match ip address nonat-acl
+!
+end
