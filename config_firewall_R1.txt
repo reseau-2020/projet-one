@@ -80,22 +80,33 @@ interface G0/1
 interface G0/0
  description Interface DMZ
  ip address 10.191.0.1 255.255.255.0
+ zone-member security dmz
+ no shutdown
+!
+!R1 vers R2
+!
+interface G0/2
+ description Interface LAN
+ ip address 10.1.1.1 255.255.255.0
  ip nat inside
  zone-member security lan
  no shutdown
 !
-interface G0/2
- description Interface DMZ
- ip address  255.255.255.0
- zone-member security dmz
+!R1 vers R3
+!
+interface G0/3
+ description Interface LAN
+ ip address 10.1.2.1 255.255.255.0
+ ip nat inside
+ zone-member security lan
  no shutdown
 !
 ip dns server
 ip nat inside source list LAN_NAT interface G0/1 overload
 !
 ip access-list extended LAN_NAT
- permit ip 192.168.59.0 0.0.0.255 any
- permit ip 192.168.101.0 0.0.0.255 any
+ permit ip 10.191.0.1 0.0.0.255 any
+ permit ip 10.191..1 0.0.0.255 any
 ip access-list extended SSH
  permit tcp any any eq 22
  deny   ip any any
