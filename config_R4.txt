@@ -32,7 +32,6 @@ conf t
 ip domain lookup
 ip name-server 1.1.1.1
 ip dns server
-exit
 !
 ip dhcp pool LAN
 network 10.104.1.0 255.255.255.0
