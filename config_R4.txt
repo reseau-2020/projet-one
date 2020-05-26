@@ -23,7 +23,6 @@ default-router 10.104.1.1
 dns-server 10.104.1.1
 ipv6 address fe80::dd:4 link-local
 ipv6 address fd00:470:c814:1004::1/64
-exit
 !
 interface GigabitEthernet0/2
 no shutdown
