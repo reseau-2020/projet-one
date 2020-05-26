@@ -1,0 +1,33 @@
+conf t
+hostname R4
+enable secret testtest
+username root secret testtest
+!
+! Configurer et sécuriser SSH
+ip domain-name lan4
+crypto key generate rsa
+2048
+!
+! Configurer l'adressage IPv4 et IPv6  
+interface GigabitEthernet0/1
+no shutdown
+ip address dhcp
+ipv6 address fe80::dd:4 link-local
+ipv6 address fd00:470:c814:1004::1/64
+exit
+!
+interface GigabitEthernet0/2
+no shutdown
+ip address 10.104.1.1 255.255.255.0
+ipv6 address fe80::dd:4 link-local
+ipv6 address fd00:470:c814:1004::2/64
+exit
+!
+ipv6 unicast-routing
+!
+ip dhcp pool LAN
+network 10.104.1.0 255.255.255.0
+default-routeur 10.104.1.1
+dns-server 1.1.1.1
+end
+wr
