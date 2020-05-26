@@ -12,6 +12,7 @@ crypto key generate rsa
 interface GigabitEthernet0/1
 no shutdown
 ip address dhcp
+ip nat outside 
 ipv6 address fe80::dd:4 link-local
 ipv6 address fd00:470:c814:1004::1/64
 exit
