@@ -3,13 +3,8 @@ hostname R4
 !
 ip dhcp pool LAN
    network 10.104.1.0 255.255.255.0
-   default-router 10.191.1.1
-   dns-server 10.191.1.1
-!
-ip dhcp pool DMZ
-   network 10.191.0.0 255.255.255.0
-   default-router 10.191.0.1
-   dns-server 10.191.0.1
+   default-router 10.104.1.1
+   dns-server 1.1.1.1
 !
 ip domain name lan
 !
@@ -17,9 +12,6 @@ ip domain-lookup
 !
 username root secret testtest
 !
-class-map type inspect match-any internet-dmz-class
- match protocol http
- match protocol https
 class-map type inspect match-any icmp-class
  match protocol icmp
 class-map type inspect match-any remote-access-class
@@ -33,10 +25,6 @@ class-map type inspect match-any internet-trafic-class
  match protocol http
  match protocol https
  match protocol icmp
-class-map type inspect match-any lan-dmz-class
- match protocol http
- match protocol https
- match protocol ssh
 !
 !
 policy-map type inspect to-self-policy
@@ -50,28 +38,15 @@ policy-map type inspect to-self-policy
   pass
  class class-default
   drop log
-policy-map type inspect lan-dmz-policy
- class type inspect lan-dmz-class
-  inspect
- class class-default
-policy-map type inspect internet-dmz-policy
- class type inspect internet-dmz-class
-  inspect
- class class-default
 policy-map type inspect lan-internet-policy
  class type inspect internet-trafic-class
   inspect
  class class-default
 !
-zone security lan
+zone security lan4
 zone security internet
-zone security dmz
-zone-pair security lan-internet source lan destination internet
- service-policy type inspect lan-internet-policy
-zone-pair security lan-dmz source lan destination dmz
- service-policy type inspect lan-dmz-policy
-zone-pair security internet-dmz source internet destination dmz
- service-policy type inspect internet-dmz-policy
+zone-pair security lan4-internet source lan4 destination internet
+ service-policy type inspect lan4-internet-policy
 zone-pair security internet-self source internet destination self
  service-policy type inspect to-self-policy
 !
@@ -82,17 +57,10 @@ interface G0/1
  zone-member security internet
  no shutdown
 !
-interface G0/0
- description Interface DMZ
- ip address 10.191.0.1 255.255.255.0
- ip nat inside
- zone-member security dmz
- no shutdown
-!
 interface G0/2
  description Interface LAN
  ip address 10.104.1.1 255.255.255.0
- zone-member security lan
+ zone-member security lan4
  no shutdown
 !
 ip dns server
