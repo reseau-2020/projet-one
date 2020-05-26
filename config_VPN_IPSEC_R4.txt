@@ -5,9 +5,7 @@
 ! Bloc de commandes pour R4
 
 interface G0/2
- ip address 10.104.1.1 255.255.255.0
  ip nat inside
- no shutdown
 !
 interface GigabitEthernet0/3
  ! ip address 10.104.122.250 255.255.255.0
@@ -15,10 +13,6 @@ interface GigabitEthernet0/3
  ip nat outside
  no shutdown
 !
-ip dhcp pool lan
- network 10.104.14.0 255.255.255.0
- default-router 10.104.1.1
- dns-server 1.1.1.1
 ip route 0.0.0.0 0.0.0.0 10.104.122.1
 ip access-list extended LAN_NAT
  permit ip 10.104.14.0 0.0.0.255 any
@@ -31,12 +25,12 @@ crypto isakmp policy 1
  group 5
  lifetime 7200
 !
-crypto isakmp key cisco123 address 10.104.122.162
+crypto isakmp key cisco123 address 192.168.122.239
 !
 crypto ipsec transform-set to-R1-set esp-aes 256 esp-sha-hmac
 !
 crypto map cm-to-R1 1 ipsec-isakmp
- set peer 10.104.122.162
+ set peer 192.168.122.239
  set transform-set to-R1-set
  match address crypto-acl
 !
@@ -44,11 +38,11 @@ interface G0/3
  crypto map cm-to-R1
 !
 ip access-list extended crypto-acl
- permit ip 10.104.14.0 0.0.0.255 10.104.59.0 0.0.0.255
+ permit ip 10.104.1.0 0.0.0.255 10.104.1.0 0.0.0.255
 !
 ip access-list extended LAN_NAT
- 5 deny ip 10.104.14.0 0.0.0.255 10.104.59.0 0.0.0.255
- 10 permit ip 10.104.14.0 0.0.0.255 any
+ 5 deny ip 10.104.1.0 0.0.0.255 10.1.0.0 0.0.255.255
+ 10 permit ip 10.104.1.0 0.0.0.255 any
 !
 ip nat inside source list LAN_NAT interface G0/3 overload
 end
