@@ -105,11 +105,10 @@ ip dns server
 ip nat inside source list LAN_NAT interface G0/1 overload
 !
 ip access-list extended LAN_NAT
- permit ip 10.191.0.1 0.0.0.255 any
- permit ip 10.191..1 0.0.0.255 any
+ permit ip 10.0.0.0 0.0.0.255 any
 ip access-list extended SSH
  permit tcp any any eq 22
- deny   ip any any
+ deny ip any any
 ip access-list extended DHCP
  permit udp any any eq 68
  deny udp any any
