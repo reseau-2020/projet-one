@@ -17,7 +17,7 @@ ip route 0.0.0.0 0.0.0.0 192.168.122.1
 ip access-list extended LAN_NAT
  permit ip 192.168.14.0 0.0.0.255 any
 !
-ip nat inside source list LAN_NAT interface G0/3 overload
+ip nat inside source list LAN_NAT interface G0/1 overload
 !
 crypto isakmp policy 1
  encr aes 256
