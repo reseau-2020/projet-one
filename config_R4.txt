@@ -37,10 +37,25 @@ R4(config-if)#ipv6 address fe80::dd:4 link-local
 R4(config-if)#ipv6 address fd00:470:c814:1004::2/64
 R4(config-if)#exit
 
-R1(config-if)#ipv6 unicast-routing
-R4#copy running-config startup-config
+R4(config-if)#ipv6 unicast-routing
+hostname R1
+ipv6 unicast-routing
+interface G0/0
+    ipv6 address FE80::dd:1 link-local
+    ipv6 address 2001:DB8:1AB:1::1/64
+    ipv6 address FD0B:E954:B412:1::1/64
+    no shutdown
+interface G0/2
+    ipv6 address FE80::dd:4 link-local
+    no shutdown
+ipv6 route 2001:470:c814:1004cc2/64 G0/2 
+ipv6 route fd00:470:c814:1004::2/64 G0/2 
+end
 
 R4(config-if)#ip dhcp pool LAN
 network 10.104.1.0 255.255.255.0
 default-routeur 10.104.1.1
 dns-server 1.1.1.1
+
+R4#copy running-config startup-config
+
