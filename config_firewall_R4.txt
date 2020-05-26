@@ -7,9 +7,9 @@ ip dhcp pool LAN
    dns-server 10.191.1.1
 !
 ip dhcp pool DMZ
-   network 192.168.101.0 255.255.255.0
-   default-router 192.168.101.1
-   dns-server 192.168.101.1
+   network 10.191.0.0 255.255.255.0
+   default-router 10.191.0.1
+   dns-server 10.191.0.1
 !
 ip domain name lan
 !
@@ -83,16 +83,16 @@ interface G0/1
  no shutdown
 !
 interface G0/0
- description Interface LAN
- ip address 192.168.59.1 255.255.255.0
+ description Interface DMZ
+ ip address 10.191.0.1 255.255.255.0
  ip nat inside
- zone-member security lan
+ zone-member security dmz
  no shutdown
 !
 interface G0/2
- description Interface DMZ
- ip address 192.168.101.1 255.255.255.0
- zone-member security dmz
+ description Interface LAN
+ ip address 10.104.1.1 255.255.255.0
+ zone-member security lan
  no shutdown
 !
 ip dns server
