@@ -30,7 +30,7 @@ end
 !
 conf t
 ip domain lookup
-ip name-server 1.1.1.1
+ip name-server 8.8.8.8
 ip dns server
 !
 ip dhcp pool LAN
