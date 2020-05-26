@@ -8,15 +8,21 @@ ip domain-name lan4
 crypto key generate rsa
 2048
 !
+access-list 1 permit 10.0.0.0 0.255.255.255
+ip nat inside source list 1 interface g0/1 overload
+!
 ! Configurer l'adressage IPv4 et IPv6  
 interface GigabitEthernet0/1
-no shutdown
 ip address dhcp
-ip nat outside 
-ip nat inside source list lan interface GigabitEthernet0/1 overload
+ip nat outside
+no shutdown
+end
+!
+conf t
 ip domain lookup
 ip name-server 1.1.1.1
 ip dns server
+!
 ip dhcp pool LAN
 network 10.104.1.0 255.255.255.0
 default-router 10.104.1.1
@@ -26,6 +32,7 @@ ipv6 address fd00:470:c814:1004::1/64
 !
 interface GigabitEthernet0/2
 no shutdown
+ip nat inside
 ip address 10.104.1.1 255.255.255.0
 ipv6 address fe80::dd:4 link-local
 ipv6 address fd00:470:c814:1004::2/64
