@@ -23,12 +23,12 @@ interface G0/1
  crypto map cm-to-R4
 !
 ip access-list extended crypto-acl
- permit ip 10.1.0.0 0.0.255.255 10.104.1.0 0.0.0.255
+ permit ip 10.0.0.0 0.255.255.255 10.104.1.0 0.0.0.255
 !
 no ip access-list standard LAN_NAT
 ip access-list extended LAN_NAT
- 5 deny ip 10.1.0.0 0.0.255.255 10.104.1.0 0.0.0.255
- 10 permit ip 10.1.0.0 0.0.255.255 any
+ 5 deny ip 10.0.0.0 0.255.255.255 10.104.1.0 0.0.0.255
+ 10 permit ip 10.0.0.0 0.255.255.255 any
 ! Pour la DMZ plus tard 20 permit ip 10.X.X.X 0.0.0.255 any
 !
 end
