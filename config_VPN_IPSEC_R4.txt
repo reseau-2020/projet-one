@@ -38,7 +38,7 @@ interface G0/3
  crypto map cm-to-R1
 !
 ip access-list extended crypto-acl
- permit ip 10.104.1.0 0.0.0.255 10.104.1.0 0.0.0.255
+ permit ip 10.104.1.0 0.0.0.255 10.0.0.0 0.255.255.255
 !
 ip access-list extended LAN_NAT
  5 deny ip 10.104.1.0 0.0.0.255 10.0.0.0 0.255.255.255
