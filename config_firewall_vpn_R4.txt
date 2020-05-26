@@ -96,8 +96,8 @@ interface G0/2
  zone-member security lan4
  no shutdown
 !
-ip access-list extended LAN_NAT
- permit ip 10.0.0.0 0.0.0.255 any
+! ip access-list extended LAN_NAT (supprimer?)
+!  permit ip 10.0.0.0 0.0.0.255 any (supprimer?)
 ip access-list extended SSH
  permit tcp any any eq 22
  deny   ip any any
@@ -108,6 +108,21 @@ ip access-list extended DNS
  permit udp any any eq 53
  deny udp any any
 !
+! Adaptation du Pare-feu R4 pour le VPN
+!
+ip access-list extended ISAKMP_IPSEC
+ permit udp any any eq isakmp
+ permit ahp any any
+ permit esp any any
+ permit udp any any eq non500-isakmp
+class-map type inspect match-any vpn-class
+ match access-group name ISAKMP_IPSEC
+policy-map type inspect to-self-policy
+ class type inspect vpn-class
+  inspect
+  end
+!
+conf t
 line con 0
  exec-timeout 0 0
  privilege level 15
@@ -131,8 +146,8 @@ interface G0/2
  ip nat inside
 !
 ip route 0.0.0.0 0.0.0.0 192.168.122.1
-ip access-list extended LAN_NAT
- permit ip 10.104.1.0 0.0.0.255 any
+! ip access-list extended LAN_NAT (supprimer?)
+!  permit ip 10.104.1.0 0.0.0.255 any (supprimer?)
 !
 ip nat inside source list LAN_NAT interface G0/1 overload
 !
