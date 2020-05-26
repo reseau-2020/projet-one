@@ -1,0 +1,34 @@
+! Configuration du tunnel VPN IPSEC (entre R1 et R4)
+! liens utilisés : https://cisco.goffinet.org/ccnp/vpn/lab-configuration-cisco-ios-ipsec-site-a-site-pre-shared-nat-entre-deux-reseaux-prive-firewall-parefeu/
+
+
+! Bloc de commandes pour R1
+
+crypto isakmp policy 1
+ encr aes 256
+ authentication pre-share
+ group 5
+ lifetime 7200
+!
+crypto isakmp key cisco123 address 192.168.122.162
+!
+crypto ipsec transform-set to-R4-set esp-aes 256 esp-sha-hmac
+!
+crypto map cm-to-R4 1 ipsec-isakmp
+ set peer 192.168.122.162
+ set transform-set to-R4-set
+ match address crypto-acl
+!
+interface G0/1
+ crypto map cm-to-R4
+!
+ip access-list extended crypto-acl
+ permit ip 10.1.0.0 0.0.255.255 10.104.1.0 0.0.0.255
+!
+no ip access-list standard LAN_NAT
+ip access-list extended LAN_NAT
+ 5 deny ip 10.1.0.0 0.0.255.255 10.104.1.0 0.0.0.255
+ 10 permit ip 10.1.0.0 0.0.255.255 any
+! Pour la DMZ plus tard 20 permit ip 10.X.X.X 0.0.0.255 any
+!
+end
