@@ -126,6 +126,7 @@ wr
 ! CONFIGURATION DU VPN IPSEC
 ! Configuration du tunnel VPN IPSEC (entre R1 et R4)
 !
+conf t
 interface G0/2
  ip nat inside
 !
