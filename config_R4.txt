@@ -4,9 +4,9 @@ R4(config)#hostname: R4
 R4(config)#enable secret testtest
 R4(config)#username root secret testtest
 
-##SSH
+##Configurer et sécuriser SSH
 R4(config)#ip domain-name mon.lan
-crypto key generate rsa
+R4(config)#crypto key generate rsa
 The name for the keys will be: Gateway.mon.lan
 Choose the size of the key modulus in the range of 360 to 4096 for your
   General Purpose Keys. Choosing a key modulus greater than 512 may take
@@ -18,16 +18,16 @@ Choose the size of the key modulus in the range of 360 to 4096 for your
 ##Configurer l'adressage IPv4 et IPv6  
 R4(config)#interface GigabitEthernet0/0
 R4(config-if)#no shutdown
-R4(config-if)#ip address 192.168.1.254 255.255.255.0
-R4(config-if)#ipv6 address fe80::1 link-local
-R4(config-if)#ipv6 address fd00:192:168:1::254/64
+R4(config-if)#ip address 10.191.0.0 255.255.255.0
+R4(config-if)#ipv6 address fe80::dd:4 link-local
+R4(config-if)#ipv6 address fd00:470:c814:1004::1/64
 R4(config-if)#exit
 
 R4(config)#interface GigabitEthernet0/1
 R4(config-if)#no shutdown
 R4(config-if)#ip address 192.168.2.254 255.255.255.0
-R4(config-if)#ipv6 address fe80::1 link-local
-R4(config-if)#ipv6 address fd00:192:168:2::fe/64
+R4(config-if)#ipv6 address fe80::dd: link-local
+R4(config-if)#ipv6 address fd00:470:c814:1004::fe/64
 R4(config-if)#exit
 
 R4(config)#interface GigabitEthernet0/2
