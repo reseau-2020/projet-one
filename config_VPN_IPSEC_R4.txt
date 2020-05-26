@@ -41,7 +41,7 @@ ip access-list extended crypto-acl
  permit ip 10.104.1.0 0.0.0.255 10.104.1.0 0.0.0.255
 !
 ip access-list extended LAN_NAT
- 5 deny ip 10.104.1.0 0.0.0.255 10.1.0.0 0.0.255.255
+ 5 deny ip 10.104.1.0 0.0.0.255 10.0.0.0 0.255.255.255
  10 permit ip 10.104.1.0 0.0.0.255 any
 !
 ip nat inside source list LAN_NAT interface G0/3 overload
