@@ -4,11 +4,13 @@ hostname R1
 ip dhcp pool DMZ
    network 10.191.0.0 255.255.255.0
    default-router 10.191.0.1
-   dns-server 1.1.1.1
+   dns-server 10.191.0.1
 !
 ip domain name lan
 !
-ip domain-lookup
+ip domain lookup
+ip name-server 1.1.1.1
+ip dns server
 !
 username root secret testtest
 !
@@ -101,11 +103,6 @@ interface G0/3
  zone-member security lan
  no shutdown
 !
-ip dns server
-ip nat inside source list LAN_NAT interface G0/1 overload
-!
-ip access-list extended LAN_NAT
- permit ip 10.0.0.0 0.0.0.255 any
 ip access-list extended SSH
  permit tcp any any eq 22
  deny ip any any
