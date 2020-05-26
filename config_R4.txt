@@ -29,5 +29,9 @@ ip dhcp pool LAN
 network 10.104.1.0 255.255.255.0
 default-router 10.104.1.1
 dns-server 1.1.1.1
+!
+ip domain lookup
+ip name-server 1.1.1.1
+ip dns server
 end
 wr
