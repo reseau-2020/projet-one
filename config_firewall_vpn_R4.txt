@@ -4,12 +4,8 @@ enable secret testtest
 username root secret testtest
 !
 ! Configurer et sécuriser SSH
-ip domain-name lan4
-crypto key generate rsa
-2048
-!
-access-list 1 permit 10.0.0.0 0.255.255.255
-ip nat inside source list 1 interface g0/1 overload
+ip domain-name lan
+crypto key generate rsa modulus 2048
 !
 ! Configurer l'adressage IPv4 et IPv6  
 interface GigabitEthernet0/1
@@ -44,20 +40,10 @@ ipv6 unicast-routing
 !
 end
 wr
-
+!
 ! CONFIGURATION DU FIREWALL
 !
 conf t
-ip dhcp pool LAN
-   network 10.104.1.0 255.255.255.0
-   default-router 10.104.1.1
-   dns-server 1.1.1.1
-!
-ip domain name lan
-!
-ip domain-lookup
-!
-username root secret testtest
 !
 class-map type inspect match-any icmp-class
  match protocol icmp
@@ -110,9 +96,6 @@ interface G0/2
  zone-member security lan4
  no shutdown
 !
-ip dns server
-ip nat inside source list LAN_NAT interface G0/1 overload
-!
 ip access-list extended LAN_NAT
  permit ip 10.0.0.0 0.0.0.255 any
 ip access-list extended SSH
@@ -146,15 +129,9 @@ wr
 interface G0/2
  ip nat inside
 !
-interface GigabitEthernet0/3
- ! ip address 10.104.122.250 255.255.255.0
- ip address dhcp
- ip nat outside
- no shutdown
-!
 ip route 0.0.0.0 0.0.0.0 192.168.122.1
 ip access-list extended LAN_NAT
- permit ip 192.168.14.0 0.0.0.255 any
+ permit ip 10.104.1.0 0.0.0.255 any
 !
 ip nat inside source list LAN_NAT interface G0/1 overload
 !
@@ -173,17 +150,16 @@ crypto map cm-to-R1 1 ipsec-isakmp
  set transform-set to-R1-set
  match address crypto-acl
 !
-interface G0/3
+interface G0/1
  crypto map cm-to-R1
 !
 ip access-list extended crypto-acl
  permit ip 10.104.1.0 0.0.0.255 10.0.0.0 0.255.255.255
 !
-ip access-list extended LAN_NAT
+ip access-list extended LAN_R4
  5 deny ip 10.104.1.0 0.0.0.255 10.0.0.0 0.255.255.255
  10 permit ip 10.104.1.0 0.0.0.255 any
 !
-ip nat inside source list LAN_NAT interface G0/3 overload
 end
 wr
 
