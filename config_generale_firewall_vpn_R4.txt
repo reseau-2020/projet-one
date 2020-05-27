@@ -53,6 +53,8 @@ class-map type inspect match-any dhcp-class
  match access-group name DHCP
 class-map type inspect match-any dns-class
  match access-group name DNS
+class-map type inspect match-any ntp-class
+ match protocol ntp
 class-map type inspect match-any internet-trafic-class
  match protocol dns
  match protocol http
@@ -68,6 +70,8 @@ policy-map type inspect to-self-policy
  class type inspect dhcp-class
   pass
  class type inspect dns-class
+  pass
+ class type inspect ntp-class
   pass
  class class-default
   drop log
