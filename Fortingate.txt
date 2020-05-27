@@ -1,0 +1,13 @@
+! Matériel Fortinet => FortiGate-VM64-KVM Fortios
+Mot de passe initial
+login Fortinet : admin
+Mot de passe : testtest
+
+! Configuration initiale du port 2
+
+config system interface
+edit port2
+set mode dhcp
+append allowaccess http
+next
+end
