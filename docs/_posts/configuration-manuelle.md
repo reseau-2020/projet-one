@@ -202,4 +202,184 @@ Ajouter les blocs de commandes utilisés pour la configuration manuelle
 
 **Sur R4** :
 
+            conf t
+            hostname R4
+            enable secret testtest
+            username root secret testtest
+            !
+            ! Configurer et sécuriser SSH
+            ip domain-name lan
+            crypto key generate rsa modulus 2048
+            !
+            ! Configurer l'adressage IPv4 et IPv6  
+            interface GigabitEthernet0/1
+            ip address dhcp
+            ip nat outside
+            ipv6 address fe80::dd:4 link-local
+            ipv6 address fd00:470:c814:1004::1/64
+            no shutdown
+            exit
+            !
+            interface GigabitEthernet0/2
+            ip nat inside
+            ip address 10.104.1.1 255.255.255.0
+            ipv6 address fe80::dd:4 link-local
+            ipv6 address fd00:470:c814:1004::2/64
+            no shutdown
+            end
+            !
+            conf t
+            ip domain lookup
+            ip name-server 1.1.1.1
+            ip dns server
+            !
+            ip dhcp pool LAN
+            network 10.104.1.0 255.255.255.0
+            default-router 10.104.1.1
+            dns-server 10.104.1.1
+            !
+            exit
+            !
+            ipv6 unicast-routing
+            !
+            end
+            wr
+            !
+            ! CONFIGURATION DU FIREWALL
+            !
+            conf t
+            !
+            class-map type inspect match-any icmp-class
+             match protocol icmp
+            class-map type inspect match-any remote-access-class
+             match access-group name SSH
+            class-map type inspect match-any dhcp-class
+             match access-group name DHCP
+            class-map type inspect match-any dns-class
+             match access-group name DNS
+            class-map type inspect match-any internet-trafic-class
+             match protocol dns
+             match protocol http
+             match protocol https
+             match protocol icmp
+            !
+            !
+            policy-map type inspect to-self-policy
+             class type inspect remote-access-class
+              pass
+             class type inspect icmp-class
+              inspect
+             class type inspect dhcp-class
+              pass
+             class type inspect dns-class
+              pass
+             class class-default
+              drop log
+            policy-map type inspect lan-internet-policy
+             class type inspect internet-trafic-class
+              inspect
+             class class-default
+            !
+            zone security lan4
+            zone security internet
+            zone-pair security lan4-internet source lan4 destination internet
+             service-policy type inspect lan4-internet-policy
+            zone-pair security internet-self source internet destination self
+             service-policy type inspect to-self-policy
+            !
+            interface G0/1
+             description Interface WAN
+             ip address dhcp
+             ip nat outside
+             zone-member security internet
+             no shutdown
+            !
+            interface G0/2
+             description Interface LAN
+             ip address 10.104.1.1 255.255.255.0
+             zone-member security lan4
+             no shutdown
+            !
+            ! ip access-list extended LAN_NAT (supprimer?)
+            !  permit ip 10.0.0.0 0.0.0.255 any (supprimer?)
+            ip access-list extended SSH
+             permit tcp any any eq 22
+             deny   ip any any
+            ip access-list extended DHCP
+             permit udp any any eq 68
+             deny udp any any
+            ip access-list extended DNS
+             permit udp any any eq 53
+             deny udp any any
+            !
+            ! Adaptation du Pare-feu R4 pour le VPN
+            !
+            ip access-list extended ISAKMP_IPSEC
+             permit udp any any eq isakmp
+             permit ahp any any
+             permit esp any any
+             permit udp any any eq non500-isakmp
+            class-map type inspect match-any vpn-class
+             match access-group name ISAKMP_IPSEC
+            policy-map type inspect to-self-policy
+             class type inspect vpn-class
+              inspect
+              end
+            !
+            conf t
+            line con 0
+             exec-timeout 0 0
+             privilege level 15
+             logging synchronous
+            line aux 0
+             exec-timeout 0 0
+             privilege level 15
+             logging synchronous
+            line vty 0 4
+             login local
+             transport input ssh
+            !
+            end
+            wr
+            !
+            ! CONFIGURATION DU VPN IPSEC
+            ! Configuration du tunnel VPN IPSEC (entre R1 et R4)
+            !
+            conf t
+            interface G0/2
+             ip nat inside
+            !
+            ip route 0.0.0.0 0.0.0.0 192.168.122.1
+            ! ip access-list extended LAN_NAT (supprimer?)
+            !  permit ip 10.104.1.0 0.0.0.255 any (supprimer?)
+            !
+            ip nat inside source list LAN_NAT interface G0/1 overload
+            !
+            crypto isakmp policy 1
+             encr aes 256
+             authentication pre-share
+             group 5
+             lifetime 7200
+            !
+            crypto isakmp key cisco123 address 192.168.122.239
+            !
+            crypto ipsec transform-set to-R1-set esp-aes 256 esp-sha-hmac
+            !
+            crypto map cm-to-R1 1 ipsec-isakmp
+             set peer 192.168.122.239
+             set transform-set to-R1-set
+             match address crypto-acl
+            !
+            interface G0/1
+             crypto map cm-to-R1
+            !
+            ip access-list extended crypto-acl
+             permit ip 10.104.1.0 0.0.0.255 10.0.0.0 0.255.255.255
+            !
+            ip access-list extended LAN_R4
+             5 deny ip 10.104.1.0 0.0.0.255 10.0.0.0 0.255.255.255
+             10 permit ip 10.104.1.0 0.0.0.255 any
+            !
+            end
+            wr
 
