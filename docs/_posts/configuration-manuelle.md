@@ -228,17 +228,23 @@ Configuration de SNMPv3 :
             end
             wr
             !
-````
-! CONFIGURATION DE NTP
-conf t
-(config)#clock timezone GMT +1
-(config)#ntp update-calendar
-(config)#^Z
-! Vérification des configurations
-show ntp status
-show ntp associations
-!
-```
+            ! CONFIGURATION DE NTP
+            conf t
+            clock timezone GMT +1
+            clock summer-time FR recurring last SUN MAR 02:00 last SUN OCT 02:00
+            ntp server 3.fr.pool.ntp.org
+            ntp update-calendar
+            end
+            wr
+            ! Vérification des configurations
+            show clock
+            show calendar
+            show ntp config
+            show ntp information
+            show ntp status
+            show ntp associations
+            show ntp packets
+            !
 
 **Sur R2** :
 
@@ -255,17 +261,16 @@ Ajouter la configuration initiale (voir Guillaume)
             end
             wr
             !
-````
-! CONFIGURATION DE NTP
-conf t
-(config)#ntp server 10.1.1.1
-(config)#ntp update-calendar
-(config)#^Z
-! Vérification des configurations
-show ntp status
-show ntp associations
-!
-```
+            ! CONFIGURATION DE NTP
+            conf t
+            ntp server 10.1.1.1
+            ntp update-calendar
+            exit
+            wr
+            ! Vérification des configurations
+            show ntp status
+            show ntp associations
+            !
 
 **Sur R3** :
 
@@ -281,7 +286,18 @@ Ajouter la configuration initiale (voir Guillaume)
             snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
             end
             wr
+            !  
+            ! CONFIGURATION DE NTP
+            conf t
+            ntp server 10.1.2.1
+            ntp update-calendar
+            exit
+            wr
+            ! Vérification des configurations
+            show ntp status
+            show ntp associations
             !
+
 
 **Sur R4** :
 
@@ -465,7 +481,23 @@ Ajouter la configuration initiale (voir Guillaume)
             !
             end
             wr
-
+            !
+            ! CONFIGURATION DE NTP
+            conf t
+            clock timezone GMT +1
+            clock summer-time FR recurring last SUN MAR 02:00 last SUN OCT 02:00
+            ntp server 3.fr.pool.ntp.org
+            ntp update-calendar
+            end
+            wr
+            ! Vérification des configurations
+            show clock
+            show calendar
+            show ntp config
+            show ntp information
+            show ntp status
+            show ntp associations
+            show ntp packets
 ## Sur les switchs Distribution (DS)
 
 **Sur DS1** :
@@ -484,6 +516,16 @@ Ajouter la configuration initiale (voir Guillaume)
             end
             wr
             !
+            ! CONFIGURATION DE NTP
+            conf t
+            ntp server 10.3.1.1
+            ntp update-calendar
+            exit
+            wr
+            ! Vérification des configurations
+            show ntp status
+            show ntp associations
+            !
 
 **Sur DS2** :
 
@@ -500,6 +542,16 @@ Ajouter la configuration initiale (voir Guillaume)
             snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
             end
             wr
+            !
+            ! CONFIGURATION DE NTP
+            conf t
+            ntp server 10.3.3.1
+            ntp update-calendar
+            exit
+            wr
+            ! Vérification des configurations
+            show ntp status
+            show ntp associations
             !
 
 ## Sur les switchs Access (AS)
