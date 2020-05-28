@@ -59,7 +59,7 @@ L'adressage IPv6 est en /64.
 
 ## VLAN
 |VLAN|Port Access (AS1 et AS2)|Passerelle par défaut IPv4|Adresse réseau IPv4|
-|:-:|:-:|:-:|:-:|:-:|
+|:-:|:-:|:-:|:-:|
 |VLAN10|G2/0|10.2.10.254 /24|10.2.10.0 /24|
 |VLAN20|G2/1|10.2.20.254 /24|10.2.20.0 /24|
 |VLAN30|G2/2|10.2.30.254 /24|10.2.30.0 /24|
@@ -71,11 +71,11 @@ Un Vlan de Gestion (Vlan 100) serait une bonne pratique afin de pouvoir joindre 
 ## Etherchannel
 |PortChannel|Ports Physiques|Commutateurs|
 |:-:|:-:|:-:|
-|PO1|G0/0,G1/0|AS1-DS1|
-|PO2|G0/1,G1/1|AS1-DS2|
-|PO3|G0/2,G1/2|DS1-DS2|
-|PO4|G0/0,G1/0|AS2-DS2|
-|PO5|G0/1,G1/1|AS2-DS1|
+|Po1|G0/0,G1/0|AS1-DS1|
+|Po2|G0/1,G1/1|AS1-DS2|
+|Po3|G0/2,G1/2|DS1-DS2|
+|Po4|G0/0,G1/0|AS2-DS2|
+|Po5|G0/1,G1/1|AS2-DS1|
 
 ## Spanning-Tree
 |VLANs|DS1|DS2|
@@ -92,7 +92,8 @@ Un Vlan de Gestion (Vlan 100) serait une bonne pratique afin de pouvoir joindre 
 
 ## LANs
 
-|LAN|Adresse réseau IPv4|	Passerelle IPv4|
+|LAN|Adresse réseau IPv4|Passerelle IPv4|
+|:-:|:-:|:-:|
 |LAN R1|10.191.0.0 /24|10.191.0.1|
 |LAN R2|10.192.0.0 /24|10.192.0.1|
 |LAN R3|10.193.0.0 /24|10.193.0.1|
