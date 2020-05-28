@@ -2,6 +2,24 @@
 
 Ajouter les blocs de commandes utilisés pour la configuration manuelle
 
+## Station de contrôle (Centos-1)
+
+Ajouter la configuration initiale de la station de contrôle (voir Guillaume)
+
+Configuration de SNMPv3 :
+
+            yum install net-tools.x86_64
+            yum install net-snmp net-snmp-utils
+            ! 
+            USER=team1
+            PASSWORD=testtest
+            SECRET=$PASSWORD
+            HOST=11.12.13.X 
+            ! l'adresse HOST est l'adresse du périphérique à surveiller (adresse de l'interface liée à Switch1)
+            !
+            snmpwalk -v3 -l authPriv -u $USER -a SHA -A $PASSWORD -x AES -X $SECRET $HOST
+
+
 ## Stations de travail
 
 **Sur PC1 à PC8** :
@@ -167,7 +185,7 @@ Ajouter les blocs de commandes utilisés pour la configuration manuelle
             !
             end
             !
-            ! Configuration du tunnel VPN IPSEC (entre R1 et R4)
+            ! CONFIGURATION DU TUNNEL VPN IPSEC (entre R1 et R4)
             !
             conf t
             crypto isakmp policy 1
@@ -196,9 +214,52 @@ Ajouter les blocs de commandes utilisés pour la configuration manuelle
              5 deny ip 10.0.0.0 0.255.255.255 10.104.1.0 0.0.0.255
              10 permit ip 10.0.0.0 0.255.255.255 any
             ! Pour la DMZ plus tard 20 permit ip 10.X.X.X 0.0.0.255 any ou 0.255.255.255
-            !
             end
             wr
+            !
+            ! CONFIGURATION DE SNMPv3
+            conf t
+            ip access-list extended LAN_SNMP
+            permit ip 11.12.13.0 0.0.0.255 any
+            exit
+            snmp-server view SNMP-RO iso included
+            snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
+            snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
+            end
+            wr
+            !
+
+**Sur R2** :
+
+Ajouter la configuration initiale (voir Guillaume)
+
+            ! CONFIGURATION DE SNMPv3
+            conf t
+            ip access-list extended LAN_SNMP
+            permit ip 11.12.13.0 0.0.0.255 any
+            exit
+            snmp-server view SNMP-RO iso included
+            snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
+            snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
+            end
+            wr
+            !
+
+**Sur R3** :
+
+Ajouter la configuration initiale (voir Guillaume)
+
+            ! CONFIGURATION DE SNMPv3
+            conf t
+            ip access-list extended LAN_SNMP
+            permit ip 11.12.13.0 0.0.0.255 any
+            exit
+            snmp-server view SNMP-RO iso included
+            snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
+            snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
+            end
+            wr
+            !
 
 **Sur R4** :
 
@@ -383,3 +444,74 @@ Ajouter les blocs de commandes utilisés pour la configuration manuelle
             end
             wr
 
+## Sur les switchs Distribution (DS)
+
+**Sur DS1** :
+
+Ajouter la configuration initiale (voir Guillaume)
+
+
+            ! CONFIGURATION DE SNMPv3
+            conf t
+            ip access-list extended LAN_SNMP
+            permit ip 11.12.13.0 0.0.0.255 any
+            exit
+            snmp-server view SNMP-RO iso included
+            snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
+            snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
+            end
+            wr
+            !
+
+**Sur DS2** :
+
+Ajouter la configuration initiale (voir Guillaume)
+
+
+            ! CONFIGURATION DE SNMPv3
+            conf t
+            ip access-list extended LAN_SNMP
+            permit ip 11.12.13.0 0.0.0.255 any
+            exit
+            snmp-server view SNMP-RO iso included
+            snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
+            snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
+            end
+            wr
+            !
+
+## Sur les switchs Access (AS)
+
+**Sur AS1** :
+
+Ajouter la configuration initiale (voir Guillaume)
+
+
+            ! CONFIGURATION DE SNMPv3
+            conf t
+            ip access-list extended LAN_SNMP
+            permit ip 11.12.13.0 0.0.0.255 any
+            exit
+            snmp-server view SNMP-RO iso included
+            snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
+            snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
+            end
+            wr
+            !
+
+**Sur AS2** :
+
+Ajouter la configuration initiale (voir Guillaume)
+
+
+            ! CONFIGURATION DE SNMPv3
+            conf t
+            ip access-list extended LAN_SNMP
+            permit ip 11.12.13.0 0.0.0.255 any
+            exit
+            snmp-server view SNMP-RO iso included
+            snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
+            snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
+            end
+            wr
+            !
