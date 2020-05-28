@@ -228,6 +228,17 @@ Configuration de SNMPv3 :
             end
             wr
             !
+````
+! CONFIGURATION DE NTP
+conf t
+(config)#clock timezone GMT +1
+(config)#ntp update-calendar
+(config)#^Z
+! Vérification des configurations
+show ntp status
+show ntp associations
+!
+```
 
 **Sur R2** :
 
@@ -255,6 +266,7 @@ show ntp status
 show ntp associations
 !
 ```
+
 **Sur R3** :
 
 Ajouter la configuration initiale (voir Guillaume)
