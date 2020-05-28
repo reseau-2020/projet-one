@@ -244,7 +244,7 @@ Ajouter la configuration initiale (voir Guillaume)
             end
             wr
             !
-'''
+````
 ! CONFIGURATION DE NTP
 conf t
 (config)#ntp server 10.1.1.1
@@ -254,7 +254,7 @@ conf t
 show ntp status
 show ntp associations
 !
-'''
+```
 **Sur R3** :
 
 Ajouter la configuration initiale (voir Guillaume)
