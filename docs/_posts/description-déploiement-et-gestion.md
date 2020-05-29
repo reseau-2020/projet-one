@@ -26,11 +26,12 @@ La topologie est constituée de :
 ### Routage
 
 Comme nous disposons d'une infrastructure homogène Cisco, nous avons décidé de déployer le protocole de routage EIGRP (Enhanced Interior Gateway Routing Protocol) qui est un protocole propriétaire Cisco. De plus, la distance administrative du protocole EIGRP est plus faible que celle du protocole OSPF (Open Shortest Path First).
+À compléter (Stéphane ?)
 
 ### Pare-feu
 
 Dans notre infrastructure homogène Cisco, nous avons donc configuré un pare-feu Cisco sur le routeur R1 (réseau principal) et sur le routeur R4 (premier site distant). Toutefois, nous avons quand même configuré un pare-feu Fortinet sur le routeur R5 (second site distant) afin d'appréhender le principe de gestion unifiée des menaces (UTM) même si nous avons déployé uniquement un pare-feu.
-
+À compléter (Stéphane ?)
 
 ### Redondance
 
@@ -50,12 +51,33 @@ CDP (Cisco Discovery Protocol) :
 
 ### VPN IPSEC
 
-tunnel entre R4 (Cisco) et R1 (Cisco) en ipv4 seulement. Code à adapter pour le rendre opérationnel en ipv6.
-tunnel entre R5 (Fortinet) et R1 (Cisco) : problèmes rencontrés, tunnel non fonctionnel (interopérabilité difficile entre Cisco et Fortinet)
+Un tunnel VPN IPSEC est établit entre R4 (avec pare-feu Cisco) et R1 (avec pare-feu Cisco) afin de disposer d'un canal sécurisé entre deux sites distants. Le protocole de transport ESP (Encapsulating Security Payload) est préféré au protocole AH (Authentication Header) car il supporte le routage NAT et assure le chiffrement. À des fins de sécurité adéquate sont implémentés : 
+- l'algorithme de chiffrement AES 256
+- la fonction de hash SHA
+- l'authentification des pairs par la méthode PSK
+- le groupe DH 5 (le groupe DH est apprécié en fonction du contexte)
+
+En IPv4, le tunnel est opérationnel.
+En IPv6, le code est à adapter afin de rendre le tunnel opérationnel.
+
+Nous avons ensuite tenté d'établir un tunnel VPN IPSEC entre R5 (avec pare-feu Fortinet) et R1 (avec pare-feu Cisco). Malheureusement, le tunnel n'est pas fonctionnel. Par manque de temps, nous n'avons pu poursuivre le travail sur ce point.
+
 
 ## Gestion
 
 ### Automatisation : Ansible
 
 ### Surveillance / Reporting : SNMP et SYSLOG
+
+SNMP (Simple Network Management Protocol) : SNMP a été déployé afin de surveiller les périphériques réseau depuis la station de contrôle. Nous avons donc implémenté ce protocole sur la station de contrôle (Centos-1) et les périphériques réseau (R1, R2, R3, DS1, DS2, AS1 et AS2). Il s'agit de la version v3 du protocole SNMP car les versions 1 et 2 sont aujourdh'hui dépréciées dues à des lacunes de sécurité. 
+Dans le cas présent, la procédure de configuration de SNMPv3 s'est passée en 4 étapes :
+         - Création d'une liste d'accès afin d'autoriser la station de contrôle à interroger le serveur SNMP
+         - Configuration d'une "view" SNMP_RO 
+         - Configuration d'un groupe ADMIN 
+         - Configuration d'un utilisateur "team1" comme membre du groupe ADMIN avec authentification SHA, mot de passe et chiffrement AES 128
+
+Reporting SYSLOG :
+
+
+SNMPv3 est configuré pour apporter une authentification SHA et un chiffrement AES 128.
 
