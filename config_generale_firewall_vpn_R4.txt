@@ -106,8 +106,8 @@ ip access-list extended SSH
  permit tcp any any eq 22
  deny   ip any any
 ip access-list extended DHCP
- permit udp any any eq 68
- deny udp any any
+  permit udp any eq 67 any eq 68
+  permit udp any eq 68 any eq 67
 ip access-list extended DNS
  permit udp any any eq 53
  deny udp any any
