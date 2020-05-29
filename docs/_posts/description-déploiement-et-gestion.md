@@ -40,7 +40,6 @@ Redondance de passerelle : HSRP
 
 ### Services d'infrastructure
 
-
 DHCP (Dynamic Host Configuration Protocol) :
 
 DNS (Domain Name System) :
@@ -67,17 +66,20 @@ Nous avons ensuite tenté d'établir un tunnel VPN IPSEC entre R5 (avec pare-feu
 
 ### Automatisation : Ansible
 
+
 ### Surveillance / Reporting : SNMP et SYSLOG
 
-SNMP (Simple Network Management Protocol) : SNMP a été déployé afin de surveiller les périphériques réseau depuis la station de contrôle. Nous avons donc implémenté ce protocole sur la station de contrôle (Centos-1) et les périphériques réseau (R1, R2, R3, DS1, DS2, AS1 et AS2). Il s'agit de la version v3 du protocole SNMP car les versions 1 et 2 sont aujourdh'hui dépréciées dues à des lacunes de sécurité. 
+*SNMP (Simple Network Management Protocol) :*
+SNMP a été déployé afin de surveiller les périphériques réseau depuis la station de contrôle. Nous avons donc implémenté ce protocole sur la station de contrôle (Centos-1) et les périphériques réseau (R1, R2, R3, DS1, DS2, AS1 et AS2). Il s'agit de la version v3 du protocole SNMP car les versions 1 et 2 sont aujourdh'hui dépréciées dues à des lacunes de sécurité. 
 Dans le cas présent, la procédure de configuration de SNMPv3 s'est passée en 4 étapes :
          - Création d'une liste d'accès afin d'autoriser la station de contrôle à interroger le serveur SNMP
          - Configuration d'une "view" SNMP_RO 
          - Configuration d'un groupe ADMIN 
          - Configuration d'un utilisateur "team1" comme membre du groupe ADMIN avec authentification SHA, mot de passe et chiffrement AES 128
 
-Reporting SYSLOG :
+
+*Reporting SYSLOG :*
 
 
-SNMPv3 est configuré pour apporter une authentification SHA et un chiffrement AES 128.
+
 
