@@ -18,7 +18,7 @@ La topologie est constituée de :
           - un accès Internet
           - une station de travail (PC10)
           
-![Topologie](https://github.com/reseau-2020/projet-one/blob/master/docs/_posts/topologie-projet-one.png)          
+![Topologie](https://github.com/reseau-2020/projet-one/blob/master/docs/_posts/topologie-projet-one.png)      
 
 
 ## Choix technologiques
