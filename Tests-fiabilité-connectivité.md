@@ -2,7 +2,7 @@
 
 ## Tests de fiabilité
 
-### IPv4 Rapid Spanning-Tree Protocol (RSTP)
+### IPv4 Rapid Spanning-Tree Portfast (RSTP) : redondance de liens
 
 On lance un ping continu de PC8 (VLAN40) vers sa passerelle sur DS2 (10.2.40.253)
 On coupe la liaison entre AS2 et DS2 (Po4) puis on la remonte :
@@ -370,12 +370,12 @@ On coupe la liaison entre AS2 et DS1 (Po5) puis on la remonte :
         rtt min/avg/max/mdev = 3.099/4.746/6.194/1.005 ms
 
 
-### IPv6 Rapid Spanning-Tree Protocol (RSTP)
+### IPv6 Rapid Spanning-Tree Portfast (RSTP) : redondance de liens
 
 Nous avons rencontré quelques problème lors des tests de la redondance de liens (RSTP) en IPv6. En effectuant des pings d'un PC à un autre ou d'un PC vers une passerelle, il se trouve que le relai n'est pas pris. Par manque de temps, nous n'avons pas pu résoudre le problème. 
 
 
-### IPv4 Hot Standby Router Protocol (HSRP)
+### IPv4 Hot Standby Router Protocol (HSRP): redondance de passerelle
 
 On lance un ping continu de PC8 (VLAN40) vers sa passerelle virtuelle sur DS2 (10.2.40.254.
 On éteint DS2 puis on le rallume.
@@ -509,7 +509,7 @@ On éteint DS1 puis on le rallume.
         27 packets transmitted, 20 received, 25% packet loss, time 26190ms
         rtt min/avg/max/mdev = 5.003/8.142/10.498/1.822 ms
 
-### IPv6 Hot Standby Router Protocol (HSRP)
+### IPv6 Hot Standby Router Protocol (HSRP): redondance de passerelle
 
 Nous avons rencontré quelques problème lors des tests de la redondance de passerelle (HSRP) en IPv6. En effectuant des pings d'un PC à un autre, il se trouve que le relai n'est pas pris. Par manque de temps, nous n'avons pas pu résoudre le problème. 
 
