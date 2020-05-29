@@ -1,6 +1,8 @@
-# Test de fiabilité IPv4
+# Test de fiabilité et de connectivité
 
-## RSTP (Rapid Spanning-Tree Protocol)
+## Tests de fiabilité
+
+### IPv4 Rapid Spanning-Tree Protocol (RSTP)
 
 On lance un ping continu de PC8 (VLAN40) vers sa passerelle sur DS2 (10.2.40.253)
 On coupe la liaison entre AS2 et DS2 (Po4) puis on la remonte :
@@ -448,7 +450,11 @@ On coupe la liaison entre AS2 et DS1 (Po5) puis on la remonte :
         rtt min/avg/max/mdev = 3.099/4.746/6.194/1.005 ms
 
 
-## Hot Standby Router Protocol
+### IPv6 Rapid Spanning-Tree Protocol (RSTP)
+problème, ça ne marche pas. À développer.
+
+
+### IPv4 Hot Standby Router Protocol (HSRP)
 
 On lance un ping continu de PC8 (VLAN40) vers sa passerelle virtuelle sur DS2 (10.2.40.254.
 On éteint DS2 puis on le rallume.
@@ -581,3 +587,15 @@ On éteint DS1 puis on le rallume.
         --- 10.2.30.51 ping statistics ---
         27 packets transmitted, 20 received, 25% packet loss, time 26190ms
         rtt min/avg/max/mdev = 5.003/8.142/10.498/1.822 ms
+
+### IPv6 Hot Standby Router Protocol (HSRP)
+
+problème, ça ne amrche pas. À développer
+
+## Test de connectivité
+
+### IPv4
+à développer en mettant quelques ping
+
+### IPv6
+à développer en mettant quelques ping
