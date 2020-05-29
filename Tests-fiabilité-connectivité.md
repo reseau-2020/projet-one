@@ -45,86 +45,6 @@ On coupe la liaison entre AS2 et DS2 (Po4) puis on la remonte :
         64 bytes from 10.2.40.253: icmp_seq=30 ttl=255 time=5.84 ms
         64 bytes from 10.2.40.253: icmp_seq=31 ttl=255 time=7.50 ms
         64 bytes from 10.2.40.253: icmp_seq=32 ttl=255 time=5.46 ms
-        64 bytes from 10.2.40.253: icmp_seq=33 ttl=255 time=6.20 ms
-        64 bytes from 10.2.40.253: icmp_seq=34 ttl=255 time=5.49 ms
-        64 bytes from 10.2.40.253: icmp_seq=35 ttl=255 time=4.86 ms
-        64 bytes from 10.2.40.253: icmp_seq=36 ttl=255 time=5.42 ms
-        64 bytes from 10.2.40.253: icmp_seq=37 ttl=255 time=6.14 ms
-        64 bytes from 10.2.40.253: icmp_seq=38 ttl=255 time=4.69 ms
-        64 bytes from 10.2.40.253: icmp_seq=39 ttl=255 time=8.36 ms
-        64 bytes from 10.2.40.253: icmp_seq=40 ttl=255 time=5.56 ms
-        64 bytes from 10.2.40.253: icmp_seq=41 ttl=255 time=5.32 ms
-        64 bytes from 10.2.40.253: icmp_seq=42 ttl=255 time=5.30 ms
-        64 bytes from 10.2.40.253: icmp_seq=43 ttl=255 time=8.21 ms
-        64 bytes from 10.2.40.253: icmp_seq=44 ttl=255 time=5.74 ms
-        64 bytes from 10.2.40.253: icmp_seq=45 ttl=255 time=5.80 ms
-        64 bytes from 10.2.40.253: icmp_seq=46 ttl=255 time=5.32 ms
-        64 bytes from 10.2.40.253: icmp_seq=47 ttl=255 time=4.72 ms
-        64 bytes from 10.2.40.253: icmp_seq=48 ttl=255 time=4.68 ms
-        64 bytes from 10.2.40.253: icmp_seq=49 ttl=255 time=5.72 ms
-        64 bytes from 10.2.40.253: icmp_seq=50 ttl=255 time=5.68 ms
-        64 bytes from 10.2.40.253: icmp_seq=51 ttl=255 time=5.87 ms
-        64 bytes from 10.2.40.253: icmp_seq=52 ttl=255 time=5.16 ms
-        64 bytes from 10.2.40.253: icmp_seq=53 ttl=255 time=6.92 ms
-        64 bytes from 10.2.40.253: icmp_seq=54 ttl=255 time=5.53 ms
-        64 bytes from 10.2.40.253: icmp_seq=55 ttl=255 time=5.53 ms
-        64 bytes from 10.2.40.253: icmp_seq=56 ttl=255 time=5.83 ms
-        64 bytes from 10.2.40.253: icmp_seq=57 ttl=255 time=6.34 ms
-        64 bytes from 10.2.40.253: icmp_seq=58 ttl=255 time=5.52 ms
-        64 bytes from 10.2.40.253: icmp_seq=59 ttl=255 time=5.87 ms
-        64 bytes from 10.2.40.253: icmp_seq=60 ttl=255 time=6.80 ms
-        64 bytes from 10.2.40.253: icmp_seq=61 ttl=255 time=6.49 ms
-        64 bytes from 10.2.40.253: icmp_seq=62 ttl=255 time=7.56 ms
-        64 bytes from 10.2.40.253: icmp_seq=63 ttl=255 time=5.38 ms
-        64 bytes from 10.2.40.253: icmp_seq=64 ttl=255 time=5.45 ms
-        64 bytes from 10.2.40.253: icmp_seq=65 ttl=255 time=6.10 ms
-        64 bytes from 10.2.40.253: icmp_seq=66 ttl=255 time=5.20 ms
-        64 bytes from 10.2.40.253: icmp_seq=67 ttl=255 time=6.59 ms
-        64 bytes from 10.2.40.253: icmp_seq=68 ttl=255 time=4.42 ms
-        64 bytes from 10.2.40.253: icmp_seq=69 ttl=255 time=5.50 ms
-        64 bytes from 10.2.40.253: icmp_seq=70 ttl=255 time=4.93 ms
-        64 bytes from 10.2.40.253: icmp_seq=71 ttl=255 time=6.37 ms
-        64 bytes from 10.2.40.253: icmp_seq=72 ttl=255 time=5.56 ms
-        64 bytes from 10.2.40.253: icmp_seq=73 ttl=255 time=5.45 ms
-        64 bytes from 10.2.40.253: icmp_seq=74 ttl=255 time=5.62 ms
-        64 bytes from 10.2.40.253: icmp_seq=75 ttl=255 time=6.02 ms
-        64 bytes from 10.2.40.253: icmp_seq=76 ttl=255 time=5.40 ms
-        64 bytes from 10.2.40.253: icmp_seq=77 ttl=255 time=4.46 ms
-        64 bytes from 10.2.40.253: icmp_seq=78 ttl=255 time=4.32 ms
-        64 bytes from 10.2.40.253: icmp_seq=79 ttl=255 time=5.80 ms
-        64 bytes from 10.2.40.253: icmp_seq=80 ttl=255 time=5.22 ms
-        64 bytes from 10.2.40.253: icmp_seq=81 ttl=255 time=6.72 ms
-        64 bytes from 10.2.40.253: icmp_seq=82 ttl=255 time=5.76 ms
-        64 bytes from 10.2.40.253: icmp_seq=83 ttl=255 time=5.54 ms
-        64 bytes from 10.2.40.253: icmp_seq=84 ttl=255 time=6.27 ms
-        64 bytes from 10.2.40.253: icmp_seq=85 ttl=255 time=6.24 ms
-        64 bytes from 10.2.40.253: icmp_seq=86 ttl=255 time=5.15 ms
-        64 bytes from 10.2.40.253: icmp_seq=87 ttl=255 time=5.69 ms
-        64 bytes from 10.2.40.253: icmp_seq=88 ttl=255 time=4.98 ms
-        64 bytes from 10.2.40.253: icmp_seq=89 ttl=255 time=5.79 ms
-        64 bytes from 10.2.40.253: icmp_seq=90 ttl=255 time=6.89 ms
-        64 bytes from 10.2.40.253: icmp_seq=91 ttl=255 time=9.41 ms
-        64 bytes from 10.2.40.253: icmp_seq=92 ttl=255 time=5.58 ms
-        64 bytes from 10.2.40.253: icmp_seq=93 ttl=255 time=5.81 ms
-        64 bytes from 10.2.40.253: icmp_seq=94 ttl=255 time=5.37 ms
-        64 bytes from 10.2.40.253: icmp_seq=95 ttl=255 time=5.60 ms
-        64 bytes from 10.2.40.253: icmp_seq=96 ttl=255 time=6.37 ms
-        64 bytes from 10.2.40.253: icmp_seq=97 ttl=255 time=5.23 ms
-        64 bytes from 10.2.40.253: icmp_seq=98 ttl=255 time=5.32 ms
-        64 bytes from 10.2.40.253: icmp_seq=99 ttl=255 time=6.39 ms
-        64 bytes from 10.2.40.253: icmp_seq=100 ttl=255 time=3.13 ms
-        64 bytes from 10.2.40.253: icmp_seq=101 ttl=255 time=4.07 ms
-        64 bytes from 10.2.40.253: icmp_seq=102 ttl=255 time=3.34 ms
-        64 bytes from 10.2.40.253: icmp_seq=103 ttl=255 time=4.42 ms
-        64 bytes from 10.2.40.253: icmp_seq=104 ttl=255 time=3.55 ms
-        64 bytes from 10.2.40.253: icmp_seq=105 ttl=255 time=3.77 ms
-        64 bytes from 10.2.40.253: icmp_seq=106 ttl=255 time=3.97 ms
-        64 bytes from 10.2.40.253: icmp_seq=107 ttl=255 time=3.87 ms
-        64 bytes from 10.2.40.253: icmp_seq=108 ttl=255 time=3.43 ms
-        64 bytes from 10.2.40.253: icmp_seq=109 ttl=255 time=4.17 ms
-        64 bytes from 10.2.40.253: icmp_seq=110 ttl=255 time=4.01 ms
-        64 bytes from 10.2.40.253: icmp_seq=111 ttl=255 time=3.71 ms
-        64 bytes from 10.2.40.253: icmp_seq=112 ttl=255 time=4.06 ms
         ^C
         --- 10.2.40.253 ping statistics ---
         112 packets transmitted, 108 received, 3% packet loss, time 111262ms
@@ -451,7 +371,8 @@ On coupe la liaison entre AS2 et DS1 (Po5) puis on la remonte :
 
 
 ### IPv6 Rapid Spanning-Tree Protocol (RSTP)
-problème, ça ne marche pas. À développer.
+
+Nous avons rencontré quelques problème lors des tests de la redondance de liens (RSTP) en IPv6. En effectuant des pings d'un PC à un autre ou d'un PC vers une passerelle, il se trouve que le relai n'est pas pris. Par manque de temps, nous n'avons pas pu résoudre le problème. 
 
 
 ### IPv4 Hot Standby Router Protocol (HSRP)
@@ -590,12 +511,299 @@ On éteint DS1 puis on le rallume.
 
 ### IPv6 Hot Standby Router Protocol (HSRP)
 
-problème, ça ne amrche pas. À développer
+Nous avons rencontré quelques problème lors des tests de la redondance de passerelle (HSRP) en IPv6. En effectuant des pings d'un PC à un autre, il se trouve que le relai n'est pas pris. Par manque de temps, nous n'avons pas pu résoudre le problème. 
 
 ## Test de connectivité
 
 ### IPv4
-à développer en mettant quelques ping
+
+Ping de PC1 vers Internet (google par exemple) :
+
+        root@PC1:~# ping 8.8.8.8
+        PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+        64 bytes from 8.8.8.8: icmp_seq=1 ttl=53 time=9.64 ms
+        64 bytes from 8.8.8.8: icmp_seq=2 ttl=53 time=8.95 ms
+        64 bytes from 8.8.8.8: icmp_seq=3 ttl=53 time=8.83 ms
+        64 bytes from 8.8.8.8: icmp_seq=4 ttl=53 time=8.57 ms
+        64 bytes from 8.8.8.8: icmp_seq=5 ttl=53 time=8.86 ms
+
+
+Ping de PC1 (VLAN10) vers PC8 (VLAN 40) :
+
+        PING 10.2.40.51 (10.2.40.51) 56(84) bytes of data.
+        64 bytes from 10.2.40.51: icmp_seq=1 ttl=63 time=8.32 ms
+        64 bytes from 10.2.40.51: icmp_seq=2 ttl=63 time=8.17 ms
+        64 bytes from 10.2.40.51: icmp_seq=3 ttl=63 time=7.80 ms
+        64 bytes from 10.2.40.51: icmp_seq=4 ttl=63 time=8.33 ms
+        64 bytes from 10.2.40.51: icmp_seq=5 ttl=63 time=7.72 ms
+        64 bytes from 10.2.40.51: icmp_seq=6 ttl=63 time=8.16 ms
+        64 bytes from 10.2.40.51: icmp_seq=7 ttl=63 time=8.04 ms
+        ^Z
 
 ### IPv6
-à développer en mettant quelques ping
+
+Ping PC1 vers internet :
+
+        root@PC1:~# ping6 test.tf
+        PING test.tf(2001:41d0:305:1000::1d8a (2001:41d0:305:1000::1d8a)) 56 data bytes
+        64 bytes from 2001:41d0:305:1000::1d8a (2001:41d0:305:1000::1d8a): icmp_seq=2 ttl=49 time=14.8 ms
+        64 bytes from 2001:41d0:305:1000::1d8a (2001:41d0:305:1000::1d8a): icmp_seq=3 ttl=49 time=15.4 ms
+        64 bytes from 2001:41d0:305:1000::1d8a (2001:41d0:305:1000::1d8a): icmp_seq=4 ttl=49 time=17.0 ms
+        64 bytes from 2001:41d0:305:1000::1d8a (2001:41d0:305:1000::1d8a): icmp_seq=5 ttl=49 time=16.2 ms
+        64 bytes from 2001:41d0:305:1000::1d8a (2001:41d0:305:1000::1d8a): icmp_seq=6 ttl=49 time=16.1 ms
+        64 bytes from 2001:41d0:305:1000::1d8a (2001:41d0:305:1000::1d8a): icmp_seq=7 ttl=49 time=16.1 ms
+        64 bytes from 2001:41d0:305:1000::1d8a (2001:41d0:305:1000::1d8a): icmp_seq=8 ttl=49 time=19.2 ms
+
+Ping de PC1 (VLAN10) vers PC4 (VLAN40) :
+
+        root@PC1:~# ping fd00:470:c814:1040:e16:5ff:feba:f300
+        PING fd00:470:c814:1040:e16:5ff:feba:f300(fd00:470:c814:1040:e16:5ff:feba:f300) 56 data bytes
+        64 bytes from fd00:470:c814:1040:e16:5ff:feba:f300: icmp_seq=2 ttl=63 time=8.53 ms
+        64 bytes from fd00:470:c814:1040:e16:5ff:feba:f300: icmp_seq=3 ttl=63 time=10.2 ms
+        64 bytes from fd00:470:c814:1040:e16:5ff:feba:f300: icmp_seq=4 ttl=63 time=7.99 ms
+        64 bytes from fd00:470:c814:1040:e16:5ff:feba:f300: icmp_seq=5 ttl=63 time=7.54 ms
+        64 bytes from fd00:470:c814:1040:e16:5ff:feba:f300: icmp_seq=6 ttl=63 time=11.4 ms
+
+
+Ping de PC1 (VLAN10) vers PC8 (VLAN40) :
+
+        root@PC1:~# ping6 fd00:470:c814:1040:e16:5ff:fe4a:1e00
+        PING fd00:470:c814:1040:e16:5ff:fe4a:1e00(fd00:470:c814:1040:e16:5ff:fe4a:1e00) 56 data bytes
+        64 bytes from fd00:470:c814:1040:e16:5ff:fe4a:1e00: icmp_seq=1 ttl=63 time=8.08 ms
+        64 bytes from fd00:470:c814:1040:e16:5ff:fe4a:1e00: icmp_seq=2 ttl=63 time=8.66 ms
+        64 bytes from fd00:470:c814:1040:e16:5ff:fe4a:1e00: icmp_seq=3 ttl=63 time=8.97 ms
+        64 bytes from fd00:470:c814:1040:e16:5ff:fe4a:1e00: icmp_seq=4 ttl=63 time=8.00 ms
+        64 bytes from fd00:470:c814:1040:e16:5ff:fe4a:1e00: icmp_seq=5 ttl=63 time=9.04 ms
+
+Ping de PC1 (VLAN10) vers PC6 (VLAN20) :
+
+        root@PC1:~# ping6 fd00:470:c814:1020:e16:5ff:fe93:3900
+        PING fd00:470:c814:1020:e16:5ff:fe93:3900(fd00:470:c814:1020:e16:5ff:fe93:3900) 56 data bytes
+        64 bytes from fd00:470:c814:1020:e16:5ff:fe93:3900: icmp_seq=2 ttl=63 time=8.70 ms
+        64 bytes from fd00:470:c814:1020:e16:5ff:fe93:3900: icmp_seq=3 ttl=63 time=7.78 ms
+        64 bytes from fd00:470:c814:1020:e16:5ff:fe93:3900: icmp_seq=4 ttl=63 time=8.10 ms
+        64 bytes from fd00:470:c814:1020:e16:5ff:fe93:3900: icmp_seq=5 ttl=63 time=7.68 ms
+
+
+## Test du tunnel VPN IPSEC en IPv4
+
+On lance un ping continu depuis PC1 (10.2.10.1) vers PC9 (10.104.1.2) ainsi que depuis PC9 vers PC1. Les deux sorties ci-dessous montrent que le tunnel se monte correctement.
+
+        root@PC1:~# ping 10.104.1.2
+        PING 10.104.1.2 (10.104.1.2) 56(84) bytes of data.
+        64 bytes from 10.104.1.2: icmp_seq=5 ttl=60 time=11.4 ms
+        64 bytes from 10.104.1.2: icmp_seq=6 ttl=60 time=9.48 ms
+        64 bytes from 10.104.1.2: icmp_seq=7 ttl=60 time=8.69 ms
+        64 bytes from 10.104.1.2: icmp_seq=8 ttl=60 time=9.57 ms
+        64 bytes from 10.104.1.2: icmp_seq=9 ttl=60 time=10.1 ms
+        64 bytes from 10.104.1.2: icmp_seq=10 ttl=60 time=10.0 ms
+        64 bytes from 10.104.1.2: icmp_seq=11 ttl=60 time=10.2 ms
+        64 bytes from 10.104.1.2: icmp_seq=12 ttl=60 time=9.44 ms
+        64 bytes from 10.104.1.2: icmp_seq=13 ttl=60 time=10.3 ms
+        64 bytes from 10.104.1.2: icmp_seq=14 ttl=60 time=10.6 ms
+        64 bytes from 10.104.1.2: icmp_seq=15 ttl=60 time=10.7 ms
+        64 bytes from 10.104.1.2: icmp_seq=16 ttl=60 time=9.14 ms
+        64 bytes from 10.104.1.2: icmp_seq=17 ttl=60 time=10.6 ms
+        64 bytes from 10.104.1.2: icmp_seq=18 ttl=60 time=9.61 ms
+        64 bytes from 10.104.1.2: icmp_seq=19 ttl=60 time=10.5 ms
+        64 bytes from 10.104.1.2: icmp_seq=20 ttl=60 time=11.3 ms
+        64 bytes from 10.104.1.2: icmp_seq=21 ttl=60 time=9.33 ms
+        64 bytes from 10.104.1.2: icmp_seq=22 ttl=60 time=10.0 ms
+        64 bytes from 10.104.1.2: icmp_seq=23 ttl=60 time=10.5 ms
+
+        root@PC9:~# ping 10.2.10.1
+        PING 10.2.10.1 (10.2.10.1) 56(84) bytes of data.
+        64 bytes from 10.2.10.1: icmp_seq=1 ttl=60 time=11.9 ms
+        64 bytes from 10.2.10.1: icmp_seq=2 ttl=60 time=10.3 ms
+        64 bytes from 10.2.10.1: icmp_seq=3 ttl=60 time=10.1 ms
+        64 bytes from 10.2.10.1: icmp_seq=4 ttl=60 time=12.2 ms
+        64 bytes from 10.2.10.1: icmp_seq=5 ttl=60 time=10.7 ms
+        64 bytes from 10.2.10.1: icmp_seq=6 ttl=60 time=9.95 ms
+        64 bytes from 10.2.10.1: icmp_seq=7 ttl=60 time=10.0 ms
+        64 bytes from 10.2.10.1: icmp_seq=8 ttl=60 time=9.35 ms
+        64 bytes from 10.2.10.1: icmp_seq=9 ttl=60 time=10.4 ms
+        64 bytes from 10.2.10.1: icmp_seq=10 ttl=60 time=10.9 ms
+        64 bytes from 10.2.10.1: icmp_seq=11 ttl=60 time=12.9 ms
+        64 bytes from 10.2.10.1: icmp_seq=12 ttl=60 time=9.97 ms
+        64 bytes from 10.2.10.1: icmp_seq=13 ttl=60 time=13.9 ms
+        64 bytes from 10.2.10.1: icmp_seq=14 ttl=60 time=10.2 ms
+        64 bytes from 10.2.10.1: icmp_seq=15 ttl=60 time=10.4 ms
+        64 bytes from 10.2.10.1: icmp_seq=16 ttl=60 time=9.98 ms
+        64 bytes from 10.2.10.1: icmp_seq=17 ttl=60 time=11.0 ms
+        64 bytes from 10.2.10.1: icmp_seq=18 ttl=60 time=10.8 ms
+        64 bytes from 10.2.10.1: icmp_seq=19 ttl=60 time=10.0 ms
+        64 bytes from 10.2.10.1: icmp_seq=20 ttl=60 time=9.79 ms
+        64 bytes from 10.2.10.1: icmp_seq=21 ttl=60 time=10.1 ms
+        64 bytes from 10.2.10.1: icmp_seq=22 ttl=60 time=10.6 ms
+        64 bytes from 10.2.10.1: icmp_seq=23 ttl=60 time=9.93 ms
+
+
+La commande "show crypto ipsec sa" appliquée sur R1 et R4 permet d'observer, entre autres, le nombre de paquets encapsulés, chiffrés, désencapsulés, déchiffrés.
+
+        R1#show crypto ipsec sa
+
+        interface: GigabitEthernet0/1
+            Crypto map tag: cm-to-R4, local addr 192.168.122.239
+
+           protected vrf: (none)
+           local  ident (addr/mask/prot/port): (10.0.0.0/255.0.0.0/0/0)
+           remote ident (addr/mask/prot/port): (10.104.1.0/255.255.255.0/0/0)
+           current_peer 192.168.122.162 port 500
+             PERMIT, flags={origin_is_acl,}
+            #pkts encaps: 418, #pkts encrypt: 418, #pkts digest: 418
+            #pkts decaps: 414, #pkts decrypt: 414, #pkts verify: 414
+            #pkts compressed: 0, #pkts decompressed: 0
+            #pkts not compressed: 0, #pkts compr. failed: 0
+            #pkts not decompressed: 0, #pkts decompress failed: 0
+            #send errors 0, #recv errors 0
+
+             local crypto endpt.: 192.168.122.239, remote crypto endpt.: 192.168.122.162
+             plaintext mtu 1438, path mtu 1500, ip mtu 1500, ip mtu idb GigabitEthernet0/1
+             current outbound spi: 0x59865DD7(1501978071)
+             PFS (Y/N): N, DH group: none
+
+             inbound esp sas:
+              spi: 0x64C848EF(1690847471)
+                transform: esp-256-aes esp-sha-hmac ,
+                in use settings ={Tunnel, }
+                conn id: 1, flow_id: SW:1, sibling_flags 80000040, crypto map: cm-to-R4
+                sa timing: remaining key lifetime (k/sec): (4608000/3267)
+                IV size: 16 bytes
+                replay detection support: Y
+                Status: ACTIVE(ACTIVE)
+              spi: 0x46CC67C6(1187801030)
+                transform: esp-256-aes esp-sha-hmac ,
+                in use settings ={Tunnel, }
+                conn id: 3, flow_id: SW:3, sibling_flags 80004040, crypto map: cm-to-R4
+                sa timing: remaining key lifetime (k/sec): (4162986/3273)
+                IV size: 16 bytes
+                replay detection support: Y
+                Status: ACTIVE(ACTIVE)
+
+             inbound ah sas:
+
+             inbound pcp sas:
+
+             outbound esp sas:
+              spi: 0xFFE4EC5A(4293192794)
+                transform: esp-256-aes esp-sha-hmac ,
+                in use settings ={Tunnel, }
+                conn id: 2, flow_id: SW:2, sibling_flags 80000040, crypto map: cm-to-R4
+                sa timing: remaining key lifetime (k/sec): (4608000/3267)
+                IV size: 16 bytes
+                replay detection support: Y
+                Status: ACTIVE(ACTIVE)
+              spi: 0x59865DD7(1501978071)
+                transform: esp-256-aes esp-sha-hmac ,
+                in use settings ={Tunnel, }
+                conn id: 4, flow_id: SW:4, sibling_flags 80004040, crypto map: cm-to-R4
+                sa timing: remaining key lifetime (k/sec): (4162986/3273)
+                IV size: 16 bytes
+                replay detection support: Y
+                Status: ACTIVE(ACTIVE)
+
+             outbound ah sas:
+
+             outbound pcp sas:
+
+        R4#show crypto ipsec sa
+
+        interface: GigabitEthernet0/1
+            Crypto map tag: cm-to-R1, local addr 192.168.122.162
+
+           protected vrf: (none)
+           local  ident (addr/mask/prot/port): (10.104.1.0/255.255.255.0/0/0)
+           remote ident (addr/mask/prot/port): (10.0.0.0/255.0.0.0/0/0)
+           current_peer 192.168.122.239 port 500
+             PERMIT, flags={origin_is_acl,}
+            #pkts encaps: 542, #pkts encrypt: 542, #pkts digest: 542
+            #pkts decaps: 547, #pkts decrypt: 547, #pkts verify: 547
+            #pkts compressed: 0, #pkts decompressed: 0
+            #pkts not compressed: 0, #pkts compr. failed: 0
+            #pkts not decompressed: 0, #pkts decompress failed: 0
+            #send errors 0, #recv errors 0
+
+             local crypto endpt.: 192.168.122.162, remote crypto endpt.: 192.168.122.239
+             plaintext mtu 1438, path mtu 1500, ip mtu 1500, ip mtu idb GigabitEthernet0/1
+             current outbound spi: 0x46CC67C6(1187801030)
+             PFS (Y/N): N, DH group: none
+
+             inbound esp sas:
+              spi: 0xFFE4EC5A(4293192794)
+                transform: esp-256-aes esp-sha-hmac ,
+                in use settings ={Tunnel, }
+                conn id: 1, flow_id: SW:1, sibling_flags 80004040, crypto map: cm-to-R1
+                sa timing: remaining key lifetime (k/sec): (4608000/3202)
+                IV size: 16 bytes
+                replay detection support: Y
+                Status: ACTIVE(ACTIVE)
+              spi: 0x59865DD7(1501978071)
+                transform: esp-256-aes esp-sha-hmac ,
+                in use settings ={Tunnel, }
+                conn id: 3, flow_id: SW:3, sibling_flags 80000040, crypto map: cm-to-R1
+                sa timing: remaining key lifetime (k/sec): (4332923/3209)
+                IV size: 16 bytes
+                replay detection support: Y
+                Status: ACTIVE(ACTIVE)
+
+             inbound ah sas:
+
+             inbound pcp sas:
+
+             outbound esp sas:
+              spi: 0x64C848EF(1690847471)
+                transform: esp-256-aes esp-sha-hmac ,
+                in use settings ={Tunnel, }
+                conn id: 2, flow_id: SW:2, sibling_flags 80004040, crypto map: cm-to-R1
+                sa timing: remaining key lifetime (k/sec): (4608000/3202)
+                IV size: 16 bytes
+                replay detection support: Y
+                Status: ACTIVE(ACTIVE)
+              spi: 0x46CC67C6(1187801030)
+                transform: esp-256-aes esp-sha-hmac ,
+                in use settings ={Tunnel, }
+                conn id: 4, flow_id: SW:4, sibling_flags 80000040, crypto map: cm-to-R1
+                sa timing: remaining key lifetime (k/sec): (4332923/3209)
+                IV size: 16 bytes
+                replay detection support: Y
+                Status: ACTIVE(ACTIVE)
+
+             outbound ah sas:
+
+             outbound pcp sas:
+
+        interface: GigabitEthernet0/3
+            Crypto map tag: cm-to-R1, local addr 0.0.0.0
+
+           protected vrf: (none)
+           local  ident (addr/mask/prot/port): (10.104.1.0/255.255.255.0/0/0)
+           remote ident (addr/mask/prot/port): (10.0.0.0/255.0.0.0/0/0)
+           current_peer 192.168.122.239 port 500
+             PERMIT, flags={origin_is_acl,}
+            #pkts encaps: 0, #pkts encrypt: 0, #pkts digest: 0
+            #pkts decaps: 0, #pkts decrypt: 0, #pkts verify: 0
+            #pkts compressed: 0, #pkts decompressed: 0
+            #pkts not compressed: 0, #pkts compr. failed: 0
+            #pkts not decompressed: 0, #pkts decompress failed: 0
+            #send errors 0, #recv errors 0
+
+             local crypto endpt.: 0.0.0.0, remote crypto endpt.: 192.168.122.239
+             plaintext mtu 1500, path mtu 1500, ip mtu 1500, ip mtu idb GigabitEthernet0/3
+             current outbound spi: 0x0(0)
+             PFS (Y/N): N, DH group: none
+
+             inbound esp sas:
+
+             inbound ah sas:
+
+             inbound pcp sas:
+
+             outbound esp sas:
+
+             outbound ah sas:
+
+             outbound pcp sas:
+
+
+
+
