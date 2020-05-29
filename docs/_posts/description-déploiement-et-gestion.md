@@ -18,29 +18,35 @@ La topologie est constituée de :
           - un accès Internet
           - une station de travail (PC10)
           
-![Topologie](https://github.com/reseau-2020/projet-one/blob/master/docs/_posts/topologie-projet-one.png)      
+![Topologie](https://github.com/reseau-2020/projet-one/blob/master/docs/_posts/topologie-projet-one.png)     
 
 
 ## Choix technologiques
 
 ### Routage
 
-EIGRP 
+Comme nous disposons d'une infrastructure homogène Cisco, nous avons décidé de déployer le protocole de routage EIGRP (Enhanced Interior Gateway Routing Protocol) qui est un protocole propriétaire Cisco. De plus, la distance administrative du protocole EIGRP est plus faible que celle du protocole OSPF (Open Shortest Path First).
 
 ### Pare-feu
 
-Cisco sur le réseau principal et le site distance (R4).
-Fortinet pour le deuxième site distant (R5).
+Dans notre infrastructure homogène Cisco, nous avons donc configuré un pare-feu Cisco sur le routeur R1 (réseau principal) et sur le routeur R4 (premier site distant). Toutefois, nous avons quand même configuré un pare-feu Fortinet sur le routeur R5 (second site distant) afin d'appréhender le principe de gestion unifiée des menaces (UTM) même si nous avons déployé uniquement un pare-feu.
+
 
 ### Redondance
 
-Etherchannel
-RSTP (redondance de lien) utilisé avec la technologie Etherchannel.
-HSRP (redondance de passerelle)
+Redondance de lien : RSTP utilisé avec la technologie Etherchannel.
+Redondance de passerelle : HSRP
 
 ### Services d'infrastructure
 
-NTP, DHCP, CDP, DNS,
+
+DHCP (Dynamic Host Configuration Protocol) :
+
+DNS (Domain Name System) :
+
+NTP (Network Time Protocol) :
+
+CDP (Cisco Discovery Protocol) :
 
 ### VPN IPSEC
 
@@ -51,5 +57,5 @@ tunnel entre R5 (Fortinet) et R1 (Cisco) : problèmes rencontrés, tunnel non fo
 
 ### Automatisation : Ansible
 
-### Surveillance : SYSLOG et SNMP
+### Surveillance / Reporting : SNMP et SYSLOG
 
