@@ -86,7 +86,7 @@ zone-pair security lan4-internet source lan4 destination internet
  service-policy type inspect lan4-internet-policy
 zone-pair security internet-self source internet destination self
  service-policy type inspect to-self-policy
-zone-pair security self-internet source internet destination self
+zone-pair security self-internet source self destination internet
  service-policy type inspect to-self-policy
 !
 !
