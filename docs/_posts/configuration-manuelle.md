@@ -28,8 +28,12 @@ Configuration de SNMPv3 :
           sudo echo PCx > /etc/hostname
           reboot
 
-      Configuration du service DNS :
+      Configuration du service DNS (actif après redémarrage) :
+          systemctl disable systemd-resolved
+          systemctl stop systemd-resolved
+          rm -f /etc/resolv.conf
           echo "nameserver 1.1.1.1" >> /etc/resolv.conf
+          chattr +i /etc/resolv.conf
 
 **Sur PC9** :
 
@@ -114,6 +118,8 @@ Configuration de SNMPv3 :
              service-policy type inspect internet-dmz-policy
             zone-pair security internet-self source internet destination self
              service-policy type inspect to-self-policy
+            zone-pair security self-internet source self destination internet
+             service-policy type inspect to-self-policy
             !
             interface G0/1
              description Interface WAN
@@ -150,8 +156,8 @@ Configuration de SNMPv3 :
              permit tcp any any eq 22
              deny ip any any
             ip access-list extended DHCP
-             permit udp any any eq 68
-             deny udp any any
+             permit udp any eq 67 any eq 68
+             permit udp any eq 68 any eq 67
             ip access-list extended DNS
              permit udp any any eq 53
              deny udp any any
@@ -385,6 +391,8 @@ Ajouter la configuration initiale (voir Guillaume)
              service-policy type inspect lan4-internet-policy
             zone-pair security internet-self source internet destination self
              service-policy type inspect to-self-policy
+            zone-pair security self-internet source self destination internet
+             service-policy type inspect to-self-policy
             !
             interface G0/1
              description Interface WAN
@@ -405,10 +413,11 @@ Ajouter la configuration initiale (voir Guillaume)
              permit tcp any any eq 22
              deny   ip any any
             ip access-list extended DHCP
-             permit udp any any eq 68
-             deny udp any any
+             permit udp any eq 67 any eq 68
+             permit udp any eq 68 any eq 67
             ip access-list extended DNS
              permit udp any any eq 53
+             permit udp any eq 53 any
              deny udp any any
             !
             ! Adaptation du Pare-feu R4 pour le VPN
@@ -514,8 +523,28 @@ Ajouter la configuration initiale (voir Guillaume)
             snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
             snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
             end
-            wr
             !
+            conf t
+            interface vlan 10
+             standby 16 priority 150
+             standby 16 preempt
+             standby version 2
+             standby 16 ipv6 fe80::d3:1
+             exit
+            interface vlan 20
+             standby version 2
+             standby 26 ipv6 fe80::d3:1
+             exit 
+            interface vlan 30
+             standby 36 priority 150
+             standby 36 preempt
+             standby version 2
+             standby 36 ipv6 fe80::d3:1      
+             exit
+            interface vlan 40
+             standby version 2
+             standby 46 ipv6 fe80::d3:1
+             end
             ! CONFIGURATION DE NTP
             conf t
             ntp server 10.3.1.1
@@ -541,8 +570,29 @@ Ajouter la configuration initiale (voir Guillaume)
             snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
             snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
             end
-            wr
             !
+            ! Configuration supplémentaire HSRP DS2 IPv6
+            conf t
+            interface vlan 10
+             standby version 2
+             standby 16 ipv6 fe80::d3:1
+             exit
+            interface vlan 20
+             standby 26 priority 150
+             standby 26 preempt
+             standby version 2
+             standby 26 ipv6 fe80::d3:1
+             exit                      
+            interface vlan 30
+             standby version 2
+             standby 36 ipv6 fe80::d3:1
+             exit
+            interface vlan 40
+             standby 46 priority 150
+             standby 46 preempt
+             standby version 2
+             standby 46 ipv6 fe80::d3:1
+             end
             ! CONFIGURATION DE NTP
             conf t
             ntp server 10.3.3.1
