@@ -317,7 +317,25 @@ Configuration manuelle à ajouté
 
 **Sur R2** :
 
-Ajouter la configuration initiale (voir Guillaume)
+Configuration initiale de R2
+
+            hostname R2
+            int GigabitEthernet0/7
+             ip address dhcp
+             no shutdown
+             no cdp enable
+            ip domain-name lan
+            username root privilege 15 password testtest
+            crypto key generate rsa modulus 2048
+            ip ssh version 2
+            ip scp server enable
+            line vty 0 4
+             login local
+             transport input ssh
+            end
+            wr
+            
+Configuration manuelle à ajouté
 
             ! CONFIGURATION DE SNMPv3
             conf t
