@@ -106,8 +106,6 @@ Configuration manuelle à ajouté
 
             conf t
             !
-             hostname R1
-            !
             ! désactivation de CDP sur l'interface g0/1
             !
              int GigabitEthernet0/1
@@ -128,6 +126,7 @@ Configuration manuelle à ajouté
             ipv6 unicast-routing
             !
             username root secret testtest
+            enable secret testtest
             !
             class-map type inspect match-any internet-dmz-class
              match protocol http
@@ -346,6 +345,7 @@ Configuration manuelle à ajouter
 
             ! CONFIGURATION DE SNMPv3
             configure terminal
+            enable secret testtest
             ipv6 unicast-routing
             ip access-list extended LAN_SNMP
             permit ip 11.12.13.0 0.0.0.255 any
@@ -409,6 +409,7 @@ Configuration manuelle à ajouter
 
             ! CONFIGURATION DE SNMPv3
             conf t
+            enable secret testtest
             ipv6 unicast-routing
             ip access-list extended LAN_SNMP
             permit ip 11.12.13.0 0.0.0.255 any
@@ -742,6 +743,7 @@ Configuration manuelle à ajouté
             end
             !
             conf t
+            enable secret testtest
             ipv6 unicast-routing
             interface g2/0
             ipv6 address 2001:470:c814:1301::2/64
@@ -823,6 +825,7 @@ Configuration manuelle à ajouté
             end
             !
             conf t
+            enable secret testtest
             ipv6 unicast-routing
             interface g2/0
             ipv6 address 2001:470:c814:1303::2/64
@@ -897,6 +900,7 @@ Configuration manuelle à ajouté
 
             ! CONFIGURATION DE SNMPv3
             conf t
+            enable secret testtest
             ip access-list extended LAN_SNMP
             permit ip 11.12.13.0 0.0.0.255 any
             exit
@@ -932,6 +936,7 @@ Configuration manuelle à ajouté
 
             ! CONFIGURATION DE SNMPv3
             conf t
+            enable secret testtest
             ip access-list extended LAN_SNMP
             permit ip 11.12.13.0 0.0.0.255 any
             exit
