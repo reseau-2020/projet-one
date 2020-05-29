@@ -437,7 +437,7 @@ Ajouter la configuration initiale (voir Guillaume)
              ipv6 route 2000::/3 GigabitEthernet0/1 FE80::E53:21FF:FE38:5800
              exit
             wr
-            !            !
+            !            
             ! CONFIGURATION DU FIREWALL
             !
             conf t
