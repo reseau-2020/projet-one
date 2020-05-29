@@ -2,6 +2,27 @@
 L'adressage IPv4 est en /24.
 L'adressage IPv6 est en /64.
 
+## Adressage IPv6 Global Unicast site principal (interface G0/1 de R1)
+- Adresses des réseaux maîtrisés, routé jusqu'à votre routeur externe : `2001:470:c814:1000::/52`
+- L'adresse IPv6 externe de votre routeur : `fe80::cafe:1`
+- L'adresse IPv6 de la passerelle vers l'Internet : `fe80::e53:21ff:fe38:5800`
+
+
+## Adressage IPv6 Global Unicast site distant (interface G0/1 de R4)
+- Adresses des réseaux maîtrisés, routé jusqu'à votre routeur externe : `2001:470:c814:5000::/52`
+- L'adresse IPv6 externe de votre routeur : `fe80::cafe:5`
+- L'adresse IPv6 de la passerelle vers l'Internet : `fe80::e53:21ff:fe38:5800`
+
+## Logique du plan d'adressage ipv4
+octet1.octet2.octet3.octet4
+octet1 = 10
+octet2 = ensemble (1: Tripod, 2: Switchblock; 3:Liaison Tripod - Switchblock; 104: Réseau Distant R4, 105: Réseau Distant R5))
+octet3 = valeur remarquable de nos réseaux
+octet4 = ipv4 utilisables de .1 à .254 (/24)
+
+## Logique du plan d'adressage ipv6
+(à completer)
+
 ## Couche Core (Tripod) 
 |Périphérique|Interface|Liaison<br>|Adresse IPv4 statique|Adresse<br>IPv6 Link-local|Adresse IPv6 publique|Adresse IPv6 privée|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
