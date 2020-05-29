@@ -44,6 +44,7 @@ Configuration de SNMPv3 :
 ## Routeurs
 
 **Sur R1** :
+
             conf t
             !
             hostname R1
