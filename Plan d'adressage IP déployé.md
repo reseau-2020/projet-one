@@ -87,8 +87,8 @@ Un Vlan de Gestion (Vlan 100) serait une bonne pratique afin de pouvoir joindre 
 
 |Périphérique|Interface|Liaison|Adresse IPv4 statique|Adresse Réseau IPv4|Adresse	Link-Local|Adresse IPv6 publique|Adresse	IPv6 privée|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|				
-|R4|G0/1|R4 - NAT3|DHCP|192.168.122.0 /24|fe80::dd:4|2001:470:c814:1004::1|fd00:470:c814:1004::1|
-|R4|G0/2|R4 - PC9|10.104.1.1|10.104.1.0 /24|fe80::dd:4|2001:470:c814:1004::2|fd00:470:c814:1004::2|
+|R4|G0/1|R4 - NAT3|DHCP|192.168.122.0 /24|fe80::dd:4|2001:470:c814:5004::1|fd00:470:c814:5004::1|
+|R4|G0/2|R4 - PC9|10.104.1.1|10.104.1.0 /24|fe80::dd:4|2001:470:c814:5004::2|fd00:470:c814:5004::2|
 
 ## LANs
 
