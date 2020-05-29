@@ -1,0 +1,350 @@
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname DS2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$6O3f$8iZSUaUWcpyKrlGGDlBai1
+!
+username root privilege 15 password 0 testtest
+no aaa new-model
+clock timezone GMT 1 0
+clock summer-time FR recurring last Sun Mar 2:00 last Sun Oct 2:00
+!
+!
+!
+!
+!
+!
+ip dhcp excluded-address 10.2.10.1 10.2.10.50
+ip dhcp excluded-address 10.2.10.100 10.2.10.254
+ip dhcp excluded-address 10.2.20.1 10.2.20.50
+ip dhcp excluded-address 10.2.20.100 10.2.20.254
+ip dhcp excluded-address 10.2.30.1 10.2.30.50
+ip dhcp excluded-address 10.2.30.100 10.2.30.254
+ip dhcp excluded-address 10.2.40.1 10.2.40.50
+ip dhcp excluded-address 10.2.40.100 10.2.40.254
+!
+ip dhcp pool VLAN10
+ network 10.2.10.0 255.255.255.0
+ default-router 10.2.10.254 
+!
+ip dhcp pool VLAN20
+ network 10.2.20.0 255.255.255.0
+ default-router 10.2.20.254 
+!
+ip dhcp pool VLAN30
+ network 10.2.30.0 255.255.255.0
+ default-router 10.2.30.254 
+!
+ip dhcp pool VLAN40
+ network 10.2.40.0 255.255.255.0
+ default-router 10.2.40.254 
+!
+!
+ip domain-name lan
+ip cef
+ipv6 unicast-routing
+ipv6 cef
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+spanning-tree vlan 1,10,30,99 priority 28672
+spanning-tree vlan 20,40 priority 24576
+!
+!
+vlan 4000
+ name STUB
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Port-channel2
+ description Trunk Group Channel2 to AS1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface Port-channel3
+ description Trunk Group Channel3 to DS1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface Port-channel4
+ description Trunk Group Channel4 to AS2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+!
+interface GigabitEthernet0/0
+ description Trunk Group Channel4 to AS2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+ negotiation auto
+ channel-group 4 mode active
+!
+interface GigabitEthernet0/1
+ description Trunk Group Channel2 to AS1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+ negotiation auto
+ channel-group 2 mode active
+!
+interface GigabitEthernet0/2
+ description Trunk Group Channel3 to DS1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+ negotiation auto
+ channel-group 3 mode active
+!
+interface GigabitEthernet0/3
+ switchport access vlan 4000
+ switchport mode access
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet1/0
+ description Trunk Group Channel4 to AS2
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+ negotiation auto
+ channel-group 4 mode active
+!
+interface GigabitEthernet1/1
+ description Trunk Group Channel2 to AS1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+ negotiation auto
+ channel-group 2 mode active
+!
+interface GigabitEthernet1/2
+ description Trunk Group Channel3 to DS1
+ switchport trunk encapsulation dot1q
+ switchport trunk native vlan 99
+ switchport mode trunk
+ negotiation auto
+ channel-group 3 mode active
+!
+interface GigabitEthernet1/3
+ switchport access vlan 4000
+ switchport mode access
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet2/0
+ description Link to R3 Core
+ no switchport
+ ip address 10.3.3.2 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::D2:2 link-local
+ ipv6 address 2001:470:C814:1303::2/64
+ ipv6 enable
+ ipv6 eigrp 1
+!
+interface GigabitEthernet2/1
+ description Link to R2 Core
+ no switchport
+ ip address 10.3.4.2 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::D2:2 link-local
+ ipv6 address 2001:470:C814:1304::2/64
+ ipv6 enable
+ ipv6 eigrp 1
+!
+interface GigabitEthernet2/2
+ switchport access vlan 4000
+ switchport mode access
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet2/3
+ switchport access vlan 4000
+ switchport mode access
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet3/0
+ description Link to R3 Core
+ no switchport
+ ip address 10.3.33.2 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::D2:2 link-local
+ ipv6 address 2001:470:C814:1333::2/64
+ ipv6 enable
+ ipv6 eigrp 1
+!
+interface GigabitEthernet3/1
+ description Link to R2 Core
+ no switchport
+ ip address 10.3.44.2 255.255.255.0
+ negotiation auto
+ ipv6 address FE80::D2:2 link-local
+ ipv6 address 2001:470:C814:1344::2/64
+ ipv6 enable
+ ipv6 eigrp 1
+!
+interface GigabitEthernet3/2
+ switchport access vlan 4000
+ switchport mode access
+ shutdown
+ negotiation auto
+!
+interface GigabitEthernet3/3
+ no switchport
+ ip address dhcp
+ negotiation auto
+ no cdp enable
+!
+interface Vlan10
+ description Vlan10 real gateway
+ ip address 10.2.10.253 255.255.255.0
+ standby version 2
+ standby 10 ip 10.2.10.254
+ standby 16 ipv6 FE80::D3:1
+ ipv6 address FE80::D2:2 link-local
+ ipv6 address 2001:470:C814:1010::2/64
+ ipv6 address FD00:470:C814:1010::2/64
+ ipv6 enable
+ ipv6 eigrp 1
+!
+interface Vlan20
+ description Vlan20 real gateway
+ ip address 10.2.20.253 255.255.255.0
+ standby version 2
+ standby 20 ip 10.2.20.254
+ standby 20 priority 150
+ standby 26 ipv6 FE80::D3:1
+ standby 26 priority 150
+ standby 26 preempt
+ ipv6 address FE80::D2:2 link-local
+ ipv6 address 2001:470:C814:1020::2/64
+ ipv6 address FD00:470:C814:1020::2/64
+ ipv6 enable
+ ipv6 eigrp 1
+!
+interface Vlan30
+ description Vlan30 real gateway
+ ip address 10.2.30.253 255.255.255.0
+ standby version 2
+ standby 30 ip 10.2.30.254
+ standby 36 ipv6 FE80::D3:1
+ ipv6 address FE80::D2:2 link-local
+ ipv6 address 2001:470:C814:1030::2/64
+ ipv6 address FD00:470:C814:1030::2/64
+ ipv6 enable
+ ipv6 eigrp 1
+!
+interface Vlan40
+ description Vlan40 real gateway
+ ip address 10.2.40.253 255.255.255.0
+ standby version 2
+ standby 40 ip 10.2.40.254
+ standby 40 priority 150
+ standby 46 ipv6 FE80::D3:1
+ standby 46 priority 150
+ standby 46 preempt
+ ipv6 address FE80::D2:2 link-local
+ ipv6 address 2001:470:C814:1040::2/64
+ ipv6 address FD00:470:C814:1040::2/64
+ ipv6 enable
+ ipv6 eigrp 1
+!
+!
+router eigrp 1
+ network 10.2.10.253 0.0.0.0
+ network 10.2.20.253 0.0.0.0
+ network 10.2.30.253 0.0.0.0
+ network 10.2.40.253 0.0.0.0
+ network 10.3.3.2 0.0.0.0
+ network 10.3.4.2 0.0.0.0
+ network 10.3.33.2 0.0.0.0
+ network 10.3.44.2 0.0.0.0
+ passive-interface Vlan10
+ passive-interface Vlan20
+ passive-interface Vlan30
+ passive-interface Vlan40
+ eigrp router-id 5.5.5.5
+!
+ip forward-protocol nd
+!
+ip http server
+!
+ip ssh version 2
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip scp server enable
+!
+ip access-list extended LAN_SNMP
+ permit ip 11.12.13.0 0.0.0.255 any
+!
+ipv6 router eigrp 1
+ passive-interface Vlan10
+ passive-interface Vlan20
+ passive-interface Vlan30
+ passive-interface Vlan40
+ eigrp router-id 5.5.5.5
+!
+!
+!
+!
+snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
+snmp-server view SNMP-RO iso included
+!
+control-plane
+!
+banner exec ^C
+Default Multi-line exec banner
+for DS2 device in the CCNA Lab
+^C
+banner incoming ^C
+Default Multi-line incoming banner
+for DS2 device in the CCNA Lab
+^C
+banner login ^C
+Default Multi-line motd banner
+for DS2 device in the CCNA Lab
+^C
+banner motd ^C
+Default Multi-line motd banner for DS2
+for DS2 device in the CCNA Lab
+^C
+banner slip-ppp ^C
+Default Multi-line slip-ppp banner
+for DS2 device in the CCNA Lab
+^C
+!
+line con 0
+line aux 0
+line vty 0 4
+ login local
+ transport input ssh
+!
+ntp update-calendar
+ntp server 10.3.3.1
+!
+end
