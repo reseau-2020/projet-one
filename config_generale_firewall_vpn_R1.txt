@@ -32,6 +32,7 @@ class-map type inspect match-any internet-trafic-class
  match protocol http
  match protocol https
  match protocol icmp
+ match protocol ssh
 class-map type inspect match-any lan-dmz-class
  match protocol http
  match protocol https
@@ -74,6 +75,8 @@ zone-pair security lan-dmz source lan destination dmz
 zone-pair security internet-dmz source internet destination dmz
  service-policy type inspect internet-dmz-policy
 zone-pair security internet-self source internet destination self
+ service-policy type inspect to-self-policy
+zone-pair security self-internet source self destination internet
  service-policy type inspect to-self-policy
 !
 interface G0/1
