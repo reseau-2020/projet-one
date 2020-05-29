@@ -44,7 +44,7 @@ Configuration de SNMPv3 :
 ## Routeurs
 
 **Sur R1** :
-
+            conf t
             !
             hostname R1
             !
@@ -58,6 +58,7 @@ Configuration de SNMPv3 :
             ip domain lookup
             ip name-server 1.1.1.1
             ip dns server
+            ipv6 unicast-routing
             !
             username root secret testtest
             !
@@ -139,6 +140,7 @@ Configuration de SNMPv3 :
             interface G0/2
              description Interface LAN
              ip address 10.1.1.1 255.255.255.0
+             ipv6 address 2001:470:c814:1001::1/64
              ip nat inside
              zone-member security lan
              no shutdown
@@ -148,6 +150,7 @@ Configuration de SNMPv3 :
             interface G0/3
              description Interface LAN
              ip address 10.1.2.1 255.255.255.0
+             ipv6 address 2001:470:c814:1002::1/64
              ip nat inside
              zone-member security lan
              no shutdown
@@ -258,6 +261,7 @@ Ajouter la configuration initiale (voir Guillaume)
 
             ! CONFIGURATION DE SNMPv3
             conf t
+            ipv6 unicast-routing
             ip access-list extended LAN_SNMP
             permit ip 11.12.13.0 0.0.0.255 any
             exit
@@ -265,7 +269,25 @@ Ajouter la configuration initiale (voir Guillaume)
             snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
             snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
             end
-            wr
+            conf t
+            interface g0/1
+            ipv6 address 2001:470:c814:1001::2/64
+            exit
+            interface g0/2
+            ipv6 address 2001:470:c814:1301::1/64
+            exit
+            interface g0/3
+            ipv6 address 2001:470:c814:1003::2/64
+            exit
+            interface g0/4
+            ipv6 address 2001:470:c814:1311::1/64
+            exit
+            interface g0/5
+            ipv6 address 2001:470:c814:1304::1/64
+            exit
+            interface g0/6
+            ipv6 address 2001:470:c814:1344::1/64
+            end
             !
             ! CONFIGURATION DE NTP
             conf t
@@ -284,6 +306,7 @@ Ajouter la configuration initiale (voir Guillaume)
 
             ! CONFIGURATION DE SNMPv3
             conf t
+            ipv6 unicast-routing
             ip access-list extended LAN_SNMP
             permit ip 11.12.13.0 0.0.0.255 any
             exit
@@ -291,7 +314,25 @@ Ajouter la configuration initiale (voir Guillaume)
             snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
             snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
             end
-            wr
+            conf t
+            interface g0/1
+            ipv6 address 2001:470:c814:1002::2/64
+            exit
+            interface g0/2
+            ipv6 address 2001:470:c814:1003::1/64
+            exit
+            interface g0/3
+            ipv6 address 2001:470:c814:1303::1/64
+            exit
+            interface g0/4
+            ipv6 address 2001:470:c814:1333::1/64
+            exit
+            interface g0/5
+            ipv6 address 2001:470:c814:1302::1/64
+            exit
+            interface g0/6
+            ipv6 address 2001:470:c814:1322::1/64
+            end
             !  
             ! CONFIGURATION DE NTP
             conf t
@@ -525,6 +566,21 @@ Ajouter la configuration initiale (voir Guillaume)
             end
             !
             conf t
+            ipv6 unicast-routing
+            interface g2/0
+            ipv6 address 2001:470:c814:1301::2/64
+            exit
+            interface g3/0
+            ipv6 address 2001:470:c814:1311::2/64
+            exit
+            interface g2/1
+            ipv6 address 2001:470:c814:1302::2/64
+            exit
+            interface g3/1
+            ipv6 address 2001:470:c814:1322::2/64
+            end
+            !
+            conf t
             interface vlan 10
              standby 16 priority 150
              standby 16 preempt
@@ -569,6 +625,21 @@ Ajouter la configuration initiale (voir Guillaume)
             snmp-server view SNMP-RO iso included
             snmp-server group ADMIN v3 priv read SNMP-RO access LAN_SNMP
             snmp-server user team1 ADMIN v3 auth sha testtest priv aes 128 testtest
+            end
+            !
+            conf t
+            ipv6 unicast-routing
+            interface g2/0
+            ipv6 address 2001:470:c814:1303::2/64
+            exit
+            interface g3/0
+            ipv6 address 2001:470:c814:1333::2/64
+            exit
+            interface g2/1
+            ipv6 address 2001:470:c814:1304::2/64
+            exit
+            interface g3/1
+            ipv6 address 2001:470:c814:1344::2/64
             end
             !
             ! Configuration supplémentaire HSRP DS2 IPv6
