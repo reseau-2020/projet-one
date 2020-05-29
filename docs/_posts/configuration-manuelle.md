@@ -106,7 +106,14 @@ Configuration manuelle à ajouté
 
             conf t
             !
-            hostname R1
+             hostname R1
+            !
+            ! désactivation de CDP sur l'interface g0/1
+            !
+             int GigabitEthernet0/1
+              no cdp enable
+              no shutdown
+              exit
             !
             ip dhcp pool DMZ
              network 10.191.0.0 255.255.255.0
@@ -335,10 +342,10 @@ Configuration initiale de R2
             end
             wr
             
-Configuration manuelle à ajouté
+Configuration manuelle à ajouter
 
             ! CONFIGURATION DE SNMPv3
-            conf t
+            configure terminal
             ipv6 unicast-routing
             ip access-list extended LAN_SNMP
             permit ip 11.12.13.0 0.0.0.255 any
@@ -398,7 +405,7 @@ Configuration initiale de R3
             end
             wr
             
-Configuration manuelle à ajouté
+Configuration manuelle à ajouter
 
             ! CONFIGURATION DE SNMPv3
             conf t
@@ -444,7 +451,16 @@ Configuration manuelle à ajouté
 
 **Sur R4 (site distant)** :
 
-            conf t
+            configure terminal
+            !
+            ! désactivation de CDP sur l'interface g0/1
+            !
+            configure terminal
+             int GigabitEthernet0/1
+              no cdp enable
+              no shutdown
+              exit
+            !
             hostname R4
             enable secret testtest
             username root secret testtest
