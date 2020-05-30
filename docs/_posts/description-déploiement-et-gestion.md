@@ -96,6 +96,10 @@ Dans notre infrastructure homogène Cisco, nous avons donc configuré un pare-fe
 | | ntp-class (*pass*) | ntp | |
 | | class-default (*drop log*) | | |
 
+#### Pare-feu / routeur Fortios (Fortinet) - site distant de R5
+
+Une seule politique a été configurée, pour un flux unidirectionnel du lan R5 vers l'internet, en autorisant certains protocoles dont http, https et icmp.
+
 ### Redondance
 
 Redondance de lien : RSTP utilisé avec la technologie Etherchannel.
