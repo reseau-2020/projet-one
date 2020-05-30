@@ -25,11 +25,10 @@ La topologie est constituée de :
 
 ### Routage
 
-Nous avons retenu le protocole de routage dynamique EIGRP, pour le routage interne en IPv4 et en IPv6 de la topologie principale et du site distant Lan R4.
+Nous avons retenu le protocole de routage dynamique EIGRP, pour le routage interne en IPv4 et en IPv6 de la topologie principale, ainsi que pour le routage interne en IPv4 et en IPv6 du site distant Lan R4. Nous justifions ce choix par l'utilisation d'une infrastructure homogène Cisco, EIGRP (Enhanced Interior Gateway Routing Protocol) étant un protocole propriétaire Cisco et standardisé par l'IETF (Internet Engineering Task Force), via le RFC 7868.
 
 EIGRP (IPv4 et IPv6) aussi bien qu'OSPFv2 (IPv4) et OSPFv3 (IPv6), sont des solutions fiables pour notre infrastructure. Nous avons décidé de ne pas prendre en compte le protocole RIPv2, moins évolué, bien que ce dernier soit aussi présent dans l'inventaire Ansible de notre client.
 
-Nous justifions ce choix par l'utilisation d'une infrastructure homogène Cisco, nous avons donc décidé de déployer le protocole de routage EIGRP (Enhanced Interior Gateway Routing Protocol), qui est un protocole propriétaire Cisco. Il est standardisé par l'IETF (Internet Engineering Task Force), via le RFC 7868. EIGRP supporte aussi bien le routage en IPv4 qu'en IPv6.
 
 ### Pare-feu
 
