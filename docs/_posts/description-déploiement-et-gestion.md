@@ -29,7 +29,7 @@ Nous avons retenu le protocole de routage dynamique EIGRP, pour le routage inter
 
 EIGRP (IPv4 et IPv6) aussi bien qu'OSPFv2 (IPv4) et OSPFv3 (IPv6), sont des solutions fiables pour notre infrastructure. Nous avons décidé de ne pas prendre en compte le protocole RIPv2, moins évolué, bien que ce dernier soit aussi présent dans l'inventaire Ansible de notre client.
 
-OSPF (Open Shortest Path First), standard IETF, pourrait aussurer le routage IPv6 via l'utilisation de sa version OSPFv3, et son temps de convergence est proche de celui d'EIGRP. EIGRP présente toutefois une meilleure fiabilité (distance administrative de 90 pour EIGRP contre 110 pour OSPF, 120 pour RIPv2). Pour rappel, EIGRP appartient à la catégorie des protocoles de routage internes à vecteur de distance, alors qu'OSPF est un protocole de routage interne à état de lien.
+OSPF (Open Shortest Path First), standard IETF, pourrait aussurer le routage IPv6 via l'utilisation de sa version OSPFv3, et son temps de convergence est proche de celui d'EIGRP. EIGRP présente toutefois une meilleure fiabilité (distance administrative de 90 pour EIGRP contre 110 pour OSPF, 120 pour RIPv2). Pour rappel, EIGRP appartient à la catégorie des protocoles de routage interne à vecteur de distance, alors qu'OSPF est un protocole de routage interne à état de lien.
 
 |**EIGRP**|**OSPF**|
 |:-:|:-:|
@@ -41,6 +41,12 @@ OSPF (Open Shortest Path First), standard IETF, pourrait aussurer le routage IPv
 |Système autonome|Division du réseau en aires|
 
 Notre second site distant R5 utilise un routeur / pare-feu Fortigate de Fortinet, OSPFv2 et OSPFv3 seraient à privilégier dans le cadre de l'implémentation du routage interne dynamique au sein de ce réseau.
+
+Sources :
+https://cisco.goffinet.org/
+https://www.cisco.com/c/en/us/support/docs/ip/enhanced-interior-gateway-routing-protocol-eigrp/16406-eigrp-toc.html
+https://openclassrooms.com/fr/courses/2557196-administrez-une-architecture-reseau-avec-cisco/5135481-choisissez-entre-ospf-et-eigrp-pour-votre-topologie
+
 
 ### Pare-feu
 
