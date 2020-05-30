@@ -14,7 +14,7 @@ L'adressage IPv6 est en /64.
 - L'adresse IPv6 de la passerelle vers l'Internet : `fe80::e53:21ff:fe38:5800`
 
 ## Logique du plan d'adressage ipv4
-- Choix de la classe A (RFC 1918), plage d'adresses IPv4 privées large : 10.0.0.0 /8
+- Choix de la classe A (RFC 1918), plage d'adresses IPv4 privées large : `10.0.0.0 /8`
 
 octet1.octet2.octet3.octet4
 
@@ -29,7 +29,8 @@ octet4 = ipv4 utilisables de .1 à .254 (/24) sauf exceptions mentionées dans p
 ## Logique du plan d'adressage ipv6
 - Bloc IPv6 public pour site principal R1 : `2001:470:c814:1000::/52`
 - Bloc IPv6 public pour site distant R4 : `2001:470:c814:5000::/52`
-- Différenciation sur le quatrième mot (1000 ou 5000)
+- Différenciation sur le quatrième mot (1000 ou 5000), uniquement au niveau des centaines, dizaines et unités en raison du masque /52
+
 
 
 
