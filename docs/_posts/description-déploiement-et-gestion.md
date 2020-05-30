@@ -25,10 +25,22 @@ La topologie est constituée de :
 
 ### Routage
 
-Nous avons retenu le protocole de routage dynamique EIGRP, pour le routage interne en IPv4 et en IPv6 de la topologie principale, ainsi que pour le routage interne en IPv4 et en IPv6 du site distant Lan R4. Nous justifions ce choix par l'utilisation d'une infrastructure homogène Cisco, EIGRP (Enhanced Interior Gateway Routing Protocol) étant un protocole propriétaire Cisco et standardisé par l'IETF (Internet Engineering Task Force), via le RFC 7868.
+Nous avons retenu le protocole de routage dynamique EIGRP, pour le routage interne en IPv4 et en IPv6 de la topologie principale, ainsi que pour le routage interne en IPv4 et en IPv6 du site distant R4. Nous justifions ce choix par l'utilisation d'une infrastructure homogène Cisco, EIGRP (Enhanced Interior Gateway Routing Protocol) étant un protocole propriétaire Cisco et standardisé par l'IETF (Internet Engineering Task Force), via le RFC 7868.
 
 EIGRP (IPv4 et IPv6) aussi bien qu'OSPFv2 (IPv4) et OSPFv3 (IPv6), sont des solutions fiables pour notre infrastructure. Nous avons décidé de ne pas prendre en compte le protocole RIPv2, moins évolué, bien que ce dernier soit aussi présent dans l'inventaire Ansible de notre client.
 
+OSPF (Open Shortest Path First), standard IETF, pourrait aussurer le routage IPv6 via l'utilisation de sa version OSPFv3, et son temps de convergence est proche de celui d'EIGRP. EIGRP présente toutefois une meilleure fiabilité (distance administrative de 90 pour EIGRP contre 110 pour OSPF, 120 pour RIPv2). Pour rappel, EIGRP appartient à la catégorie des protocoles de routage internes à vecteur de distance, alors qu'OSPF est un protocole de routage interne à état de lien.
+
+|**EIGRP**|**OSPF**|
+|:-:|:-:|
+|Protocole de routage à vecteur de distance & Hybride|Protocole de routage à état de lien |
+|Priopriétaire Cisco, Standard récent|Standard IETF|
+|Distance Administrative: 90|Distance Administrative: 110|
+|Route secondaire de secours|Pas de route secondaire|
+|Algorithme DUAL|Algorithme Dijkstra|
+|Système autonome|Division du réseau en aires|
+
+Notre second site distant R5 utilise un routeur / pare-feu Fortigate de Fortinet, OSPFv2 et OSPFv3 seraient à privilégier dans le cadre de l'implémentation du routage interne dynamique au sein de ce réseau.
 
 ### Pare-feu
 
