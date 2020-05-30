@@ -31,6 +31,7 @@ octet4 = ipv4 utilisables de .1 à .254 (/24) sauf exceptions mentionées dans p
 - Bloc IPv6 public pour site distant R4 : `2001:470:c814:5000::/52`
 - Différenciation sur le quatrième mot (1000 ou 5000), uniquement au niveau des centaines, dizaines et unités en raison du masque /52
 Les 4 derniers mots correspondent à la plage d'adresses IPv6 utilisables.
+- Nous utilisons la même logique pour nos adresses IPv6 privées
 
 
 
