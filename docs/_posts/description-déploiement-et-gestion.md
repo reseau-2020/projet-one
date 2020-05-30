@@ -56,6 +56,37 @@ https://openclassrooms.com/fr/courses/2557196-administrez-une-architecture-resea
 Dans notre infrastructure homogène Cisco, nous avons donc configuré un pare-feu Cisco sur le routeur R1 (réseau principal) et sur le routeur R4 (premier site distant). Toutefois, nous avons quand même configuré un pare-feu Fortinet sur le routeur R5 (second site distant) afin d'appréhender le principe de gestion unifiée des menaces (UTM) même si nous avons déployé uniquement un pare-feu.
 À compléter (Stéphane ?)
 
+| **security zone** | **interface** | **zone-pair** | **Niveau de Confiance** |
+| :-| :- | :- | :-: |
+| internet | g0/1 | internet-dmz, internet-self | 0% |
+| lan | g0/2, g0/3 | lan-internet, lan-dmz | 100% |
+| dmz | g0/0 | - | à risque |
+| self-zone | all | self-internet, internet-self | Firewall ZBF R1 |
+ 
+| **zone-pair** | **source**| **destination** | **policy-map** |
+| :- | :- | :- | :- |
+| lan-internet | lan | internet | lan-internet-policy |
+| lan-dmz | lan | dmz | lan-dmz-policy |
+| internet-dmz | internet | dmz | internet-dmz-policy |
+| internet-self | internet | self | to-self-policy |
+| self-internet | self | internet | to-self-policy |
+
+
+| **policy-map (*action*)** | **class-map (*action*)** | **match protocol class-map** | **access-group** |
+| :- | :- | :- | :- |
+| lan-internet-policy (*inspect*) | internet-trafic-class (*inspect*) | dns, http, https, icmp | |
+| | class-default | | |
+| lan-dmz-policy (*inspect*) | lan-dmz-class (*inspect*) | http, https | |
+| | class-default | | |
+| internet-dmz-policy (*inspect*) | internet-dmz-class (*inspect*) | http, https | |
+| | class-default | | |
+| to-self-policy (*inspect*) | remote-access-class (*inspect*) | | SSH |
+| | icmp-class (*inspect*) | icmp | |
+| | dhcp-class (*pass*) | | DHCP |
+| | dns-class (*pass*) | | DNS |
+| | ntp-class (*pass*) | ntp | |
+| | class-default (*drop log*) | | |
+
 ### Redondance
 
 Redondance de lien : RSTP utilisé avec la technologie Etherchannel.
