@@ -14,18 +14,21 @@ L'adressage IPv6 est en /64.
 - L'adresse IPv6 de la passerelle vers l'Internet : `fe80::e53:21ff:fe38:5800`
 
 ## Logique du plan d'adressage ipv4
+- Choix de la classe A (RFC 1918), plage d'adresses IPv4 privées large : 10.0.0.0 /8
+
 octet1.octet2.octet3.octet4
 
-octet1 = 10
+octet1 = 10 (Fixe)
 
-octet2 = ensemble (1: Tripod, 2: Switchblock; 3:Liaison Tripod - Switchblock; 104: Réseau Distant R4, 105: Réseau Distant R5))
+octet2 = ensemble (1: Tripod, 2: Switchblock; 3:Liaison Tripod - Switchblock; 104: Site distant R4, 105: Site distant R5))
 
-octet3 = valeur remarquable de nos réseaux
+octet3 = valeur remarquable de nos sous-réseaux et VLANs
 
-octet4 = ipv4 utilisables de .1 à .254 (/24)
+octet4 = ipv4 utilisables de .1 à .254 (/24) sauf exceptions mentionées dans pool dhcp locaux
 
 ## Logique du plan d'adressage ipv6
-(à completer)
+- Bloc IPv6 public pour site distant R4 : `2001:470:c814:5000::/52`
+
 
 ## Couche Core (Tripod) 
 |Périphérique|Interface|Liaison<br>|Adresse IPv4 statique|Adresse<br>IPv6 Link-local|Adresse IPv6 publique|Adresse IPv6 privée|
