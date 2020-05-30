@@ -102,7 +102,7 @@ Configuration initiale de R1
             end
             wr
             
-Configuration manuelle à ajouté
+Configuration manuelle à ajouter
 
             conf t
             !
@@ -730,7 +730,7 @@ Configuration initiale de DS1
             end
             wr
             
-Configuration manuelle à ajouté
+Configuration manuelle à ajouter
 
             ! CONFIGURATION DE SNMPv3
             conf t
@@ -811,7 +811,7 @@ Configuration initiale de DS2
             end
             wr
             
-Configuration manuelle à ajouté
+Configuration manuelle à ajouter
 
 
             ! CONFIGURATION DE SNMPv3
@@ -896,7 +896,7 @@ Configuration initiale de AS1
             end
             wr
             
-Configuration manuelle à ajouté
+Configuration manuelle à ajouter
 
             ! CONFIGURATION DE SNMPv3
             conf t
@@ -932,7 +932,7 @@ Configuration initiale de AS2
             end
             wr
             
-Configuration manuelle à ajouté
+Configuration manuelle à ajouter
 
             ! CONFIGURATION DE SNMPv3
             conf t
