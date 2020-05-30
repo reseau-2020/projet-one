@@ -15,9 +15,13 @@ L'adressage IPv6 est en /64.
 
 ## Logique du plan d'adressage ipv4
 octet1.octet2.octet3.octet4
+
 octet1 = 10
+
 octet2 = ensemble (1: Tripod, 2: Switchblock; 3:Liaison Tripod - Switchblock; 104: Réseau Distant R4, 105: Réseau Distant R5))
+
 octet3 = valeur remarquable de nos réseaux
+
 octet4 = ipv4 utilisables de .1 à .254 (/24)
 
 ## Logique du plan d'adressage ipv6
