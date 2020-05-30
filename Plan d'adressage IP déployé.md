@@ -27,7 +27,10 @@ octet3 = valeur remarquable de nos sous-réseaux et VLANs
 octet4 = ipv4 utilisables de .1 à .254 (/24) sauf exceptions mentionées dans pool dhcp locaux
 
 ## Logique du plan d'adressage ipv6
+- Bloc IPv6 public pour site principal R1 : `2001:470:c814:1000::/52`
 - Bloc IPv6 public pour site distant R4 : `2001:470:c814:5000::/52`
+- Différenciation sur le quatrième mot (1000 ou 5000)
+
 
 
 ## Couche Core (Tripod) 
