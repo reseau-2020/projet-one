@@ -58,6 +58,9 @@ https://openclassrooms.com/fr/courses/2557196-administrez-une-architecture-resea
 Dans notre infrastructure homogène Cisco, nous avons donc configuré un pare-feu Cisco sur le routeur R1 (réseau principal) et sur le routeur R4 (premier site distant). Toutefois, nous avons quand même configuré un pare-feu Fortinet sur le routeur R5 (second site distant) afin d'appréhender le principe de gestion unifiée des menaces (UTM) même si nous avons déployé uniquement un pare-feu.
 À compléter (Stéphane ?)
 
+* Cisco ZBF sur R1 (Choix similaire pour R4, sans dmz)
+          * Zones de sécurité et directions ajoutées
+
 | **security zone** | **interface** | **zone-pair** | **Niveau de Confiance** |
 | :-| :- | :- | :-: |
 | internet | g0/1 | internet-dmz, internet-self | 0% |
@@ -72,7 +75,6 @@ Dans notre infrastructure homogène Cisco, nous avons donc configuré un pare-fe
 | internet-dmz | internet | dmz | internet-dmz-policy |
 | internet-self | internet | self | to-self-policy |
 | self-internet | self | internet | to-self-policy |
-
 
 | **policy-map (*action*)** | **class-map (*action*)** | **match protocol class-map** | **access-group** |
 | :- | :- | :- | :- |
