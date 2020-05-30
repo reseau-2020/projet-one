@@ -58,8 +58,9 @@ https://openclassrooms.com/fr/courses/2557196-administrez-une-architecture-resea
 Dans notre infrastructure homogène Cisco, nous avons donc configuré un pare-feu Cisco sur le routeur R1 (réseau principal) et sur le routeur R4 (premier site distant). Toutefois, nous avons quand même configuré un pare-feu Fortinet sur le routeur R5 (second site distant) afin d'appréhender le principe de gestion unifiée des menaces (UTM) même si nous avons déployé uniquement un pare-feu.
 À compléter (Stéphane ?)
 
-* Cisco ZBF sur R1 (Choix similaire pour R4, sans dmz)
-          * Zones de sécurité et directions ajoutées
+#### Cisco ZBF sur R1 (Choix similaire pour R4, sans dmz)
+
+* Zones de sécurité et directions ajoutées (unidrectionnel)
 
 | **security zone** | **interface** | **zone-pair** | **Niveau de Confiance** |
 | :-| :- | :- | :-: |
@@ -67,7 +68,9 @@ Dans notre infrastructure homogène Cisco, nous avons donc configuré un pare-fe
 | lan | g0/2, g0/3 | lan-internet, lan-dmz | 100% |
 | dmz | g0/0 | - | à risque |
 | self-zone | all | self-internet, internet-self | Firewall ZBF R1 |
- 
+
+* Zone-pair et policy-map
+
 | **zone-pair** | **source**| **destination** | **policy-map** |
 | :- | :- | :- | :- |
 | lan-internet | lan | internet | lan-internet-policy |
@@ -75,6 +78,8 @@ Dans notre infrastructure homogène Cisco, nous avons donc configuré un pare-fe
 | internet-dmz | internet | dmz | internet-dmz-policy |
 | internet-self | internet | self | to-self-policy |
 | self-internet | self | internet | to-self-policy |
+
+* Policy-map, class-map, protocoles et access-group (ACL ciblées)
 
 | **policy-map (*action*)** | **class-map (*action*)** | **match protocol class-map** | **access-group** |
 | :- | :- | :- | :- |
