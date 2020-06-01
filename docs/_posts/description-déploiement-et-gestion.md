@@ -119,7 +119,7 @@ Les services d'infrastructure tels que DHCP (attribution dynamique d'adresses), 
 * DHCP :Dynamic Host Configuration Protocol)
 * DNS : (Domain Name System
 * NTP : Network Time Protocol
-* CDP :Cisco Discovery Protocol
+* CDP :Cisco Discovery Protocol (On a désactivé CDP sur les interfaces g0/1 de R1 et g0/1 de R4)
 
 ### VPN IPSEC
 
