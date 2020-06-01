@@ -137,13 +137,22 @@ Nous avons ensuite tenté d'établir un tunnel VPN IPSEC entre R5 (avec pare-feu
 
 ## Gestion
 
-### Automatisation : Ansible
+### Déploiement automatisé : Ansible 
 
+Une partie du déploiement de la topologie se fait de manière automatique à l'aide d'Ansible. Pour cela, un ensemble de livres de jeux et de fichiers de configuration est utilisé afin de paramétrer sur chacun des routeurs et périphériques des paramètres pré-établis et activer certains protocoles. 
+Pour lancer ce déploiement automatique, il faut, depuis une machine de contrôle centos ou ubuntu disposant d'Ansible, importer l'ensemble de ce repository GitHub, puis lancer l'ensemble des livres de jeux à l'aide du fichier `ccna.yml` se trouvant dans le répertoire `projet-one/playbooks/`. On utilise pour cela la commande `ansible-playbook ccna.yml -v`
+(/!\ Attention: Dans le cadre de ce projet, le client a demandé à ce qu'une pré-configuration soit réalisée sur l'ensemble des machines, cette pré-configuration est disponible dans le fichier `projet-one/docs/_posts/configuration-manuelle.md`
+
+### Déploiement manuel : 
+
+Une fois ce premier déploiement automatisé effectué, des ajouts manuels sont nécessaires afin d'activer les fonctionnalités et protocoles supplémentaires. L'ensemble des procédures à effectuer sur la topologie est regroupé dans les fichiers `projet-one/docs/_posts/configuration-manuelle.md` et `projet-one/docs/_posts/annexe_config_manuelle.md`.
+
+Il est aussi envisageable, dans le cadre d'un déploiement manuel ou de problème sur l'un des périphériques de retrouver le fichier de configuration complet de chaque périphérique dans leur état au terme de ce projet. Ces fichiers se trouvent dans `projet-one/docs/_posts/fichiers_config/`. 
 
 ### Surveillance / Reporting : SNMP et SYSLOG
 
 *SNMP (Simple Network Management Protocol) :*
-SNMP a été déployé afin de surveiller les périphériques réseau depuis la station de contrôle. Nous avons donc implémenté ce protocole sur la station de contrôle (Centos-1) et les périphériques réseau (R1, R2, R3, DS1, DS2, AS1 et AS2). Il s'agit de la version v3 du protocole SNMP car les versions 1 et 2 sont aujourdh'hui dépréciées dues à des lacunes de sécurité. 
+SNMP a été déployé afin de surveiller les périphériques réseau depuis la station de contrôle. Nous avons donc implémenté ce protocole sur la station de contrôle (Centos-1) et les périphériques réseau (R1, R2, R3, DS1, DS2, AS1 et AS2). Il s'agit de la version v3 du protocole SNMP car les versions 1 et 2 sont aujourd'hui dépréciées dû à des lacunes de sécurité. 
 Dans le cas présent, la procédure de configuration de SNMPv3 s'est passée en 4 étapes :
          - Création d'une liste d'accès afin d'autoriser la station de contrôle à interroger le serveur SNMP
          - Configuration d'une "view" SNMP_RO 
@@ -152,5 +161,5 @@ Dans le cas présent, la procédure de configuration de SNMPv3 s'est passée en 
 
 
 *Reporting SYSLOG :*
-Le protocole SYSLOG à pour but de transporter par le réseau les messages de journalisation générés par une application (qu'on appel aussi log) vers un serveur hébergeant un serveur Syslog. Il permet ainsi d'assurer une concentration des journaux en un seul point. Ici nous avons donc implémenté ce protocole sur l'ensemble des périphériques réseau (R1, R2, R3, DS1, DS2, AS1 et AS2), afin que les logs, en plus d'être disponible sur chacun de ces périphériques, soient également regroupés et disponible sur sur la station de contrôle (Centos-1). 
-Ainsi, en cas de souci sur un des périphériques, ou si la communication vers les périphériques est perdu, il reste possible d'accéder à l'ensemble des messages de journalisation générés et de les étudiés pour comprendre les éventuels disfonctionements. 
+Le protocole SYSLOG a pour but de transporter par le réseau les messages de journalisation générés par une application (qu'on appelle aussi log) vers un serveur hébergeant un serveur Syslog. Il permet ainsi d'assurer une concentration des journaux en un seul point. Ici nous avons donc implémenté ce protocole sur l'ensemble des périphériques réseau (R1, R2, R3, DS1, DS2, AS1 et AS2), afin que les logs, en plus d'être disponibles sur chacun de ces périphériques, soient également regroupés et disponibles sur la station de contrôle (Centos-1). 
+Ainsi, en cas de souci sur un des périphériques, ou si la communication vers les périphériques est perdue, il reste possible d'accéder à l'ensemble des messages de journalisation générés et de les étudier pour comprendre les éventuels disfonctionnements. 
