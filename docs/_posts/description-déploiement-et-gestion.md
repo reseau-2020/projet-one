@@ -115,10 +115,10 @@ La redondance de passerelle est assurée par le protocole Hot Standby Router Pro
 
 Les services d'infrastructure tels que DHCP (attribution dynamique d'adresses), DNS (service de résolution de noms), NTP (synchronisation temporelle) et CDP (découverte de voisins) ont été déployés.
 
-DHCP :Dynamic Host Configuration Protocol)
-DNS : (Domain Name System
-NTP : Network Time Protocol
-CDP :Cisco Discovery Protocol
+* DHCP :Dynamic Host Configuration Protocol)
+* DNS : (Domain Name System
+* NTP : Network Time Protocol
+* CDP :Cisco Discovery Protocol
 
 ### VPN IPSEC
 
