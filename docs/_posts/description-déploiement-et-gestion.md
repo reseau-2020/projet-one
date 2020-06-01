@@ -99,7 +99,7 @@ Le ZBF Cisco nécessite de définir des zones de sécurité et de mettre en plac
 | | dhcp-class (*pass*) | | DHCP |
 | | dns-class (*pass*) | | DNS |
 | | ntp-class (*pass*) | ntp | |
-| | vpn-class (*pass*) | | ISAKMP_IPSEC |
+| | vpn-class (*inspect*) | | ISAKMP_IPSEC |
 | | class-default (*drop log*) | | |
 
 #### Pare-feu / routeur Fortios (Fortinet) - site distant de R5
