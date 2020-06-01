@@ -152,7 +152,5 @@ Dans le cas présent, la procédure de configuration de SNMPv3 s'est passée en 
 
 
 *Reporting SYSLOG :*
-
-
-
-
+Le protocole SYSLOG à pour but de transporter par le réseau les messages de journalisation générés par une application (qu'on appel aussi log) vers un serveur hébergeant un serveur Syslog. Il permet ainsi d'assurer une concentration des journaux en un seul point. Ici nous avons donc implémenté ce protocole sur l'ensemble des périphériques réseau (R1, R2, R3, DS1, DS2, AS1 et AS2), afin que les logs, en plus d'être disponible sur chacun de ces périphériques, soient également regroupés et disponible sur sur la station de contrôle (Centos-1). 
+Ainsi, en cas de souci sur un des périphériques, ou si la communication vers les périphériques est perdu, il reste possible d'accéder à l'ensemble des messages de journalisation générés et de les étudiés pour comprendre les éventuels disfonctionements. 
