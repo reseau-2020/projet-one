@@ -65,9 +65,9 @@ Le ZBF Cisco nécessite de définir des zones de sécurité et de mettre en plac
 
 #### Cisco ZBF sur R1 (Choix similaire pour R4, sans dmz)
 
-* Zones de sécurité et directions ajoutées (unidrectionnel)
+* Zones de sécurité et directions ajoutées (unidirectionnel)
 
-| **security zone** | **interface** | **zone-pair** | **Niveau de Confiance** |
+| **Security zone** | **Interface** | **Zone-pair** | **Niveau de Confiance** |
 | :-| :- | :- | :-: |
 | internet | g0/1 | internet-dmz, internet-self | 0% |
 | lan | g0/2, g0/3 | lan-internet, lan-dmz | 100% |
@@ -76,7 +76,7 @@ Le ZBF Cisco nécessite de définir des zones de sécurité et de mettre en plac
 
 * Zone-pair et policy-map
 
-| **zone-pair** | **source**| **destination** | **policy-map** |
+| **zone-pair** | **Source**| **Destination** | **Policy-map** |
 | :- | :- | :- | :- |
 | lan-internet | lan | internet | lan-internet-policy |
 | lan-dmz | lan | dmz | lan-dmz-policy |
@@ -86,7 +86,7 @@ Le ZBF Cisco nécessite de définir des zones de sécurité et de mettre en plac
 
 * Policy-map, class-map, protocoles et access-group (ACL ciblées)
 
-| **policy-map (*action*)** | **class-map (*action*)** | **match protocol class-map** | **access-group** |
+| **Policy-map (*action*)** | **Class-map (*action*)** | **Match protocol class-map** | **Access-group** |
 | :- | :- | :- | :- |
 | lan-internet-policy (*inspect*) | internet-trafic-class (*inspect*) | dns, http, https, icmp | |
 | | class-default | | |
