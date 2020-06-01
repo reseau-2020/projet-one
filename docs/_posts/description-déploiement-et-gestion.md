@@ -106,19 +106,18 @@ Le ZBF Cisco nécessite de définir des zones de sécurité et de mettre en plac
 Une seule politique a été configurée, pour un flux unidirectionnel du lan R5 vers l'internet, en autorisant certains protocoles dont http, https et icmp.
 
 ### Redondance
-
-Redondance de lien : RSTP utilisé avec la technologie Etherchannel.
-Redondance de passerelle : HSRP
+ 
+La redondance de liens est assurée par le protocole Rapid Spanning-Tree Portfast (RSTP) agissant au niveau de la couche L2 du modèle OSI. RSTP est utilisé de concert avec la technologie Etherchannel agissant au niveau de la couche L1. RSTP est préféré à STP car il possède un temps de convergence beaucoup plus court le rendant ainsi plus opérationnel. L'interêt d'utiliser la technologie Etherchannel est qu'elle permet de simplifier une topologie Spanning-Tree en diminuant le nombre de liens. Ainsi la vitesse et la tolérance aux pannes entre les switchs, routeurs, serveurs est augmentée.
+La redondance de passerelle est assurée par le protocole Hot Standby Router Protocol (HSRP) agissant au niveau de la couche L3. HSRP est un protocole propriétaire Cisco. Ayant une topologie homogène Cisco, il est cohérent de déployer HSRP. Le "Hello Time" est de 3s et le "Hold Time" de 10s. Ces deux valeurs pourraient être ajustées afin de rendre le protocole HSRP encore plus efficace dans le délai de reprise.
 
 ### Services d'infrastructure
 
-DHCP (Dynamic Host Configuration Protocol) :
+Les services d'infrastructure tels que DHCP (attribution dynamique d'adresses), DNS (service de résolution de noms), NTP (synchronisation temporelle) et CDP (découverte de voisins) ont été déployés.
 
-DNS (Domain Name System) :
-
-NTP (Network Time Protocol) :
-
-CDP (Cisco Discovery Protocol) :
+DHCP :Dynamic Host Configuration Protocol)
+DNS : (Domain Name System
+NTP : Network Time Protocol
+CDP :Cisco Discovery Protocol
 
 ### VPN IPSEC
 
